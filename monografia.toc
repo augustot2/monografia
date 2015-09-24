@@ -9,4 +9,6 @@
 \contentsline {section}{\numberline {3.1}Considera\c c\~oes Finais}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}Sugest\~oes para Pesquisas Futuras}{5}{section.3.2}
 \contentsline {chapter}{\numberline {A}Sequ\^encias}{7}{appendix.A}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{9}{appendix*.10}
+\contentsline {chapter}{\'Indice Remissivo}{11}{appendix*.10}
 \contentsfinish 

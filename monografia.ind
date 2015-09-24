@@ -1,0 +1,24 @@
+\begin{theindex}
+
+  \item DFT, 
+		\hyperindexformat{\see{transformada discreta de Fourier}}{10}
+  \item DSP, 
+		\hyperindexformat{\see{processamento digital de sinais}}{10}
+
+  \indexspace
+
+  \item Fourier
+    \subitem transformada, 
+		\hyperindexformat{\see{transformada de Fourier}}{10}
+
+  \indexspace
+
+  \item STFT, 
+		\hyperindexformat{\see{transformada de Fourier de tempo reduzido}}{10}
+
+  \indexspace
+
+  \item TBP, 
+		\hyperindexformat{\see{periodicidade regi\~ao codificante}}{10}
+
+\end{theindex}
