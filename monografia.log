@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.10)  10 SEP 2015 19:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  24 SEP 2015 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tese-exemplo.tex
-(./tese-exemplo.tex
+**monografia.tex
+(./monografia.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 5 languages loaded.
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
@@ -348,15 +348,15 @@ LaTeX Info: Redefining \cite on input line 694.
 \f@ncyO@orf=\skip54
 )
 \@indexfile=\write3
-\openout3 = `tese-exemplo.idx'.
+\openout3 = `monografia.idx'.
 
 
-Writing index file tese-exemplo.idx
+Writing index file monografia.idx
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-(./tese-exemplo.aux (./ape-conjuntos.aux))
-\openout1 = `tese-exemplo.aux'.
+(./monografia.aux (./ape-conjuntos.aux))
+\openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
@@ -465,188 +465,168 @@ LaTeX Info: Redefining \ref on input line 89.
 LaTeX Info: Redefining \pageref on input line 89.
 LaTeX Info: Redefining \nameref on input line 89.
 
-(./tese-exemplo.out) (./tese-exemplo.out)
+(./monografia.out) (./monografia.out)
 \@outlinefile=\write4
-\openout4 = `tese-exemplo.out'.
+\openout4 = `monografia.out'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 145.
  [1
 
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 163.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 163.
  [2]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 214.
+(babel)             in language  on input line 211.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 214.
+(babel)             in language  on input line 211.
  [3]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 230.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 230.
+(babel)             in language  on input line 223.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.230 \chapter
+l.223 \chapter
               *{Resumo} [1
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 230.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 230.
+(babel)             in language  on input line 223.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.230 \chapter
+l.223 \chapter
               *{Resumo} [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 232--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--255
-
- []
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 240.
 pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 \chapter
+l.240 \chapter
               *{Abstract} [3]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 240.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 240.
  [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 261--266
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 268--279
-
- []
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 284.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 284.
-[5]
+(babel)             in language  on input line 256.
+ [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 284.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 284.
+(babel)             in language  on input line 256.
  [6
 
-] (./tese-exemplo.toc)
+] (./monografia.toc)
 \tf@toc=\write5
-\openout5 = `tese-exemplo.toc'.
+\openout5 = `monografia.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 259.
  [7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 259.
  [8
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 287.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 268.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 268.
  [9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 268.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 296.
- [10
+(babel)             in language  on input line 268.
+
+[10
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 296.
+(babel)             in language  on input line 268.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 277.
  [11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 305.
+(babel)             in language  on input line 277.
  [12
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 305.
- (./tese-exemplo.lof)
+(babel)             in language  on input line 277.
+ (./monografia.lof)
 \tf@lof=\write6
-\openout6 = `tese-exemplo.lof'.
+\openout6 = `monografia.lof'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
+(babel)             in language  on input line 278.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
-
-[13]
+(babel)             in language  on input line 278.
+ [13]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
+(babel)             in language  on input line 278.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
+(babel)             in language  on input line 278.
  [14
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 306.
- (./tese-exemplo.lot)
+(babel)             in language  on input line 278.
+ (./monografia.lot)
 \tf@lot=\write7
-\openout7 = `tese-exemplo.lot'.
+\openout7 = `monografia.lot'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 282.
  [15]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 282.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 282.
  [16
 
-] (./cap-introducao.tex
+]
+(./cap-introducao.tex
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
-
-Package natbib Warning: Citation `eco:09' on page 1 undefined on input line 7.
-
 
 Package natbib Warning: Citation `zobel:04' on page 1 undefined on input line 1
 2.
@@ -663,35 +643,14 @@ Package natbib Warning: Citation `Higham:98' on page 1 undefined on input line
 Package natbib Warning: Citation `Knuth:96' on page 1 undefined on input line 1
 8.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 24.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (5.66743pt too wide) in paragraph at lines 31--31
-[]\T1/pcr/m/n/10 certo : Andrew e Foster introduziram o algoritmo ótimo (Andrew
- e Foster, 1983).[] 
- []
-
-
-Package natbib Warning: Citation `tufte01:visualDisplay' on page 1 undefined on
- input line 40.
-
+) (./cap-conceitos.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 50.
+(babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 61.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 69.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 75.
-[1
+(babel)             in language  on input line 2.
+ [1
 
 ]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 84.
-) (./cap-conceitos.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -702,7 +661,9 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
-[2]
+[2
+
+]
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
@@ -710,7 +671,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 22.
-<./figuras/graph.pdf, id=216, 722.7pt x 722.7pt>
+<./figuras/graph.pdf, id=189, 722.7pt x 722.7pt>
 File: ./figuras/graph.pdf Graphic file (type pdf)
  <use ./figuras/graph.pdf>
 Package pdftex.def Info: ./figuras/graph.pdf used on input line 33.
@@ -722,9 +683,12 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 47.
 
-[3
+[3 <./figuras/graph.pdf>]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 53.
 
- <./figuras/graph.pdf>]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining portuges shorthand "|
@@ -800,15 +764,11 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 18.
-
-Package natbib Warning: Citation `alon09:how' on page 7 undefined on input line
- 24.
-
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
  [7
 
 ]
@@ -828,61 +788,59 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
  [9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 327.
+(babel)             in language  on input line 300.
  [10]
-No file tese-exemplo.bbl.
-No file tese-exemplo.ind.
+No file monografia.bbl.
+No file monografia.ind.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
-(./tese-exemplo.aux (./ape-conjuntos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
-Package rerunfilecheck Info: File `tese-exemplo.out' has not changed.
-(rerunfilecheck)             Checksum: 4D580F9743695DA9C7BA02F0DCE3157E;1173.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+(./monografia.aux (./ape-conjuntos.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package rerunfilecheck Info: File `monografia.out' has not changed.
+(rerunfilecheck)             Checksum: 75DBF751D1D8273468D0A46E9F5DF41E;900.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 10954 strings out of 494963
- 159431 string characters out of 6179647
- 299393 words of memory out of 5000000
- 13932 multiletter control sequences out of 15000+600000
- 25875 words of font info for 59 fonts, out of 8000000 for 9000
- 38 hyphenation exceptions out of 8191
- 36i,12n,43p,322b,1203s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home
-/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </home/augusto/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> </home/augusto/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/augusto/.texmf-var/fonts/p
-k/ljfour/jknappen/ec/ecbx1000.600pk> </home/augusto/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecbx1200.600pk> </home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecrm0600.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <
-/home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/aug
-usto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/augusto/.tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/augusto/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/augusto/.texmf-var/fonts/pk/lj
-four/jknappen/ec/ecbx2488.600pk> </home/augusto/.texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecrm0800.600pk> </home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1095.600pk> </home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1440.6
-00pk> </home/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </h
-ome/augusto/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/courier/ucrr8a.pfb>
-Output written on tese-exemplo.pdf (29 pages, 237470 bytes).
+ 10936 strings out of 493304
+ 159134 string characters out of 6139871
+ 303440 words of memory out of 5000000
+ 14152 multiletter control sequences out of 15000+600000
+ 25254 words of font info for 57 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 36i,12n,43p,320b,1203s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx0900.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfcc1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on monografia.pdf (29 pages, 376032 bytes).
 PDF statistics:
- 863 PDF objects out of 1000 (max. 8388607)
- 316 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 274 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

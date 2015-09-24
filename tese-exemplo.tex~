@@ -127,6 +127,9 @@ framexrightmargin=10pt
     Orientador: Prof.  Dr. Nelson Mukgayar Kuhl\\
     Coorientador: Dr. Paulo José Saiz Jabardo
 
+   	\vskip 1cm
+    \normalsize{Durante o desenvolvimento deste trabalho o autor recebeu auxílio
+    financeiro da CAPES/CNPq/FAPESP}
     
     \vskip 0.5cm
     \normalsize{São Paulo, fevereiro de 2011}
@@ -155,7 +158,7 @@ framexrightmargin=10pt
 
     \begin{flushright}
 	Esta é a versão original da dissertação/tese elaborada pelo\\
-	candidato Augusto Carillo Ferrari, tal como \\
+	candidato (Nome Completo do Aluno), tal como \\
 	submetida à Comissão Julgadora.
     \end{flushright}
 
@@ -216,22 +219,39 @@ framexrightmargin=10pt
 % Agradecimentos:
 % Se o candidato não quer fazer agradecimentos, deve simplesmente eliminar esta página 
 \chapter*{Agradecimentos}
-	A Fazer
+Texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto. Texto opcional.
+
 
 % ---------------------------------------------------------------------------- %
 % Resumo
 \chapter*{Resumo}
 
-\noindent Ferrari, Augusto.C  \textbf{Título do trabalho em português}. 
+\noindent SOBRENOME, A. B. C. \textbf{Título do trabalho em português}. 
 2010. 120 f.
-Trabalho de conclusão de curso - Instituto de Matemática e Estatística,
+Tese (Doutorado) - Instituto de Matemática e Estatística,
 Universidade de São Paulo, São Paulo, 2010.
-
+\\
 
 Elemento obrigatório, constituído de uma sequência de frases concisas e
 objetivas, em forma de texto.  Deve apresentar os objetivos, métodos empregados,
 resultados e conclusões.  O resumo deve ser redigido em parágrafo único, conter
-
+no máximo 500 palavras e ser seguido dos termos representativos do conteúdo do
+trabalho (palavras-chave). 
+Texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto.
+Texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto.
+\\
 
 \noindent \textbf{Palavras-chave:} palavra-chave1, palavra-chave2, palavra-chave3.
 
@@ -242,12 +262,20 @@ resultados e conclusões.  O resumo deve ser redigido em parágrafo único, conter
 2010. 120 f.
 Tese (Doutorado) - Instituto de Matemática e Estatística,
 Universidade de São Paulo, São Paulo, 2010.
+\\
 
 
 Elemento obrigatório, elaborado com as mesmas características do resumo em
 língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo
 99), deve ser redigido em inglês para fins de divulgação. 
- 
+Text text text text text text text text text text text text text text text text
+text text text text text text text text text text text text text text text text
+text text text text text text text text text text text text text text text text
+text text text text text text text text text text text text.
+Text text text text text text text text text text text text text text text text
+text text text text text text text text text text text text text text text text
+text text text.
+\\
 
 \noindent \textbf{Keywords:} keyword1, keyword2, keyword3.
 
@@ -290,8 +318,7 @@ língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo
 \input cap-introducao        % associado ao arquivo: 'cap-introducao.tex'
 \input cap-conceitos         % associado ao arquivo: 'cap-conceitos.tex'
 \input cap-conclusoes        % associado ao arquivo: 'cap-conclusoes.tex'
-%\input cap-test1
-%\input cap-test2
+
 % cabeçalho para os apêndices
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\appendixname\ \thechapter}} {\MakeUppercase{#1}} }
 \fancyhead[RE,LO]{}
@@ -316,4 +343,3 @@ língua portuguesa. De acordo com o Regimento da Pós- Graduação da USP (Artigo
 \printindex   % imprime o índice remissivo no documento 
 
 \end{document}
-
