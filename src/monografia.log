@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  13 OCT 2015 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  13 OCT 2015 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,7 +802,34 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 273.
  [4
 
-] (./monografia.toc)
+] (./monografia.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 5.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 5.
+)
 \tf@toc=\write5
 \openout5 = `monografia.toc'.
 
@@ -828,13 +855,13 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 295.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 295.
+ [7]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 295.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 295.
 
-[7]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 295.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 295.
- [8
+[8
 
 ]
 Package babel Info: Redefining portuges shorthand "|
@@ -858,6 +885,8 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
 ) (./cap-conclusoes
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
@@ -914,29 +943,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 6555BE2C3D0F4D2B2D9E36E1F997AA48;266.
+(rerunfilecheck)             Checksum: 6A30CCDC6CE81385D1A5C65E7DC3B0DD;322.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
 (rerunfilecheck)             Checksum: C151B999766144460164DFDF568BC562;48.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 11177 strings out of 493304
- 162202 string characters out of 6139871
+ 11248 strings out of 493304
+ 163765 string characters out of 6139871
  297549 words of memory out of 5000000
- 14429 multiletter control sequences out of 15000+600000
- 39088 words of font info for 28 fonts, out of 8000000 for 9000
+ 14477 multiletter control sequences out of 15000+600000
+ 53107 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,12n,43p,320b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,43p,481b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
 public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on monografia.pdf (15 pages, 200933 bytes).
+Output written on monografia.pdf (15 pages, 205056 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
