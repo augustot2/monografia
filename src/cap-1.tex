@@ -2,23 +2,41 @@
 \label{cap:I}
 \section{Método espectral}
 
- A ideia geral do método espectral é a aproximação de uma função qualquer, $f(x) : \mathbb{R} \rightarrow \mathbb{R}$, usando um polinômio de alta ordem $\mathit{n}$, $P_{n}(x)$. Sabendo os pontos $(x_k,y_k)$, definimos então o polinômio:
+ Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}.
+
+\section{Interpolação}
+ A interpolação de uma função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ e que satisfaça:
+
 \begin{equation}
-	P(x_k) = y_k, k = 1,...,N
-\end{equation} 
+	P_n (x_i) = f(x_i) \ i = 1,2,...,\emph{n+1}
+\end{equation}
 
- Para uma equação com 2 pontos $(x_1,x_2,y_1,y_2)$ podemos definir um Polinômio de grau 1 que obedece $P(x_k) = y_k, k = 1,2$. Assim, para $N+1$ 
-pontos, podemos aproximar por um polinômio de grau menor ou igual que $N$.
+ Onde $f(x_i)$ é a função $f$ pré-calculada nos pontos $x_i$. A escolha desses pontos $x_i$ ainda será explicada.
+ 
+\subsection{Interpolação polinomial}
 
- Podemos usar diversos polinômios, um dos mais conhecidos é o polinômio de \textit{Lagrange} :
+ Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, eram utilizados tabelas com valores de pré-calculados. A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
+
+\begin{equation}
+	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + 							 \frac{x - x_0}{x_1 - x_0}f(x_1)
+\end{equation}
  
- \begin{equation}
- P(x) = \sum_{k = 1}_{k ^{N} \frac{x - x_j}{x_k - x_j}y_k
- \end{equation}
+\includegraphics[scale=0.4]{figuras/interpolacao_linear.png}
  
+ Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
+\begin{equation}
+C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j} 
+\end{equation}
+ A interpolação de \emph{Lagrange} é dada por :
+\begin{equation}
+ P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
+\end{equation}
+ Obedecendo que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
  
-Exemplo 
+\subsection{Fenômeno de Runge}
+ 
 
 
-Exemplo 
- 
+
+
+

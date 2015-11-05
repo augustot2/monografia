@@ -1,0 +1,13 @@
+
+ Sabendo os pontos $(x_k,y_k)$, definimos então o polinômio:
+\begin{equation}
+	P(x_k) = y_k, k = 1,...,N
+\end{equation} 
+ Para uma equação com 2 pontos $(x_1,x_2,y_1,y_2)$ podemos definir um Polinômio de grau 1 que obedece $P(x_k) = y_k, k = 1,2$. Assim, para $N+1$ pontos, podemos aproximar por um polinômio de grau menor ou igual que $N$.
+
+
+ Podemos usar diversos polinômios, um dos mais conhecidos é o polinômio de \textit{Lagrange} :
+ 
+\begin{equation}
+ P(x) = \sum_{k = 1} ^{N} \prod_{j \neq k}\frac{x - x_j}{x_k -x_j}y_k
+\end{equation}
