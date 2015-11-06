@@ -54,5 +54,17 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \end{figure}
 
  Assim, Runge prova que no meio do intervalo temos boas aproximações mas infelizmente perto dos extremos, os valores interpolados oscilam muito, para um polinômio de grau n com pontos equidistante. Esse fenômeno sugere que escolhamos pontos diversos que tenham menor concentração do meio do intervalo, onde temos uma maior precisão, e aumentar a densidade de pontos próximos dos extremos.
+ Agora como encontrar uma distribuição de pontos de forma que melhore a interpolação ? A resposta pode ser explicado pelos teoremas a seguir.
+ 
+\subsection{ Teorema I: Erro de interpolação de Cauchy}
+
+ Dado $f(x)$  com pelo menos $N+1$ derivadas no intervalo de interesse e seja $P_N(x)$ seja o interpolador Lagrangiano de grau $N$. Então:
+ 
+ \begin{equation}
+ f(x) - P_N(x) = \frac{1}{[N+1]!}f^{(N+1)}(\epsilon)\prod^{N}_{i = 0} (x - x_i)
+ \end{equation}
+ Para um $\epsilon(x) \in [-1,1]$.
+ 
+  
 
 
