@@ -19,10 +19,12 @@
 
 \begin{equation}
 	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + 							 \frac{x - x_0}{x_1 - x_0}f(x_1)
-\end{equation}
+\end{equation} 
  
-\includegraphics[scale=0.4]{figuras/interpolacao_linear.png}
- 
+\begin{figure}[!ht]
+  \includegraphics[width=0.3\textwidth,center]{figuras/interpolacao_linear.png}
+  \caption{interpolação simples}
+\end{figure}
  Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
 \begin{equation}
 C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j} 
@@ -32,9 +34,24 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
 \end{equation}
  Obedecendo que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
- 
+\begin{figure}[h]
+  \includegraphics[width=0.4\textwidth, center]{figuras/interpolacao_linear5.png}
+  \caption{interpolação com n pontos equidistantes}
+\end{figure}
+
+
 \subsection{Fenômeno de Runge}
- 
+ Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente distantes sobre um interval $[a,b]$, $\lim_{n \rightarrow \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável.
+ No início do século XX, \emph{Carl David Tolmé Runge}, provou que para uma função $f(x)$:
+ \begin{equation}
+ f(x) = \frac{1}{1 + x^2} , x \in [-5,5]
+ \end{equation}
+ que para pontos equidistantes, a interpolação converge apenas no intervalo $[-3.63,3.63]$, e diverge fora do mesmo. Para polinômios de maior grau, esse intervalo de convergência tende a diminuir e perto dos pontos de fronteira diverge bastante (figura abaixo).
+
+\begin{figure}[!h]
+\includegraphics[width=0.4\textwidth, center]{figuras/fenomeno_runge.png}
+\caption{fenômeno Runge}
+\end{figure}
 
 
 

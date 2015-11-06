@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  5 NOV 2015 14:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  6 NOV 2015 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,6 +366,54 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+\XKV@depth=\count102
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box28
+)
+\tc@llx=\dimen115
+\tc@lly=\dimen116
+\tc@urx=\dimen117
+\tc@ury=\dimen118
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen119
+\adjbox@Height=\dimen120
+\adjbox@Depth=\dimen121
+\adjbox@Totalheight=\dimen122
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box29
+\sift@deathcycles=\count104
+\@vwid@loff=\dimen123
+\@vwid@roff=\dimen124
+))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
@@ -384,24 +432,24 @@ Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
 atched RF)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count102
-\lst@gtempboxa=\box28
-\lst@token=\toks23
-\lst@length=\count103
-\lst@currlwidth=\dimen115
-\lst@column=\count104
-\lst@pos=\count105
-\lst@lostspace=\dimen116
-\lst@width=\dimen117
-\lst@newlines=\count106
-\lst@lineno=\count107
-\lst@maxwidth=\dimen118
+\lst@mode=\count105
+\lst@gtempboxa=\box30
+\lst@token=\toks25
+\lst@length=\count106
+\lst@currlwidth=\dimen125
+\lst@column=\count107
+\lst@pos=\count108
+\lst@lostspace=\dimen126
+\lst@width=\dimen127
+\lst@newlines=\count109
+\lst@lineno=\count110
+\lst@maxwidth=\dimen128
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count108
-\lst@skipnumbers=\count109
-\lst@framebox=\box29
+\c@lstnumber=\count111
+\lst@skipnumbers=\count112
+\lst@framebox=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2013/08/26 1.5b listings configuration
@@ -410,7 +458,7 @@ Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen119
+\ttl@leftsep=\dimen129
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -449,7 +497,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/babelbib/babelbib.sty
 Package: babelbib 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count110
+\c@btxromaniannumeral=\count113
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
@@ -457,15 +505,15 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen120
-\captionmargin@=\dimen121
-\captionwidth=\dimen122
-\caption@tempdima=\dimen123
-\caption@indent=\dimen124
-\caption@parindent=\dimen125
-\caption@hangindent=\dimen126
+\captionmargin=\dimen130
+\captionmargin@=\dimen131
+\captionwidth=\dimen132
+\caption@tempdima=\dimen133
+\caption@indent=\dimen134
+\caption@parindent=\dimen135
+\caption@hangindent=\dimen136
 )
-\c@ContinuedFloat=\count111
+\c@ContinuedFloat=\count114
 Package caption Info: listings package is loaded.
 )
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
@@ -506,18 +554,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count112
-\Gm@cntv=\count113
-\c@Gm@tempcnt=\count114
-\Gm@bindingoffset=\dimen127
-\Gm@wd@mp=\dimen128
-\Gm@odd@mp=\dimen129
-\Gm@even@mp=\dimen130
-\Gm@layoutwidth=\dimen131
-\Gm@layoutheight=\dimen132
-\Gm@layouthoffset=\dimen133
-\Gm@layoutvoffset=\dimen134
-\Gm@dimlist=\toks24
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
+\Gm@dimlist=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -571,16 +619,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen135
-\Hy@linkcounter=\count115
-\Hy@pagecounter=\count116
+\@linkdim=\dimen145
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count117
+\Hy@SavedSpaceFactor=\count120
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -605,17 +653,17 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count118
+\c@Hy@tempcnt=\count121
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen136
-\Fld@menulength=\count119
-\Field@Width=\dimen137
-\Fld@charsize=\dimen138
+\XeTeXLinkMargin=\dimen146
+\Fld@menulength=\count122
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -625,17 +673,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count120
-\c@Item=\count121
-\c@Hfootnote=\count122
+\Hy@abspage=\count123
+\c@Item=\count124
+\c@Hfootnote=\count125
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count123
-\c@bookmark@seq@number=\count124
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
 \Hy@SectionHShift=\skip46
 )
 (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
@@ -648,7 +696,7 @@ Package: natbib 2007/02/05 8.0 (PWD)
 \bibhang=\skip47
 \bibsep=\skip48
 LaTeX Info: Redefining \cite on input line 602.
-\c@NAT@ctr=\count125
+\c@NAT@ctr=\count128
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip49
@@ -692,17 +740,17 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
-\scratchdimen=\dimen139
-\scratchbox=\box30
-\nofMPsegments=\count127
-\nofMParguments=\count128
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count129
-\MPscratchDim=\dimen140
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count129
+\scratchdimen=\dimen149
+\scratchbox=\box32
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen150
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -718,7 +766,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count132
+\c@lstlisting=\count135
 
 babelbib: Set bibliography fall-back language to brazilian
 (/usr/share/texlive/texmf-dist/tex/latex/babelbib/portuguese.bdf
@@ -767,7 +815,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box31
+\AtBeginShipoutBox=\box33
 Package backref Info: ** backref set up for natbib ** on input line 97.
 Package hyperref Info: Link coloring ON on input line 97.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -776,7 +824,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count133
+\c@section@level=\count136
 )
 LaTeX Info: Redefining \ref on input line 97.
 LaTeX Info: Redefining \pageref on input line 97.
@@ -930,24 +978,40 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 7.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 16.
-<figuras/interpolacao_linear.png, id=119, 492.1587pt x 381.5856pt>
+<figuras/interpolacao_linear.png, id=130, 658.3797pt x 381.5856pt>
 File: figuras/interpolacao_linear.png Graphic file (type png)
 
 <use figuras/interpolacao_linear.png>
-Package pdftex.def Info: figuras/interpolacao_linear.png used on input line 24.
+Package pdftex.def Info: figuras/interpolacao_linear.png used on input line 25.
 
-(pdftex.def)             Requested size: 196.85999pt x 152.63153pt.
+(pdftex.def)             Requested size: 140.50119pt x 81.42793pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 27.
- [3 <./figuras/interpolacao_linear.png>])
-(./cap-conclusoes
+(babel)             in language  on input line 31.
+ [3 <./figuras/interpolacao_linear.png>]
+<figuras/interpolacao_linear5.png, id=145, 658.3797pt x 381.5856pt>
+File: figuras/interpolacao_linear5.png Graphic file (type png)
+
+<use figuras/interpolacao_linear5.png>
+Package pdftex.def Info: figuras/interpolacao_linear5.png used on input line 38
+.
+(pdftex.def)             Requested size: 187.33015pt x 108.57253pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 43.
+
+<figuras/fenomeno_runge.png, id=146, 670.6656pt x 375.804pt>
+File: figuras/fenomeno_runge.png Graphic file (type png)
+
+<use figuras/fenomeno_runge.png>
+Package pdftex.def Info: figuras/fenomeno_runge.png used on input line 57.
+(pdftex.def)             Requested size: 187.33015pt x 104.96635pt.
+) (./cap-conclusoes
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
- [4]
+ [4 <./figuras/interpolacao_linear5.png> <./figuras/fenomeno_runge.png>]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
@@ -985,19 +1049,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: EA7CBA1DF1D6F131564FFDA89369FEC8;629.
+(rerunfilecheck)             Checksum: 87DD322EA56B73028B96972774504B77;702.
 Package rerunfilecheck Info: File `monografia.brf' has not changed.
 (rerunfilecheck)             Checksum: 1D85FC32715890DA937219872CA43564;48.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
  ) 
 Here is how much of TeX's memory you used:
- 11554 strings out of 493304
- 167015 string characters out of 6139871
- 299136 words of memory out of 5000000
- 14749 multiletter control sequences out of 15000+600000
- 74861 words of font info for 51 fonts, out of 8000000 for 9000
+ 12310 strings out of 493304
+ 179066 string characters out of 6139871
+ 315194 words of memory out of 5000000
+ 15466 multiletter control sequences out of 15000+600000
+ 85109 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 36i,12n,43p,597b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,92p,597b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1011,10 +1075,10 @@ share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb>
-Output written on monografia.pdf (17 pages, 270387 bytes).
+Output written on monografia.pdf (17 pages, 388851 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
