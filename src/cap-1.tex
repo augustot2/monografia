@@ -12,8 +12,12 @@
 \end{equation}
 
  Onde $f(x_i)$ é a função $f$ pré-calculada nos pontos $x_i$. A escolha desses pontos $x_i$ ainda será explicada.
- 
+
 \subsection{Interpolação polinomial}
+ \begin{figure}[!ht]
+  \includegraphics[width=0.7\textwidth,center]{figuras/interpolacao_linear.png}
+  \caption{interpolação simples}
+\end{figure}
 
  Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, eram utilizados tabelas com valores de pré-calculados. A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
 
@@ -21,55 +25,15 @@
 	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + 							 \frac{x - x_0}{x_1 - x_0}f(x_1)
 \end{equation} 
  
-\begin{figure}[!ht]
-  \includegraphics[width=0.7\textwidth,center]{figuras/interpolacao_linear.png}
-  \caption{interpolação simples}
-\end{figure}
-
-
-\pagebreak
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
 \begin{equation}
 C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j} 
 \end{equation}
-\begin{figure}[htb]
-\includegraphics[width=0.7\textwidth, ]{figuras/exemplo_polinomio_lagrange.png}
-\caption{polinomio base de Lagrange para 6 pontos}
+
+\begin{figure}[!h]
+\includegraphics[width=0.7\textwidth, center ]{figuras/exemplo_polinomio_lagrange.png}
+\caption{polinômio base de Lagrange para 6 pontos}
 \end{figure}
-
-
-\newpage
-\pagebreak
 
  A interpolação de \emph{Lagrange} é dada por :
 \begin{equation}
@@ -77,10 +41,12 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \end{equation}
  Obedecendo que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
 \begin{figure}[h]
-  \includegraphics[width=0.7\textwidth, right]{figuras/interpolacao_linear5.png}
+  \includegraphics[width=0.5\textwidth, center]{figuras/interpolacao_linear5.png}
   \caption{interpolação com n pontos equidistantes}
 \end{figure}
 
+\pagebreak
+\newpage
 
 \subsection{Fenômeno de Runge}
  Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente distantes sobre um interval $[a,b]$, $\lim_{n \rightarrow \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável.
