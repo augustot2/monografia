@@ -1,8 +1,9 @@
 \select@language {brazilian}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces interpola\IeC {\c c}\IeC {\~a}o simples\relax }}{3}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces interpola\IeC {\c c}\IeC {\~a}o com n pontos equidistantes\relax }}{4}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces fen\IeC {\^o}meno Runge\relax }}{4}{figure.caption.7}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces interpola\IeC {\c c}\IeC {\~a}o simples\relax }}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces polinomio base de Lagrange para 6 pontos\relax }}{4}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces interpola\IeC {\c c}\IeC {\~a}o com n pontos equidistantes\relax }}{5}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces fen\IeC {\^o}meno Runge\relax }}{5}{figure.caption.8}
 \addvspace {10\p@ }
 \contentsfinish 

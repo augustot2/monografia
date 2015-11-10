@@ -8,7 +8,9 @@
 \contentsline {section}{\numberline {2.1}M\IeC {\'e}todo espectral}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Interpola\IeC {\c c}\IeC {\~a}o}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{3}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^o}meno de Runge}{4}{subsection.2.2.2}
-\contentsline {chapter}{\numberline {3}Conclus\IeC {\~o}es}{5}{chapter.3}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{7}{chapter*.8}
+\contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^o}meno de Runge}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
+\contentsline {chapter}{\numberline {3}Conclus\IeC {\~o}es}{9}{chapter.3}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{11}{chapter*.9}
 \contentsfinish 

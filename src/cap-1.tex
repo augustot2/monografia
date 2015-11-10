@@ -22,20 +22,62 @@
 \end{equation} 
  
 \begin{figure}[!ht]
-  \includegraphics[width=0.3\textwidth,center]{figuras/interpolacao_linear.png}
+  \includegraphics[width=0.7\textwidth,center]{figuras/interpolacao_linear.png}
   \caption{interpolação simples}
 \end{figure}
+
+
+\pagebreak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
 \begin{equation}
 C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j} 
 \end{equation}
+\begin{figure}[htb]
+\includegraphics[width=0.7\textwidth, ]{figuras/exemplo_polinomio_lagrange.png}
+\caption{polinomio base de Lagrange para 6 pontos}
+\end{figure}
+
+
+\newpage
+\pagebreak
+
  A interpolação de \emph{Lagrange} é dada por :
 \begin{equation}
  P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
 \end{equation}
  Obedecendo que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
 \begin{figure}[h]
-  \includegraphics[width=0.4\textwidth, center]{figuras/interpolacao_linear5.png}
+  \includegraphics[width=0.7\textwidth, right]{figuras/interpolacao_linear5.png}
   \caption{interpolação com n pontos equidistantes}
 \end{figure}
 
@@ -48,8 +90,8 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{equation}
  que para pontos equidistantes, a interpolação converge apenas no intervalo $[-3.63,3.63]$, e diverge fora do mesmo. Para polinômios de maior grau, esse intervalo de convergência tende a diminuir e perto dos pontos de fronteira diverge bastante (figura abaixo).
 
-\begin{figure}[!h]
-\includegraphics[width=0.4\textwidth, center]{figuras/fenomeno_runge.png}
+\begin{figure}[htp]
+\includegraphics[width=0.7\textwidth, center]{figuras/fenomeno_runge.png}
 \caption{fenômeno Runge}
 \end{figure}
 
@@ -58,12 +100,45 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  
 \subsection{ Teorema I: Erro de interpolação de Cauchy}
 
- Dado $f(x)$  com pelo menos $N+1$ derivadas no intervalo de interesse e seja $P_N(x)$ seja o interpolador Lagrangiano de grau $N$. Então:
+ Dado $f(x)$  com pelo menos $N+1$ derivadas no intervalo de interesse e seja $P_N(x)$ seja o interpolador Lagrangiano de grau $N$. Então o erro é dado por:
  
  \begin{equation}
  f(x) - P_N(x) = \frac{1}{[N+1]!}f^{(N+1)}(\epsilon)\prod^{N}_{i = 0} (x - x_i)
  \end{equation}
  Para um $\epsilon(x) \in [-1,1]$.
  
-  2
-test
+ Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^(N+1)(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
+
+ 
+\subsection{Teorema II: Amplitude minima}
+ De todos os polinômios de grau $N$ com coeficiente de $x^N$ igual a 1, o único polinômio que tem o menor máximo no intervalo $[-1,1]$ é $\frac{T_N(x)}{2^(N-1)}$, o polinômio de \emph{Chebyshev} dividido por ideia. Em outras palavras, todos os polinômios de mesmo grau e coeficiente líder unitário, satisfazem a desigualdade:
+
+\begin{equation}
+	max_{x \in [-1,1]}|P_N(x)| \geq  max_{x \in [-1,1]} \left |\frac{T_N(x)}{2^(N-1)}  \right |  = \frac{1}{2^{N-1}}\\
+\end{equation}
+
+\begin{align}
+    T_0(x) = 1\\
+    T_1(x) = x\\
+    T_{N+1}(x) = 2xT_N(x) - T_{N-1}(x)\\
+    T_{N}(x)=\cos(n \arccos x)=\cosh(n\,\operatorname{arcosh}\,x)
+\end{align}
+
+ Agora, qualquer polinômio de grau $N$ pode ser fatorado na forma de um produtório  $(x - x_i)$, onde $x_i$ é uma das raízes do polinômio, em particular:
+ \begin{equation}
+ \frac{1}{2^N}T_{N+1}(x) \equiv \prod_{i = 1}^{N+1} (x-x_i)
+ \end{equation}
+ Temos então que, para minimizar o erro no \emph{Teorema I}, o polinômio deve ser proporcional a $T_{N+1}(x)$. Isso implica que  os pontos interpoladores que minimizam o erro, são as raízes do próprio polinômio de \emph{Chebyshev} de grau $N+1$.
+ 
+ Usando o fato que esse polinômio pode ser reescrita como uma função trigonométrica, temos que as raízes são:
+ \begin{equation}
+  x_i  \equiv \cos \left [ \frac{(2i - 1)pi}{2(N+1)}  \right ] , i = 1,2,..., N+1
+ \end{equation}
+ 
+ Pela expansão de \emph{Taylor} da função coseno, verificamos a afirmação de acima que o espaçamento da malha é $O(N^2)$ perto das fronteiras:
+ 
+ \begin{equation}
+  x_1 \approx -1 + \frac{\pi^2}{8N^2} ; x_2 = -1 + \frac{9\pi}{8N^2} [N\gg 1]
+ \end{equation}
+ 
+ Tendo calculados temos 
