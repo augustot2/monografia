@@ -1,4 +1,4 @@
-\chapter{Método espectral}
+\chapter{Método espectral e Método dos elementos finitos}
 \label{cap:I}
 \section{sobre}
 
@@ -124,18 +124,28 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
   w_i \equiv \int_{a}^{b} C_i(x) \partial x
  \end{equation}
  Onde $C_i$ é o polinômio base de \emph{Lagrange}.
- Quando calculamos, os pontos de \emph{interpolação} são nomeados de \bold{abcissas}, enquanto que a \emph{integral} de um polinômio base é chamado de \bold{Pesos de quadratura}, no contexto da integração numérica.
- A \emph{ordem} de um método numérico é diretamente relacionado a maior polinômio que o aproxima. Por exemplo quando aplicamos a interpolação para equações de primeiro e segundo grau, os erros são respectivamente $O(h^2}\ O(h^4)$. Similarmente, a fórmula de quadratura com $(N + 1)$ pontos, será exata se o integrado for um polinômio de grau $N$.
+ Quando calculamos, os pontos de \emph{interpolação} são nomeados de \emph{abcissas}, enquanto que a \emph{integral} de um polinômio base é chamado de \emph{quadratura}, no contexto da integração numérica.
+ 
+ A \emph{ordem} de um método numérico é diretamente relacionado a maior polinômio que o aproxima. Por exemplo quando aplicamos a interpolação para equações de primeiro e segundo grau, os erros são respectivamente $O(h^2),\ O(h^4)$. Similarmente, a fórmula de quadratura com $(N + 1)$ pontos, será exata se o integrado for um polinômio de grau $N$.
+ 
  Gauss fez uma observação que pontos de interpolação equidistantes não são tão bons. Se tivermos pontos interpoladores $x_i$ e seus pesos $w_i$ 
 desconhecido, teremos o dobro de parâmetros para escolher que maximizem a precisão do método e assim podemos ter uma aproximação exata para polinômios de grau $(2N + 1)$.
-\subsection{tipos de polinômio}
-
-
 \subsection{Teorema: Integração Gauss-Jacobi}
  Seja $(N + 1)$ pontos interpoladores $x_i$ escolhidos e raízes de $P_N(x)$, um polinômio de grau $(N+1)$ do tipo \emph{ortogonal} no intervalo $[a,b]$ com respeito a função $p(x)$, então a fórmula de quadratura é dado por:
 \begin{equation}
- $\int^a_b f(x)p(x) \partial x = \sum^{N}_{i= 0} w_i f_i(x)
+ \int^a_b f(x)p(x) \partial x = \sum^{N}_{i= 0} w_i f_i(x)
 \end{equation} 
 é exata para toda $f(x)$ polinomial de grau máximo $(2N +1)$
 
+\subsection{tipos de polinômio}
+	adicionar outros polinômios de base talvez ?
+	Gauss-Jacobi
+	Gauss-Lobatto-Jacobi
+	Gauss-Radau-Jacobi 
 
+
+\subsection{Derivada}
+	Adicionar texto derivada
+	
+\section{método dos elementos finitos}
+adicionar texto de elementos dinâmicos

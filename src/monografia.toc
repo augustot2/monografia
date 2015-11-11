@@ -12,6 +12,8 @@
 \contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{5}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{7}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}tipos de polin\IeC {\^o}mio}{7}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{7}{subsection.2.2.7}
 \contentsline {chapter}{\numberline {3}Conclus\IeC {\~o}es}{9}{chapter.3}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{11}{chapter*.10}
 \contentsfinish 
