@@ -1,6 +1,6 @@
-\chapter{Capítulo I}
+\chapter{Método espectral}
 \label{cap:I}
-\section{Método espectral}
+\section{sobre}
 
  Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}.
 
@@ -107,7 +107,35 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
   x_1 \approx -1 + \frac{\pi^2}{8N^2}\ ;\ x_2 \approx -1 + \frac{9\pi}{8N^2} [N\gg 1]
  \end{equation}
  
- Agora temos 
- 
+ Agora temos como conseguir o polinômio de \emph{Chebyshev} que minimiza o erro. Porém essa escolha de polinômio varia para diferentes geometrias ou funções harmônicas ou hermitianas.
+ \begin{figure}[b]
+ \includegraphics[width=0.45\textwidth, center]{figuras/chebychev_equidist.png}
+ \caption{método de raízes de chebychev contra raízes de pontos equidistante}
+ \end{figure}
+\pagebreak
+\subsection{Integração gaussiana e linhas pseudoespectral}
+ A razão pelo qual o método de colocação é também chamado "pseudoespectral" devido a colocação otimizada dos pontos de interpolação, como o polinômio de \emph{Chebyshev}, faz o método da colocação idêntico ao método de \emph{Galerkin} se o produto interno é calculado por um tipo de integração numérica conhecida como Integração gaussiana.
+ Integração numérica e interpolação Lagrangiana são muito correlacionada pois o método de integração é de aproximar o polinômio pelo integrando de $f(x)$ e depois integrar $P_N(X)$. Como o interpolado pode ser integrado facilmente, o erro é dado como a diferença de $f(x)$ e $P_N(x)$.  A fórmula é dada por:
+ \begin{equation}
+  \int_a^b f(x) \partial x \approx \sum_{i = 0}^N w_i f(x)
+ \end{equation}
+ e a função peso $w_i$ é dado por:
+ \begin{equation}
+  w_i \equiv \int_{a}^{b} C_i(x) \partial x
+ \end{equation}
+ Onde $C_i$ é o polinômio base de \emph{Lagrange}.
+ Quando calculamos, os pontos de \emph{interpolação} são nomeados de \bold{abcissas}, enquanto que a \emph{integral} de um polinômio base é chamado de \bold{Pesos de quadratura}, no contexto da integração numérica.
+ A \emph{ordem} de um método numérico é diretamente relacionado a maior polinômio que o aproxima. Por exemplo quando aplicamos a interpolação para equações de primeiro e segundo grau, os erros são respectivamente $O(h^2}\ O(h^4)$. Similarmente, a fórmula de quadratura com $(N + 1)$ pontos, será exata se o integrado for um polinômio de grau $N$.
+ Gauss fez uma observação que pontos de interpolação equidistantes não são tão bons. Se tivermos pontos interpoladores $x_i$ e seus pesos $w_i$ 
+desconhecido, teremos o dobro de parâmetros para escolher que maximizem a precisão do método e assim podemos ter uma aproximação exata para polinômios de grau $(2N + 1)$.
+\subsection{tipos de polinômio}
 
- 
+
+\subsection{Teorema: Integração Gauss-Jacobi}
+ Seja $(N + 1)$ pontos interpoladores $x_i$ escolhidos e raízes de $P_N(x)$, um polinômio de grau $(N+1)$ do tipo \emph{ortogonal} no intervalo $[a,b]$ com respeito a função $p(x)$, então a fórmula de quadratura é dado por:
+\begin{equation}
+ $\int^a_b f(x)p(x) \partial x = \sum^{N}_{i= 0} w_i f_i(x)
+\end{equation} 
+é exata para toda $f(x)$ polinomial de grau máximo $(2N +1)$
+
+

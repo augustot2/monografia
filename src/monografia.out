@@ -3,12 +3,13 @@
 \BOOKMARK [0][]{chapter.1}{Introdu\347\343o}{}% 3
 \BOOKMARK [1][]{section.1.1}{Hist\363ria}{chapter.1}% 4
 \BOOKMARK [1][]{section.1.2}{Julia}{chapter.1}% 5
-\BOOKMARK [0][]{chapter.2}{Cap\355tulo I}{}% 6
-\BOOKMARK [1][]{section.2.1}{M\351todo espectral}{chapter.2}% 7
+\BOOKMARK [0][]{chapter.2}{M\351todo espectral}{}% 6
+\BOOKMARK [1][]{section.2.1}{sobre}{chapter.2}% 7
 \BOOKMARK [1][]{section.2.2}{Interpola\347\343o}{chapter.2}% 8
 \BOOKMARK [2][]{subsection.2.2.1}{Interpola\347\343o polinomial}{section.2.2}% 9
 \BOOKMARK [2][]{subsection.2.2.2}{Fen\364meno de Runge}{section.2.2}% 10
 \BOOKMARK [2][]{subsection.2.2.3}{ Teorema I: Erro de interpola\347\343o de Cauchy}{section.2.2}% 11
 \BOOKMARK [2][]{subsection.2.2.4}{Teorema II: Amplitude minima}{section.2.2}% 12
-\BOOKMARK [0][]{chapter.3}{Conclus\365es}{}% 13
-\BOOKMARK [0][]{chapter*.9}{Refer\352ncias Bibliogr\341ficas}{}% 14
+\BOOKMARK [2][]{subsection.2.2.5}{Integra\347\343o gaussiana e linhas pseudoespectral}{section.2.2}% 13
+\BOOKMARK [0][]{chapter.3}{Conclus\365es}{}% 14
+\BOOKMARK [0][]{chapter*.10}{Refer\352ncias Bibliogr\341ficas}{}% 15
