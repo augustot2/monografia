@@ -4,7 +4,7 @@
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Hist\IeC {\'o}ria}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Julia}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}M\IeC {\'e}todo espectral}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}sobre}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Interpola\IeC {\c c}\IeC {\~a}o}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{3}{subsection.2.2.1}
@@ -12,8 +12,16 @@
 \contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{5}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{7}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}tipos de polin\IeC {\^o}mio}{7}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{7}{subsection.2.2.7}
-\contentsline {chapter}{\numberline {3}Conclus\IeC {\~o}es}{9}{chapter.3}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{11}{chapter*.10}
+\contentsline {subsection}{\numberline {2.2.6}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{7}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}tipos de polin\IeC {\^o}mio}{7}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Derivada}{8}{subsection.2.2.8}
+\contentsline {section}{\numberline {2.3}m\IeC {\'e}todo dos elementos finitos}{8}{section.2.3}
+\contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Discretiza\IeC {\c c}\IeC {\~a}o}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Solver linear}{9}{section.3.4}
+\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{11}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{13}{chapter.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{15}{chapter*.10}
 \contentsfinish 

@@ -3,7 +3,7 @@
 \BOOKMARK [0][]{chapter.1}{Introdu\347\343o}{}% 3
 \BOOKMARK [1][]{section.1.1}{Hist\363ria}{chapter.1}% 4
 \BOOKMARK [1][]{section.1.2}{Julia}{chapter.1}% 5
-\BOOKMARK [0][]{chapter.2}{M\351todo espectral}{}% 6
+\BOOKMARK [0][]{chapter.2}{M\351todo espectral e M\351todo dos elementos finitos}{}% 6
 \BOOKMARK [1][]{section.2.1}{sobre}{chapter.2}% 7
 \BOOKMARK [1][]{section.2.2}{Interpola\347\343o}{chapter.2}% 8
 \BOOKMARK [2][]{subsection.2.2.1}{Interpola\347\343o polinomial}{section.2.2}% 9
@@ -11,7 +11,15 @@
 \BOOKMARK [2][]{subsection.2.2.3}{ Teorema I: Erro de interpola\347\343o de Cauchy}{section.2.2}% 11
 \BOOKMARK [2][]{subsection.2.2.4}{Teorema II: Amplitude minima}{section.2.2}% 12
 \BOOKMARK [2][]{subsection.2.2.5}{Integra\347\343o gaussiana e linhas pseudoespectral}{section.2.2}% 13
-\BOOKMARK [2][]{subsection.2.2.6}{tipos de polin\364mio}{section.2.2}% 14
-\BOOKMARK [2][]{subsection.2.2.7}{Teorema: Integra\347\343o Gauss-Jacobi}{section.2.2}% 15
-\BOOKMARK [0][]{chapter.3}{Conclus\365es}{}% 16
-\BOOKMARK [0][]{chapter*.10}{Refer\352ncias Bibliogr\341ficas}{}% 17
+\BOOKMARK [2][]{subsection.2.2.6}{Teorema: Integra\347\343o Gauss-Jacobi}{section.2.2}% 14
+\BOOKMARK [2][]{subsection.2.2.7}{tipos de polin\364mio}{section.2.2}% 15
+\BOOKMARK [2][]{subsection.2.2.8}{Derivada}{section.2.2}% 16
+\BOOKMARK [1][]{section.2.3}{m\351todo dos elementos finitos}{chapter.2}% 17
+\BOOKMARK [0][]{chapter.3}{M\351todo dos elementos espectrais}{}% 18
+\BOOKMARK [1][]{section.3.1}{Equa\347\343o de Helmholtz}{chapter.3}% 19
+\BOOKMARK [1][]{section.3.2}{Condi\347\343o de contorno Neumann de newton e Dirichilet}{chapter.3}% 20
+\BOOKMARK [1][]{section.3.3}{Discretiza\347\343o}{chapter.3}% 21
+\BOOKMARK [1][]{section.3.4}{Solver linear}{chapter.3}% 22
+\BOOKMARK [0][]{chapter.4}{Simula\347\365es}{}% 23
+\BOOKMARK [0][]{chapter.5}{Conclus\365es}{}% 24
+\BOOKMARK [0][]{chapter*.10}{Refer\352ncias Bibliogr\341ficas}{}% 25

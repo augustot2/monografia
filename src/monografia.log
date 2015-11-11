@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  11 NOV 2015 16:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.17)  11 NOV 2015 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,16 +1005,19 @@ File: figuras/interpolacao_linear5.png Graphic file (type png)
 Package pdftex.def Info: figuras/interpolacao_linear5.png used on input line 44
 .
 (pdftex.def)             Requested size: 234.16628pt x 135.7171pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
- [4 <./figuras/exemplo_polinomio_lagrange.png> <./figuras/interpolacao_linear5.
-png>]
+[4 <./figuras/exemplo_polinomio_lagrange.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 51.
 
-<figuras/fenomeno_runge.png, id=187, 670.6656pt x 375.804pt>
+<figuras/fenomeno_runge.png, id=186, 670.6656pt x 375.804pt>
 File: figuras/fenomeno_runge.png Graphic file (type png)
 
 <use figuras/fenomeno_runge.png>
@@ -1023,13 +1026,14 @@ Package pdftex.def Info: figuras/fenomeno_runge.png used on input line 60.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 73.
+ [5 <./figuras/interpolacao_linear5.png> <./figuras/fenomeno_runge.png>]
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 79.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 81.
- [5 <./figuras/fenomeno_runge.png>]
-<figuras/chebychev_equidist.png, id=195, 692.3466pt x 391.7034pt>
+
+<figuras/chebychev_equidist.png, id=194, 692.3466pt x 391.7034pt>
 File: figuras/chebychev_equidist.png Graphic file (type png)
 
 <use figuras/chebychev_equidist.png>
@@ -1040,41 +1044,84 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 116.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 116.
- [6 <./figuras/chebychev_equidist.png>]
+ [6]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 116.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 138.
-)
-(./cap-conclusoes
+(babel)             in language  on input line 140.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
- [7]
+(babel)             in language  on input line 152.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 152.
+ [7 <./figuras/chebychev_equidist.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
- [8
-
-]
+(babel)             in language  on input line 155.
+) (./cap-2.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [8]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+) (./cap-3.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [9
+
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+ [10
+
+]
+Cap\'{\i }tulo 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 1.
+) (./cap-conclusoes
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+ [11]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 2.
+ [12
+
+]
+Cap\'{\i }tulo 5.
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 326.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 326.
- [9]
+(babel)             in language  on input line 328.
+ [13]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 326.
+(babel)             in language  on input line 328.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 326.
- [10
+(babel)             in language  on input line 328.
+ [14
 
 ] (./monografia.bbl (./monografia.brf)
 \tf@brf=\write8
@@ -1083,29 +1130,44 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 339.
+(babel)             in language  on input line 341.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 339.
- [11
+(babel)             in language  on input line 341.
+ [15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
  (./monografia.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
-Package rerunfilecheck Info: File `monografia.out' has not changed.
-(rerunfilecheck)             Checksum: 16F240CE7058144ED7E7623DE0914732;1146.
-Package rerunfilecheck Info: File `monografia.brf' has not changed.
-(rerunfilecheck)             Checksum: B3F46C3CA2413E3E89A4AE1A5A4177EC;48.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 339.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
+
+
+Package rerunfilecheck Warning: File `monografia.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `monografia.out':
+(rerunfilecheck)             Before: 16F240CE7058144ED7E7623DE0914732;1146
+(rerunfilecheck)             After:  9BA3398837E80DA47358862C57B7BBEF;1737.
+
+Package rerunfilecheck Warning: File `monografia.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `monografia.brf':
+(rerunfilecheck)             Before: B3F46C3CA2413E3E89A4AE1A5A4177EC;48
+(rerunfilecheck)             After:  918F5EC657D01E5C8A9BADF346249B17;49.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
  ) 
 Here is how much of TeX's memory you used:
- 12355 strings out of 493304
- 179930 string characters out of 6139871
- 317194 words of memory out of 5000000
- 15486 multiletter control sequences out of 15000+600000
+ 12377 strings out of 493304
+ 180144 string characters out of 6139871
+ 319194 words of memory out of 5000000
+ 15488 multiletter control sequences out of 15000+600000
  85109 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  53i,12n,92p,624b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1123,10 +1185,10 @@ c/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmsy8.pfb>
-Output written on monografia.pdf (21 pages, 490815 bytes).
+Output written on monografia.pdf (25 pages, 493789 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 260 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
