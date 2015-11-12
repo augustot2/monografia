@@ -22,7 +22,7 @@
  Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, era utilizar tabelas com valores de pré-calculados. \corr{A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}}.
 
 \begin{equation}
-	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + 							 \frac{x - x_0}{x_1 - x_0}f(x_1)
+	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + \frac{x - x_0}{x_1 - x_0}f(x_1)
 \end{equation} 
  
  Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
@@ -77,20 +77,18 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 
  
 \subsection{Teorema II: Amplitude minima}
- De todos os polinômios de grau $N$ com coeficiente de $x^N$ igual a 1, o único polinômio que tem o menor máximo no intervalo $[-1,1]$ é $\frac{T_N(x)}{2^{N-1}}$, o polinômio de \emph{Chebyshev} \corr{dividido por ideia}. Em outras palavras, todos os polinômios de mesmo grau e coeficiente líder unitário, satisfazem a desigualdade: \corr{Em Inglês o nome deste tipo de polinômio é ``monic polynomial''}
+ De todos os polinômios de grau $N$ com coeficiente de $x^N$ igual a 1, o único polinômio que tem o menor máximo no intervalo $[-1,1]$ é $\frac{T_N(x)}{2^{N-1}}$, o polinômio de \emph{Chebyshev}  dividido por $2^{N-1}$. Em outras palavras, todos os polinômios de mesmo grau e coeficiente líder unitário,chamados de polinômios mônicos, satisfazem a desigualdade:
 
 \begin{equation}
 	max_{x \in [-1,1]}|P_N(x)| \geq  max_{x \in [-1,1]} \left |\frac{T_N(x)}{2^{N-1}}  \right |  = \frac{1}{2^{N-1}}\\
 \end{equation}
 
-\corr{Você erra sistemáticamente expoentes em \LaTeX : $x^{1+2}$ ou $x^{(1+2)}$ e não $x^(1+2)$}
-
 \begin{align}
-    T_0(x) &= 1\\
-    T_1(x) &= x\\
-    T_{N+1}(x) &= 2xT_N(x) - T_{N-1}(x)\\
-    T_{N}(x)&=\cos(n \arccos x)=\cosh(n\,\operatorname{arcosh}\,x)
-\end{align}\corr{Tem que colocar} \& \corr{onde você quer alinhar as equações!!!}
+    &T_0(x) = 1\\
+    &T_1(x) = x\\
+    &T_{N+1}(x) = 2xT_N(x) - T_{N-1}(x)\\
+    &T_{N}(x) =\cos(n \arccos x)=\cosh(n\,\operatorname{arcosh}\,x)
+\end{align}
 
  Agora, qualquer polinômio de grau $N$, com coeficiente líder unitário, pode ser fatorado na forma de um produtório  $(x - x_i)$, onde $x_i$ é uma das raízes do polinômio, em particular: 
  \begin{equation}
@@ -115,48 +113,5 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \caption{método de raízes de chebychev contra raízes de pontos equidistante}
  \end{figure}
 \pagebreak
-\subsection{Integração gaussiana e linhas pseudoespectral}
-\corr{Eu colocaria em outra seção e não como subseção da interpolação}
- A razão pelo qual o método de colocação é também chamado "pseudoespectral" devido a colocação otimizada dos pontos de interpolação, como o polinômio de \emph{Chebyshev}, faz o método da colocação idêntico ao método de \emph{Galerkin} se o produto interno é calculado por um tipo de integração numérica conhecida como Integração gaussiana. \corr{Você não falou o que é o método espetral, Galerkin, etc}
- Integração numérica e interpolação Lagrangiana são muito correlacionada pois o método de integração é de aproximar o polinômio pelo integrando de $f(x)$ e depois integrar $P_N(X)$. Como o interpolado pode ser integrado facilmente, o erro é dado como a diferença de $f(x)$ e $P_N(x)$.  A fórmula é dada por:
- \begin{equation}
-  \int_a^b f(x) \partial x \approx \sum_{i = 0}^N w_i f(x)
- \end{equation}
- e a função peso $w_i$ é dado por:
- \begin{equation}
-  w_i \equiv \int_{a}^{b} C_i(x) \partial x
- \end{equation}
- Onde $C_i$ é o polinômio base de \emph{Lagrange}.
- Quando calculamos, os pontos de \emph{interpolação} são nomeados de \emph{abcissas}, enquanto que a \emph{integral} de um polinômio base é chamado de \emph{quadratura}, no contexto da integração numérica.
- 
- A \emph{ordem} de um método numérico é diretamente relacionado a maior polinômio que o aproxima. Por exemplo quando aplicamos a interpolação para equações de primeiro e segundo grau, os erros são respectivamente $O(h^2),\ O(h^4)$. Similarmente, a fórmula de quadratura com $(N + 1)$ pontos, será exata se o integrado for um polinômio de grau $N$.
- 
- Gauss fez uma observação que pontos de interpolação equidistantes não são tão bons. Se tivermos pontos interpoladores $x_i$ e seus pesos $w_i$ 
-desconhecido, teremos o dobro de parâmetros para escolher que maximizem a precisão do método e assim podemos ter uma aproximação exata para polinômios de grau $(2N + 1)$.
-\subsection{Teorema: Integração Gauss-Jacobi}
- Seja $(N + 1)$ pontos interpoladores $x_i$ escolhidos e raízes de $P_N(x)$, um polinômio de grau $(N+1)$ do tipo \emph{ortogonal} no intervalo $[a,b]$ com respeito a função $p(x)$, então a fórmula de quadratura é dado por:
-\begin{equation}
- \int^a_b f(x)p(x) \partial x = \sum^{N}_{i= 0} w_i f_i(x)
-\end{equation} 
-é exata para toda $f(x)$ polinomial de grau máximo $(2N +1)$
-
-\subsection{tipos de polinômio}
-	adicionar outros polinômios de base talvez ?
-	Gauss-Jacobi
-	Gauss-Lobatto-Jacobi
-	Gauss-Radau-Jacobi 
-
-
-\subsection{Derivada}
-	As derivadas podem ser calculadas da seguinte forma:
-	\begin{align}
-	f(x) = \sum^{N-1}_{i=0} f(x_i) C_i(x)\\
-	\frac{\partial f(x)}{\partial x} = \sum^{N}_{i = 0} f(x_i) \frac{\partial C_i(x)}{\partial x}
-	\end{align}
-	para calcular as integrais, é necessário conhecer a derivada nos nós da quadratura, $x_i$ :
-	%\begin{equation}
-	%
-	%\end{equation}
-
 \section{método dos elementos finitos}
 adicionar texto de elementos dinâmicos
