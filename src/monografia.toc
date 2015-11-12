@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{7}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{7}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}tipos de polin\IeC {\^o}mio}{7}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.7}tipos de polin\IeC {\^o}mio}{8}{subsection.2.2.7}
 \contentsline {subsection}{\numberline {2.2.8}Derivada}{8}{subsection.2.2.8}
 \contentsline {section}{\numberline {2.3}m\IeC {\'e}todo dos elementos finitos}{8}{section.2.3}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{9}{chapter.3}

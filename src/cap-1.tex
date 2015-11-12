@@ -1,8 +1,8 @@
 \chapter{Método espectral e Método dos elementos finitos}
 \label{cap:I}
-\section{sobre}
+\section{sobre}\corr{Sério? O título é sobre?}
 
- Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}.
+ Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. \corr{E o método de elementos espectrais?}
 
 \section{Interpolação}
  A interpolação de uma função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ e que satisfaça:
@@ -19,7 +19,7 @@
   \caption{interpolação simples}
 \end{figure}
 
- Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, eram utilizados tabelas com valores de pré-calculados. A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
+ Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, era utilizar tabelas com valores de pré-calculados. \corr{A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}}.
 
 \begin{equation}
 	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + 							 \frac{x - x_0}{x_1 - x_0}f(x_1)
@@ -77,20 +77,22 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 
  
 \subsection{Teorema II: Amplitude minima}
- De todos os polinômios de grau $N$ com coeficiente de $x^N$ igual a 1, o único polinômio que tem o menor máximo no intervalo $[-1,1]$ é $\frac{T_N(x)}{2^(N-1)}$, o polinômio de \emph{Chebyshev} dividido por ideia. Em outras palavras, todos os polinômios de mesmo grau e coeficiente líder unitário, satisfazem a desigualdade:
+ De todos os polinômios de grau $N$ com coeficiente de $x^N$ igual a 1, o único polinômio que tem o menor máximo no intervalo $[-1,1]$ é $\frac{T_N(x)}{2^{N-1}}$, o polinômio de \emph{Chebyshev} \corr{dividido por ideia}. Em outras palavras, todos os polinômios de mesmo grau e coeficiente líder unitário, satisfazem a desigualdade: \corr{Em Inglês o nome deste tipo de polinômio é ``monic polynomial''}
 
 \begin{equation}
-	max_{x \in [-1,1]}|P_N(x)| \geq  max_{x \in [-1,1]} \left |\frac{T_N(x)}{2^(N-1)}  \right |  = \frac{1}{2^{N-1}}\\
+	max_{x \in [-1,1]}|P_N(x)| \geq  max_{x \in [-1,1]} \left |\frac{T_N(x)}{2^{N-1}}  \right |  = \frac{1}{2^{N-1}}\\
 \end{equation}
 
-\begin{align}
-    T_0(x) = 1\\
-    T_1(x) = x\\
-    T_{N+1}(x) = 2xT_N(x) - T_{N-1}(x)\\
-    T_{N}(x)=\cos(n \arccos x)=\cosh(n\,\operatorname{arcosh}\,x)
-\end{align}
+\corr{Você erra sistemáticamente expoentes em \LaTeX : $x^{1+2}$ ou $x^{(1+2)}$ e não $x^(1+2)$}
 
- Agora, qualquer polinômio de grau $N$ pode ser fatorado na forma de um produtório  $(x - x_i)$, onde $x_i$ é uma das raízes do polinômio, em particular:
+\begin{align}
+    T_0(x) &= 1\\
+    T_1(x) &= x\\
+    T_{N+1}(x) &= 2xT_N(x) - T_{N-1}(x)\\
+    T_{N}(x)&=\cos(n \arccos x)=\cosh(n\,\operatorname{arcosh}\,x)
+\end{align}\corr{Tem que colocar} \& \corr{onde você quer alinhar as equações!!!}
+
+ Agora, qualquer polinômio de grau $N$, com coeficiente líder unitário, pode ser fatorado na forma de um produtório  $(x - x_i)$, onde $x_i$ é uma das raízes do polinômio, em particular: 
  \begin{equation}
  \frac{1}{2^N}T_{N+1}(x) \equiv \prod_{i = 1}^{N+1} (x-x_i)
  \end{equation}
@@ -98,7 +100,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  
  Usando o fato que esse polinômio pode ser reescrita como uma função trigonométrica, temos que as raízes são:
  \begin{equation}
-  x_i  \equiv \cos \left [ \frac{(2i - 1)pi}{2(N+1)}  \right ] , i = 1,2,..., N+1
+  x_i  \equiv \cos \left [ \frac{(2i - 1)\pi}{2(N+1)}  \right ] , i = 1,2,..., N+1
  \end{equation}
  
  Pela expansão de \emph{Taylor} da função coseno, verificamos a afirmação de acima que o espaçamento da malha é $O(N^2)$ perto das fronteiras:
@@ -114,7 +116,8 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{figure}
 \pagebreak
 \subsection{Integração gaussiana e linhas pseudoespectral}
- A razão pelo qual o método de colocação é também chamado "pseudoespectral" devido a colocação otimizada dos pontos de interpolação, como o polinômio de \emph{Chebyshev}, faz o método da colocação idêntico ao método de \emph{Galerkin} se o produto interno é calculado por um tipo de integração numérica conhecida como Integração gaussiana.
+\corr{Eu colocaria em outra seção e não como subseção da interpolação}
+ A razão pelo qual o método de colocação é também chamado "pseudoespectral" devido a colocação otimizada dos pontos de interpolação, como o polinômio de \emph{Chebyshev}, faz o método da colocação idêntico ao método de \emph{Galerkin} se o produto interno é calculado por um tipo de integração numérica conhecida como Integração gaussiana. \corr{Você não falou o que é o método espetral, Galerkin, etc}
  Integração numérica e interpolação Lagrangiana são muito correlacionada pois o método de integração é de aproximar o polinômio pelo integrando de $f(x)$ e depois integrar $P_N(X)$. Como o interpolado pode ser integrado facilmente, o erro é dado como a diferença de $f(x)$ e $P_N(x)$.  A fórmula é dada por:
  \begin{equation}
   \int_a^b f(x) \partial x \approx \sum_{i = 0}^N w_i f(x)
