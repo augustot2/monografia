@@ -5,13 +5,17 @@
 \contentsline {section}{\numberline {1.1}Hist\IeC {\'o}ria}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Julia}{1}{section.1.2}
 \contentsline {chapter}{\numberline {2}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}sobre}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}M\IeC {\'e}todo espectral}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Interpola\IeC {\c c}\IeC {\~a}o}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{3}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^o}meno de Runge}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{6}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}m\IeC {\'e}todo dos elementos finitos}{8}{section.2.3}
+\contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Derivada}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectralou da coloca\IeC {\c c}\IeC {\~a}o}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{8}{section.2.6}
+\contentsline {section}{\numberline {2.7}m\IeC {\'e}todo dos elementos finitos}{8}{section.2.7}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{9}{section.3.2}
