@@ -19,7 +19,7 @@
   \caption{interpolação simples}
 \end{figure}
 
- Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto, era utilizar tabelas com valores de pré-calculados. \corr{A maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}}.
+ Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto,a   maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
 
 \begin{equation}
 	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + \frac{x - x_0}{x_1 - x_0}f(x_1)
@@ -130,7 +130,7 @@ onde o coeficiente é:
  w_i =  \int^{a}_b  P_i(x) 
 \end{equation}
  E esse coeficiente independem da função $f$ e são somente depende dos pontos $x_i$ considerados. Estes pontos $x_i$ são determinados de modo a tornar o erro nulo quando integrarmos uma função que é um polinômio quando integrarmos uma função que é um polinômio de grau menor ou igual a $(2n +1)$.
- Tomemos $f$ como sendo um polinômio de grau $(2n+1)$.Desta forma a derivada de ordem (n+1) da função $f$ será um polinômio de grau n. Logo, utilizamos o polinômio, $P$ para interpolá-lo:
+ Tomemos $f$ como sendo um polinômio de grau $(2n+1)$.Desta forma a derivada de ordem $(n+1)$ da função $f$ será um polinômio de grau n. Logo, utilizamos o polinômio, $P$ para interpolá-lo:
  \begin{equation}
  f^{n+1}(x) = \sum^{n}_{j = 0} b_j P_j(x)
  \end{equation}
@@ -151,9 +151,43 @@ Assim, fazemos:
 &(P_i,P_j) = \int^b_a P_i(x) P_j(x) \partial x = 0\ ,\ i \neq j\\
 &\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x = 0
 \end{align}
-
  No caso acima foi utilizado para a integração um polinômio qualquer ortogonal, porém podemos utilizar qualquer classe de polinômios \emph{ortogonais} para estimarmos a integral da função, tomando os zeros dos polinômios a nossa escolha.[\emph{Gauss-Chebychev}, \emph{Gauss-Jacobi}, \emph{Gauss-Radau}, \emph{Gauss-Lobatto}]
 \section{Derivada}
+ Com a interpolação de $f(x)$ com os polinômios de base de \emph{Lagrange}, $C_i(x)$ , nos $N+1$ pontos $x_i$ dados por:
+ \begin{equation}
+ f(x)  = \sum^{N}_{0} f(x_i) C_i(x)
+ \end{equation}
+ A derivada da $f(x)$ é dada por:
+ \begin{equation}
+ \frac{\partial f(x)}{\partial x} = \sum^{N}_{0} f(x_i) \frac{\partial C_i(x)}{\partial x}
+ \end{equation}
+ Calculando $\frac{\partial f(x)}{\partial x}$ nos pontos nodais $x_i$, temos:
+\begin{equation}
+   \frac{\partial f(x)}{\partial x}  \Biggm\lvert_{x=x_i} = \sum^{N}_{j\ = 0} f(x_j) C_{ij}
+\end{equation}
+ Onde:
+ \begin{equation}
+  C_{ij} = \frac{\partial C_i(x)}{\partial x} \Biggm\lvert_{x=x_i}
+ \end{equation}
+ a derivada de $C_i(x)$ é:
+ \begin{align}
+ &C_i(x) = \frac{P_{n+1}(x)}{P'_{n+1}(x)(x -\ x_i)}\ ,\ P_{n+1}(x) = \prod^{N}_{0} (x - x_j)\\
+ &\frac{\partial C_i(x)}{\partial x} =  \frac{P'_{n+1}(x)(x\ -\ x_i) - P_{n+1}(x)}{P'_{n+1}(x)(x - x_i)^2}\ 
+ \end{align}
+ temos que para x tendendo para $x_i$:
+ \begin{equation}
+ \lim_{x \rightarrow x_i}  \frac{\partial C_i(x)}{\partial x} =  \lim_{x \rightarrow x_i} \frac{P''_{n+1}(x)}{2P'_{n+1}(x)} = \frac{P''_{n+1}(x_i)}{2P'_{n+1}(x_i)}
+ \end{equation}
+ assim, ficamos com:
+ \begin{equation}
+ C_{ij}= 
+\begin{cases}
+    \frac{P'_{n+1}(x_i)}{P'_{n+1}(x_j)} \frac{1}{(x_i - x_j)},& \text{se}\ i\ \neq  j\\\\
+    \frac{P''_{n+1}(x_i)}{2P''_{n+1}(x_j)},              & \text{otherwise}
+\end{cases}
+ \end{equation}
+
+
 
 
 \section{Método Pseudo-espectralou da colocação}
