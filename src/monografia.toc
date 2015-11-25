@@ -11,11 +11,12 @@
 \contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^o}meno de Runge}{5}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{6}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica}{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Derivada}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectralou da coloca\IeC {\c c}\IeC {\~a}o}{9}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}m\IeC {\'e}todo dos elementos finitos}{9}{section.2.7}
+\contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica pelo m\IeC {\'e}todo de coloca\IeC {\c c}\IeC {\~a}o [talvez alterar]}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Deriva\IeC {\c c}\IeC {\~a}o pelo m\IeC {\'e}todo da coloca\IeC {\c c}\IeC {\~a}o [talvez altere o nome] }{8}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Polin\IeC {\^o}mios de Jacobi}{9}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{10}{section.2.5}
+\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{10}{section.2.6}
+\contentsline {section}{\numberline {2.7}m\IeC {\'e}todo dos elementos finitos}{10}{section.2.7}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{11}{section.3.2}

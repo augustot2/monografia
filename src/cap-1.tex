@@ -113,7 +113,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \caption{método de raízes de Chebychev contra raízes de pontos equidistante}
  \end{figure}
 \pagebreak
-\section{Integração numérica}
+\section{Integração numérica pelo método de colocação [talvez alterar]}
  Usando um polinômio interpolador $P$ de grau menor ou igual a $n$ na forma de Lagrange, podemos escrever a integral de $f$ no intervalo $[a,b]$:\\
  
 \begin{equation}
@@ -152,14 +152,14 @@ Assim, fazemos:
 &\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x = 0
 \end{align}
  No caso acima foi utilizado para a integração um polinômio qualquer ortogonal, porém podemos utilizar qualquer classe de polinômios \emph{ortogonais} para estimarmos a integral da função, tomando os zeros dos polinômios a nossa escolha.[\emph{Gauss-Chebychev}, \emph{Gauss-Jacobi}, \emph{Gauss-Radau}, \emph{Gauss-Lobatto}]
-\section{Derivada}
- Com a interpolação de $f(x)$ com os polinômios de base de \emph{Lagrange}, $C_i(x)$ , nos $N+1$ pontos $x_i$ dados por:
+\section{Derivação pelo método da colocação [talvez altere o nome] }
+ Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$, pode ser reescrito em termos de polinômios de Lagrange $h_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
  \begin{equation}
  f(x)  = \sum^{N}_{0} f(x_i) C_i(x)
  \end{equation}
  A derivada da $f(x)$ é dada por:
  \begin{equation}
- \frac{\partial f(x)}{\partial x} = \sum^{N}_{0} f(x_i) \frac{\partial C_i(x)}{\partial x}
+ \frac{\partial f(x)}{\partial x} = \sum^{N}_{i = 0} f(x_i) \frac{\partial C_i(x)}{\partial x}
  \end{equation}
  Calculando $\frac{\partial f(x)}{\partial x}$ nos pontos nodais $x_i$, temos:
 \begin{equation}
@@ -179,19 +179,79 @@ Assim, fazemos:
  \lim_{x \rightarrow x_i}  \frac{\partial C_i(x)}{\partial x} =  \lim_{x \rightarrow x_i} \frac{P''_{n+1}(x)}{2P'_{n+1}(x)} = \frac{P''_{n+1}(x_i)}{2P'_{n+1}(x_i)}
  \end{equation}
  assim, ficamos com:
- \begin{equation}
+ \begin{equation}\label{eq:test}
  C_{ij}= 
 \begin{cases}
     \frac{P'_{n+1}(x_i)}{P'_{n+1}(x_j)} \frac{1}{(x_i - x_j)},& \text{se}\ i\ \neq  j\\\\
-    \frac{P''_{n+1}(x_i)}{2P''_{n+1}(x_j)},              & \text{otherwise}
+    \frac{P''_{n+1}(x_i)}{2P''_{n+1}(x_j)},              & \text{caso contrário}
 \end{cases}
  \end{equation}
-
-
-
-
-\section{Método Pseudo-espectralou da colocação}
-
+ Matricialmente podemos fazer:
+\begin{equation}
+ U'= \begin{bmatrix} 
+u'(x_0)\\ 
+u'(x_1)\\
+...\\
+u'(x_N)\\ 
+\end{bmatrix} =
+\begin{bmatrix}
+C_{00} &   C_{01} & \ldots & C_{0N}\\
+C_{10}  &  C_{11} & \ldots & C_{1N}\\
+\vdots & \vdots & \ddots & \vdots\\
+C_{N0}  &   C_{N1}       &\ldots & C_{NN}
+\end{bmatrix}. \begin{bmatrix} 
+u_{0}\\ 
+u_{1}\\
+\vdots\\
+u_{N}\\ 
+\end{bmatrix} 
+\end{equation}  
+  Para a mudança de intervalo $ x \in [-1,1]$ para $y \in [a,b]$ podemos fazer:
+\begin{align}
+&y = \frac{(1-x)}{2}a + \frac{(1+x)}{2}b \\
+&\frac{\partial y}{\partial x} = \frac{(b -a)}{2}\\
+&\frac{\partial f}{\partial x} = \frac{\partial f}{\partial y}. \frac{\partial y}{\partial x} \\
+&\frac{\partial f}{\partial y} =  (\frac{\partial y}{\partial x})^{-1}.\frac{\partial f}{\partial x} \\
+&\frac{\partial f}{\partial y} = \frac{2}{(b -a)}.\frac{\partial f}{\partial x}
+\end{align}
+  
+\subsection{Polinômios de Jacobi}
+ Polinômios de Jacobi $P^{\alpha,\beta}_n(x)$ são famílias de polinômios de soluções para problemas de \emph{Sturm-Liouville}. Tais polinômios são \emph{ortogonais} no intervalo $[-1,1]$  com respeito funções peso do tipo $(1-x)^\alpha (1+x)^\beta \text(para) (\alpha,\beta > -1)$.
+Pela fórmula de Rodrigues, essa família é dada por:
+\begin{equation}
+P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \frac{d^n}{dx^n} \left\{ (1-x)^\alpha (1+x)^\beta \left (1 - x^2 \right )^n \right\},\ (\alpha, \beta >-1)
+\end{equation}
+ sua derivada é dada por:
+\begin{equation}
+\frac{\partial P^{\alpha,\beta}_n (x)}{\partial x} = \frac{1}{2}(n+\alpha+\beta) P^{\alpha + 1,\beta +1}_{n-1} (x)
+\end{equation}
+ onde podemos encontrar $P^{\alpha + 1,\beta +1}_{n-1}$ pela relação recursiva:
+\begin{align}
+& P^{\alpha,\beta}_{0} (x) = 1\\
+& P^{\alpha,\beta}_{1} (x) = \frac{1}{2}[\alpha - \beta + (\alpha + \beta + 2 )x]\\
+& P^{\alpha,\beta}_{n+1} (x)=(a^2_n + a ^3_n x)P^{\alpha,\beta}_{n}(x) - a_n^4P^{\alpha,\beta}_{n-1}(x)  \\
+& a^1_n = 2(n+1)(n+ \alpha + \beta + 1)(2n + \alpha +\beta)\\
+& a^2_n = (2n + \alpha +\beta + 1)(\alpha^2 - \beta^2)\\
+& a^3_n = (2n + \alpha +\beta)(2n + \alpha +\beta + 1)(2n + \alpha + \beta + 2)\\ 
+\end{align}
+ Anteriormente utilizado nos exemplos, o polinômio de \emph{Chebyshev} e o conhecido polinômio de \emph{Legendre} são na verdade um caso especial do polinômio de \emph{Jacobi}:
+\begin{align}
+& \text{Polinômio de Chebychev} (\alpha= \beta = -\frac{1}{2})  \rightarrow  C_n(x) =\frac{2^{2n}(n!)^2}{ (2n)!} P^{(-\frac{1}{2},-\frac{1}{2})}_{n}(x) \\
+& \text{Polinômio de Legendre} (\alpha= \beta = 0)  \rightarrow L_n(x) =  P^{(0,0)}_{n}(x)
+\end{align}
+ 
+ \emph{Interpolador de Gauss-Lobatto}: Nesse caso, os pontos de interpolação são os zeros do polinômio $[P^{\alpha,\beta}_{Q-2}(x)]'$, mais os extremos +1 e -1 do intervalo. E a função interpoladora é dada por:
+\begin{equation}
+ C_{ij}= 
+\begin{cases}
+ \frac{(-1)^{Q - 1}(Q-2)!\Gamma(\beta +2)}{(Q + \alpha + \beta)\Gamma(Q + \beta)}(x-1)[P^{\alpha,\beta}_{Q-1}(x)]'\  \  \ \text{se}\  j = 0 \\\\
+ \frac{(x^2 -1)[P^{\alpha,\beta}_{Q-1}(x)]'}{(Q-1)(Q + \alpha + \beta)P^{\alpha,\beta}_{Q-1}(x)(x-x_j)} \text{se}\  1 \leq j \leq Q-2\\\\
+ \frac{(x^2 -1)[P^{\alpha,\beta}_{Q-1}(x)]'}{(Q + \alpha + \beta)\Gamma(Q+\alpha)}(x+1)[P^{\alpha,\beta}_{Q-1}(x)]' \ \ \text{se} \ \ j = Q - 1
+\end{cases}\\
+\end{equation} 
+ 
+\section{Método Pseudo-espectral ou da colocação}
+ O método Pseudo-espectral é utilizado 
 \section{Método de Galerkin}
 
 \section{método dos elementos finitos}
