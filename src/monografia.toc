@@ -14,19 +14,18 @@
 \contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica pelo m\IeC {\'e}todo de coloca\IeC {\c c}\IeC {\~a}o [talvez alterar]}{7}{section.2.3}
 \contentsline {section}{\numberline {2.4}Deriva\IeC {\c c}\IeC {\~a}o pelo m\IeC {\'e}todo da coloca\IeC {\c c}\IeC {\~a}o [talvez altere o nome] }{8}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Polin\IeC {\^o}mios de Jacobi}{9}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{10}{section.2.6}
-\contentsline {section}{\numberline {2.7}m\IeC {\'e}todo dos elementos finitos}{10}{section.2.7}
-\contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{11}{section.3.1}
-\contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Discretiza\IeC {\c c}\IeC {\~a}o}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Solver linear}{11}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{11}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{12}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}tipos de polin\IeC {\^o}mio}{12}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Derivada}{13}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{15}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{17}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{19}{chapter*.10}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{12}{section.2.5}
+\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{12}{section.2.6}
+\contentsline {section}{\numberline {2.7}m\IeC {\'e}todo dos elementos finitos}{12}{section.2.7}
+\contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Discretiza\IeC {\c c}\IeC {\~a}o}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Solver linear}{13}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{13}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{14}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}tipos de polin\IeC {\^o}mio}{14}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Derivada}{15}{subsection.3.4.4}
+\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{17}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{19}{chapter.5}
 \contentsfinish 

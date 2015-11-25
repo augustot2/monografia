@@ -249,9 +249,69 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \frac{(x^2 -1)[P^{\alpha,\beta}_{Q-1}(x)]'}{(Q + \alpha + \beta)\Gamma(Q+\alpha)}(x+1)[P^{\alpha,\beta}_{Q-1}(x)]' \ \ \text{se} \ \ j = Q - 1
 \end{cases}\\
 \end{equation} 
+
+\pagebreak
+ \emph{Gauss-Radau-Jacobi}: Esse caso, só consideramos o extremo da esquerda [-1] e os pontos internos:
+ \begin{equation}
+ x_{i}= 
+\begin{cases}
+ -1 \ i = 0\\
+ x^{\alpha,\beta +1}_{i-1,N-1}(x) \i= 1,...,N-1\\
+\end{cases}\\
+ \end{equation}
+ E é dada por :
+ \begin{align}
+  & P_{N}(x) = (1+x)P^{\alpha,\beta+1}_{N -1}(x)\\
+  & P'_{N}(x) = (1+x)[P^{\alpha,\beta+1}_{N -1}(x)]' + P^{\alpha,\beta+1}_{N -1}(x)\\
+  & P''_{N}(x) = (1+x)[P^{\alpha,\beta+1}_{N -1}(x)]'' + 2P^{\alpha,\beta+1}_{N -1}(x)
+ \end{align}
+ Calculando nos pontos internos:
+ \begin{align}
+  & P'_{N}(x_i)= 
+\begin{cases}
+ \frac{-1^{N-1}\Gamma(N+\beta+1)}{\Gamma(N)\Gamma(\beta+2)} \ i =0\\ \\
+ (1+x_i)[P^{\alpha,\beta+1}_{N -1}(x)]' \ \ \ i= 1,...,N-1\\ 
+\end{cases}\\ \\
+  & P''_{N}(x_i)= 
+\begin{cases}
+ \frac{-1^{N} (N+\alpha+\beta+1)}{\Gamma(N-1)\Gamma(\beta+3)} \ i =0\\  \\
+ \frac{(\alpha -\beta +1+(\alpha+\beta+1)x_i)}{(1-x_i)}[P^{\alpha,\beta+1}_{N -1}(x)]' \ \ i= 1,...,N-1\\
+\end{cases}\\
+ \end{align}\\
+\emph{Gauss-Lobatto-Jacobi}: nesse caso, consideramos ambos os extremos (-1 e +1):
+\begin{equation}
+ x_{i}= 
+\begin{cases}
+ -1 \ i = 0\\
+ x^{\alpha,\beta +1}_{i-1,N-1}(x) \i= 1,...,N-2\\
+  1 \ i = N-1
+\end{cases}\\
+\end{equation}
+ E assim:
+ \begin{align}
+  & P_{N}(x) =   (1-x)(1+x)P^{\alpha+1,\beta+1}_{N -2}(x)\\
+  & P'_{N}(x) =  (1-x)(1+x)[P^{\alpha+1,\beta+1}_{N -2}(x)]' -  2P^{\alpha+1,\beta+1}_{N -2}(x)\\
+  & P''_{N}(x) = (1-x)(1+x)[P^{\alpha+1,\beta+1}_{N -2}(x)]'' -4x[P^{\alpha+1,\beta+1}_{N -2}(x)]' - 2P^{\alpha,\beta+1}_{N -1}(x)
+ \end{align}
+ E calculando as derivadas:
+ \begin{align}
+  & P'_{N}(x_i)= 
+\begin{cases}
+ \frac{-1^{N}2\Gamma(N+ \beta)}{\Gamma(N-1)\Gamma(\beta+2)} \ i =0\\ \\
+ (1+x_i)(1-x_i)[P^{\alpha+1,\beta+1}_{N-2}(x_i)]' \ \ \ i= 1,...,N-2\\ 
+ \frac{-2\Gamma(N+\alpha)}{\Gamma(N-1)\Gamma(\alpha +2)} \ \ i = N-1
+\end{cases}\\ \\
+  & P''_{N}(x_i)= 
+\begin{cases}
+ \frac{(-1)^N 2(\alpha -(N-1)(Q+\alpha+\beta)))}{\beta + 2}\frac{\Gamma(N+\beta)}{\Gamma(N-1)\Gamma(\beta + 2)}\ i =0\\  \\
+(\alpha -\beta +1+(\alpha+\beta)x_i)[P^{\alpha+1,\beta+1}_{N-2}(x_i)]'\ \ i= 1,...,N-2\\
+\frac{2(\beta -(N-1)(N + \alpha + \beta))}{\alpha + 2}\frac{\Gamma(N+\alpha)}{\Gamma(N-1)\Gamma(\alpha+2))} \ \ i = N-1
+\end{cases}\\
+ \end{align}\\
+ onde $\Gamma{x)$ é a função gamma.
  
 \section{Método Pseudo-espectral ou da colocação}
- O método Pseudo-espectral é utilizado 
+ O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira.
 \section{Método de Galerkin}
 
 \section{método dos elementos finitos}
