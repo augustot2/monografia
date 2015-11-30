@@ -2,7 +2,7 @@
 \label{cap:I}
 \section{Método espectral} 
 
- Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. \corr{E o método de elementos espectrais?}
+ Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. 
 
 \section{Interpolação}
  A interpolação de uma função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ e que satisfaça:
@@ -28,7 +28,7 @@
  Para fazermos essa interpolação para $n$ pontos conhecidos aproximamos uma função usando o polinômio base de \emph{Lagrange}.
 \begin{equation}
 C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j} 
-\end{equation}
+\end{equation} 
 
 \begin{figure}[!h]
 \includegraphics[width=0.7\textwidth, center ]{figuras/exemplo_polinomio_lagrange.png}
@@ -256,7 +256,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  x_{i}= 
 \begin{cases}
  -1 \ i = 0\\
- x^{\alpha,\beta +1}_{i-1,N-1}(x) \i= 1,...,N-1\\
+ x^{\alpha,\beta +1}_{i-1,N-1}(x) \ i= 1,...,N-1\\
 \end{cases}\\
  \end{equation}
  E é dada por :
@@ -283,7 +283,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  x_{i}= 
 \begin{cases}
  -1 \ i = 0\\
- x^{\alpha,\beta +1}_{i-1,N-1}(x) \i= 1,...,N-2\\
+ x^{\alpha,\beta +1}_{i-1,N-1}(x) \ i= 1,...,N-2\\
   1 \ i = N-1
 \end{cases}\\
 \end{equation}
@@ -308,11 +308,57 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 \frac{2(\beta -(N-1)(N + \alpha + \beta))}{\alpha + 2}\frac{\Gamma(N+\alpha)}{\Gamma(N-1)\Gamma(\alpha+2))} \ \ i = N-1
 \end{cases}\\
  \end{align}\\
- onde $\Gamma{x)$ é a função gamma.
+ onde $\Gamma{x}$ é a função gamma.
  
 \section{Método Pseudo-espectral ou da colocação}
- O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira.
+ O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira. Porém não o utilizarei.
 \section{Método de Galerkin}
+ O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos elementos finitos para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
+ \begin{equation}\label{eq:eq_dif}
+ L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
+ \end{equation}
+ 
+ Para esse problema ser bem posto e então obter uma solução única, precisamos especificar as condições de fronteira num domínio $\Omega = \{x| -1 < x < 1\}$, assim sendo temos:
+ \begin{equation}
+ u(-1)=g_D\ ,\ \frac{\partial u(1)}{\partial x} = g_N
+ \end{equation}
+ Onde $g_D$ e $g_N$, são constantes, e são chamadas de condição de contorno de \emph{D}irichlet e \emph{N}eumman. Essas condições junto da equação \eqref{eq:eq_dif}, chamamos essa combinação como formulação \emph{Forte} do problema.
+\subsection{Formulação fraca e a implementação da condição de fronteira de Neumman}
+ Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 em na fronteira de \emph{Dirichlet} $d\Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
+ \begin{equation}\label{eq:eq_fraca}
+ (v,L(u))=\int^1_{-1} v\left ( \frac{\partial^2u}{\partial x^2} + f \right )\partial x = 0
+ \end{equation}
+ Podemos ver que essa equação \eqref{eq:eq_fraca} pode ser reescrita usando integração por partes obtemos:
+ \begin{align}
+& \int^{1}_{-1} v \frac{\partial^2 u}{\partial x^2} \partial x = \left [ v\frac{\partial u}{\partial x}    \right ]^{1}_{-1}breath of fire 6 - \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x \\
+&  \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x =  \int^{1}_{-1}  v f\ \partial x  + \left [ v\frac{\partial u}{\partial x}    \right ]^{1}_{-1} 
+ \end{align}
+ Como a função teste $v$ é zero na fronteira de \emph{Dirichlet}, sabemos que $v(-1) = 0$. Assim, aplicando a condição de fronteira de \emph{Neumman}, $\frac{\partial u(1)}{\partial x} = g_N$, simplificamos a equação, temos:
+ \begin{equation}
+ \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x =  v(1)g_N + \int^{1}_{-1}  v f\ \partial x  
+\end{equation}
 
-\section{método dos elementos finitos}
+Vemos que nessa última etapa, vemos que a condição de fronteira de \emph{Neumman} é naturalmente incluida na formulação. A forma integral  equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
+
+A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a solução para a formulação fraca da equação, quando a solução exata $u(x)$ e a função test $v(x)$ são aproximadas por expanções \emph{finitas} $u^\delta(x)$ e $v^\delta(x)$, e assim a  equação diferencial se torna:
+\begin{equation}
+ \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x 
+\end{equation}
+\subsection{Implementação da condição de fronteira de Dirichlet}
+ Como para todo funão test $v^\delta(x)$ é zero na fronteira de \emph{Dirichlet}, fica claro que $u^\delta$ deveconter outra função não zero na fronteira, sem isso não seria possível satisfazer a condição de fronteira de \emph{Dirichlet} do problema. Então temos que a solução aproximada $u^\delta$ é uma combinação de outras duas funções: $u^d$, que satisfaz as condições de fronteira de \emph{Dirichlet} e uma função \emph{h}omogênea desconhecida $u^h$, que é zero na fronteira de Dirichelt.
+ \begin{align}
+ u^\delta = u^d + u^h \\
+ \text{onde:}\\
+ u^h(\partial \Omega_D) = 0,\ u^d(\partial \Omega_D) = g_d
+ \end{align}
+ substituindo na equação \ref{eq:eq_fraca} essa combinação linear de $u^d$ e $u^h$ temos:
+ \begin{align}\label{eq:eqdif_dh}
+ & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x  +  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x \\
+& \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x=  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x -    \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x 
+ \end{align}
+ Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} bis oernute reduzir uma \textbf{equação diferencial} num problema algébrico.
+
+\subsection{Condição de fronteira de Robin}
+
+\subsection{método dos elementos finitos}
 adicionar texto de elementos dinâmicos
