@@ -359,6 +359,19 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} bis oernute reduzir uma \textbf{equação diferencial} num problema algébrico.
 
 \subsection{Condição de fronteira de Robin}
+ Outro tipo de condição de fronteira é a condição mista ou de \emph{Robin}. Ela geralmente aparece em equações de transferência de calor e é uma combinação linear das condições de fronteira de \emph{Dirichlet} e \emph{Neumman} da forma:
+ \begin{equation}
+ \alpha \frac{\partial u(1)}{\partial x} + \beta u(1) = g_r , \alpha \neq 0 
+ \end{equation}
+ para $\alpha,\beta,g_r$ conhecidos, assim rearranjando, temos:
+ \begin{equation}
+ \frac{\partial u(1)}{\partial x}  =\frac{1}{\alpha}(g_r - \beta u(1))
+ \end{equation}
+e substituindo na \ref{eq:eq_fraca} temos:
+\begin{equation}
+\int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x + \frac{\beta}{\alpha}v^\delta(1)u(1) =   \int^{1}_{-1}  v^\delta f\ \partial x + \frac{v^\delta(1)g_N}{\alpha}
+\end{equation}
 
+ A diferença entre as implementações das condições de fronteiras de \emph{Robin} e \emph{Neumman} é apenas no termo novo $\frac{\beta}{\alpha}v^\delta(1)u(1)$.
 \subsection{método dos elementos finitos}
 adicionar texto de elementos dinâmicos
