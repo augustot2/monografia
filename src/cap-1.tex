@@ -341,7 +341,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 Vemos que nessa última etapa, vemos que a condição de fronteira de \emph{Neumman} é naturalmente incluida na formulação. A forma integral  equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
 
 A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a solução para a formulação fraca da equação, quando a solução exata $u(x)$ e a função test $v(x)$ são aproximadas por expanções \emph{finitas} $u^\delta(x)$ e $v^\delta(x)$, e assim a  equação diferencial se torna:
-\begin{equation}
+\begin{equation}\label{eq:eqdif_neumann}
  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x 
 \end{equation}
 \subsection{Implementação da condição de fronteira de Dirichlet}
@@ -374,4 +374,34 @@ e substituindo na \ref{eq:eq_fraca} temos:
 
  A diferença entre as implementações das condições de fronteiras de \emph{Robin} e \emph{Neumman} é apenas no termo novo $\frac{\beta}{\alpha}v^\delta(1)u(1)$.
 \subsection{método dos elementos finitos}
-adicionar texto de elementos dinâmicos
+ O método dos elementos finitos para equações diferenciais de segunda ordem, estima $v^\delta$ por uma classe de funções $C^0$ contínua, onde essa aproximada é contínua em todo domínio $\Omega$. A solução do método é dividir em esse domínio em finitos elementos, da forma $\Omega^e$, onde a derivada também é contínua. No entanto nas fronteiras entre os elementos, sua derivada pode ser descontínua apesar da função ser $C^0$ contínua.
+ Fazendo a nova forma para $N_{el}$ elementos, transformando a equação \eqref{eq:eq_dif} temos:
+\begin{align} 
+ \int^1_{-1} \frac{\partial v^\delta}{\partial x}\frac{\partial u^\delta}{\partial x} \partial x&= 
+\sum^{N_{el}}_{e=1} \int_{\Omega^e}\frac{\partial v^\delta}{\partial x}\frac{\partial u^\delta}{\partial x} \partial x\\
+& = - \sum^{N_{el}}_{e=1} \int_{\Omega^e} v^\delta\frac{\partial u^\delta}{\partial x} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\\
+& = -\int^1_{-1} v^\delta\frac{\partial u^\delta}{\partial x} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\label{eqdif_ef}
+\end{align}
+ Onde $\Omega^e_D$ e $\Omega^e_E$ são o valor de $x$ no elemento  $\Omega^e$, respectivamente na extrema \emph{D}ireita e \emph{E}squerda desse elemento $e$. Substituindo a equação \eqref{eqdif_ef} na equação \eqref{eq:eqdif_neumann}:
+ \begin{align}
+& -\int^1_{-1} v^\delta\frac{\partial u^\delta}{\partial x} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E} =\int^1_{-1} fv^\delta  \partial x + v^\delta(1)g_N \\
+& -\int^1_{-1} v^\delta\left (\frac{\partial u^\delta}{\partial x} + f  \right ) \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E} -  v^\delta(1)g_N = 0 \\
+ \end{align}
+  reformulando:
+\begin{equation}
+\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E} = \sum^{{N_{el} -1}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^e_D} -  v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{e+ 1}_E}    \right ] +\ \    v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{1}_E} -\ \   v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{N_{el}}_D}
+\end{equation}
+tendo assim a equação diferencial como:
+\begin{align}
+-\int^1_{-1} v^\delta\left (\frac{\partial u^\delta}{\partial x} + f  \right ) \partial x \ \
+ -\ \   v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{N_{el}}_D}
++\sum^{{N_{el} -1}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^e_D} -  v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{e+ 1}_E}    \right ] 
++  \left [  v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{1}_E}  -\ \ v^\delta(1)g_N \right ] = 0 
+\end{align}
+ O termo $ v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{N_{el}}_D}$ é zerado pois $\Omega^1_E$ é a fronteira de \emph{Dirichlet} e então $v^\delta(\Omega^1_E)=0$.
+
+ Caso a aproximação fosse aproximada por funções do tipo $C^1$ contínua, então por definição:
+ \begin{equation}
+  v^\delta\frac{\partial u^\delta}{\partial x} \Biggm\lvert_{\Omega^e_D} =  v^\delta\frac{\partial u^\delta}{\partial x} \Biggm\lvert_{\Omega^{e+1}_E} 
+ \end{equation}
+ usando essa função $C^1$, a diferença de  teríamos a integração por partes padrão visto anteriormente.
