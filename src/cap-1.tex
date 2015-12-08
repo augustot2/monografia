@@ -249,8 +249,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \frac{(x^2 -1)[P^{\alpha,\beta}_{Q-1}(x)]'}{(Q + \alpha + \beta)\Gamma(Q+\alpha)}(x+1)[P^{\alpha,\beta}_{Q-1}(x)]' \ \ \text{se} \ \ j = Q - 1
 \end{cases}\\
 \end{equation} 
-
-\pagebreak
+\\
  \emph{Gauss-Radau-Jacobi}: Esse caso, só consideramos o extremo da esquerda [-1] e os pontos internos:
  \begin{equation}
  x_{i}= 
@@ -313,7 +312,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 \section{Método Pseudo-espectral ou da colocação}
  O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira. Porém não o utilizarei.
 \section{Método de Galerkin}
- O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos elementos finitos para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
+ O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos \emph{Elementos Finitos} para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}
  L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
  \end{equation}
@@ -324,7 +323,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \end{equation}
  Onde $g_D$ e $g_N$, são constantes, e são chamadas de condição de contorno de \emph{D}irichlet e \emph{N}eumman. Essas condições junto da equação \eqref{eq:eq_dif}, chamamos essa combinação como formulação \emph{Forte} do problema.
 \subsection{Formulação fraca e a implementação da condição de fronteira de Neumman}
- Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 em na fronteira de \emph{Dirichlet} $d\Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
+ Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 em na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
  \begin{equation}\label{eq:eq_fraca}
  (v,L(u))=\int^1_{-1} v\left ( \frac{\partial^2u}{\partial x^2} + f \right )\partial x = 0
  \end{equation}
@@ -404,4 +403,29 @@ tendo assim a equação diferencial como:
  \begin{equation}
   v^\delta\frac{\partial u^\delta}{\partial x} \Biggm\lvert_{\Omega^e_D} =  v^\delta\frac{\partial u^\delta}{\partial x} \Biggm\lvert_{\Omega^{e+1}_E} 
  \end{equation}
- usando essa função $C^1$, a diferença de  teríamos a integração por partes padrão visto anteriormente.
+ Assim, zerando o somatório $\sum^{{N_{el} -1}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^e_D} -\ \  v^\delta \frac{\partial u^\delta}{\partial x}\Biggm\lvert_{\Omega^{e+ 1}_E}    \right ] 
+$, a diferença então é que teríamos a integração por partes padrão visto anteriormente.
+
+\subsection{Exemplo de elementos finitos com }
+\begin{align}
+& \phi_0=
+\begin{cases} 
+     1-x & 0 \leq x\leq \frac{1}{2} \\
+      0  & \frac{1}{2}  \leq x \leq 1 \\
+\end{cases},
+\phi_1=
+\begin{cases} 
+     2x & 0 \leq x\leq \frac{1}{2} \\
+      0(1-x)  & \frac{1}{2}  \leq x \leq 1 \\
+\end{cases}\\
+& \phi_2=
+\begin{cases} 
+     0 & 0 \leq x\leq \frac{1}{2} \\
+     2x-1  & \frac{1}{2}  \leq x \leq 1 \\
+\end{cases}
+\end{align}
+
+\begin{figure}[h]
+ \includegraphics[width=0.45\textwidth, center]{figuras/exemplo_elementos_finitos.png}
+ \caption{Domínio $\Omega$ dividido em dois elementos $\Omega_e$}
+ \end{figure}

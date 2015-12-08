@@ -14,12 +14,13 @@
 \contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica pelo m\IeC {\'e}todo de coloca\IeC {\c c}\IeC {\~a}o [talvez alterar]}{7}{section.2.3}
 \contentsline {section}{\numberline {2.4}Deriva\IeC {\c c}\IeC {\~a}o pelo m\IeC {\'e}todo da coloca\IeC {\c c}\IeC {\~a}o [talvez altere o nome] }{8}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Polin\IeC {\^o}mios de Jacobi}{9}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{12}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{12}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Formula\IeC {\c c}\IeC {\~a}o fraca e a implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Neumman}{12}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Dirichlet}{13}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Condi\IeC {\c c}\IeC {\~a}o de fronteira de Robin}{13}{subsection.2.6.3}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{11}{section.2.5}
+\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{11}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Formula\IeC {\c c}\IeC {\~a}o fraca e a implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Neumman}{11}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Dirichlet}{12}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Condi\IeC {\c c}\IeC {\~a}o de fronteira de Robin}{12}{subsection.2.6.3}
 \contentsline {subsection}{\numberline {2.6.4}m\IeC {\'e}todo dos elementos finitos}{13}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Exemplo de elementos finitos com }{14}{subsection.2.6.5}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{15}{section.3.2}
@@ -31,5 +32,4 @@
 \contentsline {subsection}{\numberline {3.4.4}Derivada}{17}{subsection.3.4.4}
 \contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{19}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{21}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{23}{chapter*.10}
 \contentsfinish 
