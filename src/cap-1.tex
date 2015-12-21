@@ -5,7 +5,7 @@
  Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. 
 
 \section{Interpolação}
- A interpolação de uma função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ e que satisfaça:
+ Para fazer a interpolação da função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ satisfazendo:
 
 \begin{equation}
 	P_n (x_i) = f(x_i) \ i = 1,2,...,\emph{n+1}
@@ -62,14 +62,14 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \end{figure}
 
  Assim, Runge prova que no meio do intervalo temos boas aproximações mas infelizmente perto dos extremos, os valores interpolados oscilam muito, para um polinômio de grau n com pontos equidistante. Esse fenômeno sugere que escolhamos pontos diversos que tenham menor concentração do meio do intervalo, onde temos uma maior precisão, e aumentar a densidade de pontos próximos dos extremos.
- Agora como encontrar uma distribuição de pontos de forma que melhore a interpolação ? A resposta pode ser explicado pelos teoremas a seguir.
+ Agora como encontrar uma distribuição de pontos de forma que melhore a interpolação? A resposta pode ser explicado pelos teoremas a seguir.
 \pagebreak
 \subsection{ Teorema I: Erro de interpolação de Cauchy}
 
  Dado $f(x)$  com pelo menos $N+1$ derivadas no intervalo de interesse e seja $P_N(x)$ seja o interpolador Lagrangiano de grau $N$. Então o erro é dado por:
  
  \begin{equation}
- f(x) - P_N(x) = \frac{1}{[N+1]!}f^{(N+1)}(\epsilon)\prod^{N}_{i = 0} (x - x_i)
+ f(x) - P_{N+1}(x) = \frac{1}{[N+1]!}f^{(N+1)}(\epsilon)\prod^{N}_{i = 0} (x - x_i)
  \end{equation}
  Para um $\epsilon(x) \in [-1,1]$.
  
@@ -96,18 +96,18 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{equation}
  Temos então que, para minimizar o erro no \emph{Teorema I}, o polinômio deve ser proporcional a $T_{N+1}(x)$. Isso implica que  os pontos interpoladores que minimizam o erro, são as raízes do próprio polinômio de \emph{Chebyshev} de grau $N+1$.
  
- Usando o fato que esse polinômio pode ser reescrita como uma função trigonométrica, temos que as raízes são:
+ Usando o fato que esse polinômio pode ser reescrito como uma função trigonométrica, temos que as raízes são:
  \begin{equation}
   x_i  \equiv \cos \left [ \frac{(2i - 1)\pi}{2(N+1)}  \right ] , i = 1,2,..., N+1
  \end{equation}
  
- Pela expansão de \emph{Taylor} da função coseno, verificamos a afirmação de acima que o espaçamento da malha é $O(N^2)$ perto das fronteiras:
+ Pela expansão de \emph{Taylor} da função coseno, verificamos que segundo   a definição de $x_i$ acima, o espaçamento da malha é $O(N^2)$ perto das fronteiras:
  
  \begin{equation}
   x_1 \approx -1 + \frac{\pi^2}{8N^2}\ ;\ x_2 \approx -1 + \frac{9\pi}{8N^2}\ \ [N\gg 1]
  \end{equation}
  
- Agora temos como conseguir o polinômio de \emph{Chebyshev} que minimiza o erro. Porém essa escolha de polinômio varia para diferentes geometrias ou funções harmônicas ou hermitianas.
+ Agora temos como conseguir o polinômio de \emph{Chebyshev} que minimiza o erro. Porém essa escolha de polinômio varia para diferentes geometrias no $\mathbb{R}^2$ ou funções harmônicas ou hermitianas.
  \begin{figure}[t]
  \includegraphics[width=0.45\textwidth, center]{figuras/chebychev_equidist.png}
  \caption{método de raízes de Chebychev contra raízes de pontos equidistante}
@@ -129,8 +129,8 @@ onde o coeficiente é:
 \begin{equation}
  w_i =  \int^{a}_b  P_i(x) 
 \end{equation}
- E esse coeficiente independem da função $f$ e são somente depende dos pontos $x_i$ considerados. Estes pontos $x_i$ são determinados de modo a tornar o erro nulo quando integrarmos uma função que é um polinômio quando integrarmos uma função que é um polinômio de grau menor ou igual a $(2n +1)$.
- Tomemos $f$ como sendo um polinômio de grau $(2n+1)$.Desta forma a derivada de ordem $(n+1)$ da função $f$ será um polinômio de grau n. Logo, utilizamos o polinômio, $P$ para interpolá-lo:
+ E esse coeficiente dependem da função $f$ nos pontos $x_i$ considerados. Estes pontos $x_i$ são determinados de modo a tornar o \emph{erro} nulo  quando integrarmos uma função que é um polinômio de grau menor ou igual a $(2n +1)$.
+ Tomemos $f$ como sendo um polinômio de grau $(2n+1)$.Desta forma a derivada de ordem $(n+1)$ da função $f$ será um polinômio de grau n. Logo, utilizamos os polinômios, $P$ para interpolá-lo:
  \begin{equation}
  f^{n+1}(x) = \sum^{n}_{j = 0} b_j P_j(x)
  \end{equation}
@@ -153,7 +153,7 @@ Assim, fazemos:
 \end{align}
  No caso acima foi utilizado para a integração um polinômio qualquer ortogonal, porém podemos utilizar qualquer classe de polinômios \emph{ortogonais} para estimarmos a integral da função, tomando os zeros dos polinômios a nossa escolha.[\emph{Gauss-Chebychev}, \emph{Gauss-Jacobi}, \emph{Gauss-Radau}, \emph{Gauss-Lobatto}]
 \section{Derivação pelo método da colocação [talvez altere o nome] }
- Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$, pode ser reescrito em termos de polinômios de Lagrange $h_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
+ Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$, pode ser reescrito em termos de polinômios de Lagrange $C_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
  \begin{equation}
  f(x)  = \sum^{N}_{0} f(x_i) C_i(x)
  \end{equation}
@@ -236,7 +236,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 \end{align}
  Anteriormente utilizado nos exemplos, o polinômio de \emph{Chebyshev} e o conhecido polinômio de \emph{Legendre} são na verdade um caso especial do polinômio de \emph{Jacobi}:
 \begin{align}
-& \text{Polinômio de Chebychev} (\alpha= \beta = -\frac{1}{2})  \rightarrow  C_n(x) =\frac{2^{2n}(n!)^2}{ (2n)!} P^{(-\frac{1}{2},-\frac{1}{2})}_{n}(x) \\
+& \text{Polinômio de Chebychev} (\alpha= \beta = -\frac{1}{2})  \rightarrow  T_n(x) =\frac{2^{2n}(n!)^2}{ (2n)!} P^{(-\frac{1}{2},-\frac{1}{2})}_{n}(x) \\
 & \text{Polinômio de Legendre} (\alpha= \beta = 0)  \rightarrow L_n(x) =  P^{(0,0)}_{n}(x)
 \end{align}
  
@@ -329,7 +329,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \end{equation}
  Podemos ver que essa equação \eqref{eq:eq_fraca} pode ser reescrita usando integração por partes obtemos:
  \begin{align}
-& \int^{1}_{-1} v \frac{\partial^2 u}{\partial x^2} \partial x = \left [ v\frac{\partial u}{\partial x}    \right ]^{1}_{-1}breath of fire 6 - \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x \\
+& \int^{1}_{-1} v \frac{\partial^2 u}{\partial x^2} \partial x = \left [ v\frac{\partial u}{\partial x}    \right ]^{1}_{-1} - \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x \\
 &  \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x =  \int^{1}_{-1}  v f\ \partial x  + \left [ v\frac{\partial u}{\partial x}    \right ]^{1}_{-1} 
  \end{align}
  Como a função teste $v$ é zero na fronteira de \emph{Dirichlet}, sabemos que $v(-1) = 0$. Assim, aplicando a condição de fronteira de \emph{Neumman}, $\frac{\partial u(1)}{\partial x} = g_N$, simplificamos a equação, temos:
@@ -344,13 +344,13 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x 
 \end{equation}
 \subsection{Implementação da condição de fronteira de Dirichlet}
- Como para todo funão test $v^\delta(x)$ é zero na fronteira de \emph{Dirichlet}, fica claro que $u^\delta$ deveconter outra função não zero na fronteira, sem isso não seria possível satisfazer a condição de fronteira de \emph{Dirichlet} do problema. Então temos que a solução aproximada $u^\delta$ é uma combinação de outras duas funções: $u^d$, que satisfaz as condições de fronteira de \emph{Dirichlet} e uma função \emph{h}omogênea desconhecida $u^h$, que é zero na fronteira de Dirichelt.
+ Como para todo função teste $v^\delta(x)$ é zero na fronteira de \emph{Dirichlet}, fica claro que $u^\delta$ deve conter outra função não zero na fronteira, sem isso não seria possível satisfazer a condição de fronteira de \emph{Dirichlet} do problema. Então temos que a solução aproximada $u^\delta$ é uma combinação de outras duas funções: $u^d$, que satisfaz as condições de fronteira de \emph{Dirichlet} e uma função \emph{h}omogênea desconhecida $u^h$, que é zero na fronteira de Dirichelt.
  \begin{align}
  u^\delta = u^d + u^h \\
  \text{onde:}\\
  u^h(\partial \Omega_D) = 0,\ u^d(\partial \Omega_D) = g_d
  \end{align}
- substituindo na equação \ref{eq:eq_fraca} essa combinação linear de $u^d$ e $u^h$ temos:
+ Chamamos essa combinação de \emph{Lift}. Substituindo na equação \ref{eq:eq_fraca} essa combinação linear de $u^d$ e $u^h$ temos:
  \begin{align}\label{eq:eqdif_dh}
  & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x  +  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x \\
 & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x=  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x -    \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x 
@@ -358,7 +358,7 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} bis oernute reduzir uma \textbf{equação diferencial} num problema algébrico.
 
 \subsection{Condição de fronteira de Robin}
- Outro tipo de condição de fronteira é a condição mista ou de \emph{Robin}. Ela geralmente aparece em equações de transferência de calor e é uma combinação linear das condições de fronteira de \emph{Dirichlet} e \emph{Neumman} da forma:
+ Outro tipo de condição de fronteira é a condição mista ou de \emph{Robin}. Ela  aparece, por exemplo, em equações de transferência de calor e é uma combinação linear das condições de fronteira de \emph{Dirichlet} e \emph{Neumman} da forma:
  \begin{equation}
  \alpha \frac{\partial u(1)}{\partial x} + \beta u(1) = g_r , \alpha \neq 0 
  \end{equation}
