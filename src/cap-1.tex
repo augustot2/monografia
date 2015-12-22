@@ -113,15 +113,15 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \caption{método de raízes de Chebychev contra raízes de pontos equidistante}
  \end{figure}
 \pagebreak
-\section{Integração numérica pelo método de colocação [talvez alterar]}
- Usando um polinômio interpolador $P$ de grau menor ou igual a $n$ na forma de Lagrange, podemos escrever a integral de $f$ no intervalo $[a,b]$:\\
+\section{Integração numérica pelo método de colocação }
+ Usando os polinômios interpoladores $P_i$ de uma mesma família qualquer,  de grau menor ou igual a $n$, podemos escrever a integral de $f$ no intervalo $[a,b]$:
  
 \begin{equation}
 \int^{a}_b f(x) \partial x\ = \int^{a}_b[\sum_{i\ =\ 0}^N P_i(x) f(x_i)]\ \partial x +  \int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x\\
 \end{equation}
 
 podemos aproximar a integral por:
-\begin{equation}
+\begin{equation}\label{eq:integra}
    \int^{a}_b f(x) \partial x\ \approx \sum_{i\ =\ 0}^N f(x_i) \int^{a}_b P_i(x) \partial x\ =\ \sum_{i\ =\ 0}^N f(x_i) w_i \\
 \end{equation}
 
@@ -129,10 +129,10 @@ onde o coeficiente é:
 \begin{equation}
  w_i =  \int^{a}_b  P_i(x) 
 \end{equation}
- E esse coeficiente dependem da função $f$ nos pontos $x_i$ considerados. Estes pontos $x_i$ são determinados de modo a tornar o \emph{erro} nulo  quando integrarmos uma função que é um polinômio de grau menor ou igual a $(2n +1)$.
- Tomemos $f$ como sendo um polinômio de grau $(2n+1)$.Desta forma a derivada de ordem $(n+1)$ da função $f$ será um polinômio de grau n. Logo, utilizamos os polinômios, $P$ para interpolá-lo:
+ para provarmos que o termo de \emph{erro} na equação \eqref{eq:integra}, é zerada, fazemos a seguinte prova:\\
+ Tomando $f$ como sendo uma polinômio de grau $(2n+1)$. Temos que $f^{(n+1)}$ será um polinômio de grau $n$. Logo, reescrevendo $f^{(n+1)}$, temos:
  \begin{equation}
- f^{n+1}(x) = \sum^{n}_{j = 0} b_j P_j(x)
+ f^{(n+1)}(x) = \sum^{n-1}_{j = 0} b_j P_j(x)
  \end{equation}
  E também para interpolar o termo $\prod^{n}_{i = 0} (x - x_j)$:
 \begin{equation}
@@ -140,18 +140,19 @@ onde o coeficiente é:
 \end{equation}  
 Assim, fazemos:
 \begin{equation}
-\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x
+\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n-1}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x
 \end{equation}
- Agora, seja o polinômio $P$ ortogonal  em relação ao produto escalar:
+ Agora, sejam os polinômios $P_i$'s ortogonais em relação ao produto escalar:
 \begin{equation}
  (f,g) = \int^b_a f(x)g(x) \partial x
 \end{equation}
  Assim anulamos o erro:
 \begin{align}
 &(P_i,P_j) = \int^b_a P_i(x) P_j(x) \partial x = 0\ ,\ i \neq j\\
-&\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x = 0
+&\int^{a}_b \prod_{i\ =\ 0} (x - x_i)\frac{f^{(n+1)}(\varepsilon)}{(n+1)!}\ \partial x = \sum^{n-1}_{j = 0} b_j \int^{a}_b   P_{n+1}(x) P_j(x) \partial x = 0
 \end{align}
  No caso acima foi utilizado para a integração um polinômio qualquer ortogonal, porém podemos utilizar qualquer classe de polinômios \emph{ortogonais} para estimarmos a integral da função, tomando os zeros dos polinômios a nossa escolha.[\emph{Gauss-Chebychev}, \emph{Gauss-Jacobi}, \emph{Gauss-Radau}, \emph{Gauss-Lobatto}]
+ 
 \section{Derivação pelo método da colocação [talvez altere o nome] }
  Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$, pode ser reescrito em termos de polinômios de Lagrange $C_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
  \begin{equation}
@@ -350,7 +351,7 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  \text{onde:}\\
  u^h(\partial \Omega_D) = 0,\ u^d(\partial \Omega_D) = g_d
  \end{align}
- Chamamos essa combinação de \emph{Lift}. Substituindo na equação \ref{eq:eq_fraca} essa combinação linear de $u^d$ e $u^h$ temos:
+ Chamamos essa combinação de $u^d$ e $u^h$ de \emph{Lift}. Substituindo na equação \ref{eq:eq_fraca} essa combinação linear de $u^d$ e $u^h$ temos:
  \begin{align}\label{eq:eqdif_dh}
  & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x  +  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x \\
 & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x=  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x -    \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x 
@@ -429,13 +430,13 @@ u^\delta = \sum^2_{i=0} \hat{u_i}\phi_i(x)
 	& \text{onde\ } \phi_i \text{\ é dado por:}\\
 	& \phi_0=
 	\begin{cases} 
-	     1-x & 0 \leq x\leq \frac{1}{2} \\
+	     1-\ 2x & 0 \leq x\leq \frac{1}{2} \\
 	      0  & \frac{1}{2}  \leq x \leq 1 \\
 	\end{cases},\\ 
 	& \phi_1=
 	\begin{cases} 
 	     2x & 0 \leq x\leq \frac{1}{2} \\
-	      0(1-x)  & \frac{1}{2}  \leq x \leq 1 \\
+	      2(1-x)  & \frac{1}{2}  \leq x \leq 1 \\
 	\end{cases},\\
 	& \phi_2=
 	\begin{cases} 
@@ -465,7 +466,7 @@ u^\delta = \sum^2_{i=0} \hat{u_i}\phi_i(x)
  \begin{equation}
  v^\delta(x) = \hat{v_1}\phi_1(x) + \hat{v_2}\phi_2(x)
  \end{equation}
- tanto $\hat{v_0}\ e \hat{v_1}$ são \emph{desconhecidos}. Definimos $f(x)$ como uma expansão idêntica de $u^\delta$ em relação a $\phi$:
+ tanto $\hat{v_0}$ e $\hat{v_1}$ são \emph{desconhecidos}. Definimos $f(x)$ como uma expansão idêntica de $u^\delta$ em relação a $\phi$:
  \begin{equation}
  f(x) = \sum^2_{i=0} \hat{f_0}\phi_0(x) +\hat{f_1}\phi_1(x) + \hat{f_2}\phi_2(x)
  \end{equation}
