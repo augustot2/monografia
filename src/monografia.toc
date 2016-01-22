@@ -22,15 +22,8 @@
 \contentsline {subsection}{\numberline {2.6.4}m\IeC {\'e}todo dos elementos finitos}{13}{subsection.2.6.4}
 \contentsline {subsection}{\numberline {2.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{14}{subsection.2.6.5}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Equa\IeC {\c c}\IeC {\~a}o de Helmholtz}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Condi\IeC {\c c}\IeC {\~a}o de contorno Neumann de newton e Dirichilet}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Discretiza\IeC {\c c}\IeC {\~a}o}{17}{section.3.3}
-\contentsline {section}{\numberline {3.4}Solver linear}{17}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Integra\IeC {\c c}\IeC {\~a}o gaussiana e linhas pseudoespectral}{17}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Teorema: Integra\IeC {\c c}\IeC {\~a}o Gauss-Jacobi}{18}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}tipos de polin\IeC {\^o}mio}{18}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Derivada}{19}{subsection.3.4.4}
-\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{23}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{25}{chapter*.11}
+\contentsline {section}{\numberline {3.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{17}{section.3.1}
+\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{19}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{21}{chapter.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{23}{chapter*.11}
 \contentsfinish 

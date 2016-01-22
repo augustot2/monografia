@@ -1,71 +1,59 @@
 \chapter{Método dos elementos espectrais}
 \label{cap:II}
 
-\section{Equação de Helmholtz}
- text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-
-
-
-
-
-\section{Condição de contorno Neumann de newton e Dirichilet}
- text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-
-\section{Discretização}
- text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
- 
-\section{Solver linear}
- text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
- 
-	
-
-\subsection{Integração gaussiana e linhas pseudoespectral}
- text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-  text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-  text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-  text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-  text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
-  text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .
- 
-\corr{Eu colocaria em outra seção e não como subseção da interpolação}
- A razão pelo qual o método de colocação é também chamado "pseudoespectral" devido a colocação otimizada dos pontos de interpolação, como o polinômio de \emph{Chebyshev}, faz o método da colocação idêntico ao método de \emph{Galerkin} se o produto interno é calculado por um tipo de integração numérica conhecida como Integração gaussiana. \corr{Você não falou o que é o método espetral, Galerkin, etc}
- Integração numérica e interpolação Lagrangiana são muito correlacionada pois o método de integração é de aproximar o polinômio pelo integrando de $f(x)$ e depois integrar $P_N(X)$. Como o interpolado pode ser integrado facilmente, o erro é dado como a diferença de $f(x)$ e $P_N(x)$.  A fórmula é dada por:
- \begin{equation}
-  \int_a^b f(x) \partial x \approx \sum_{i = 0}^N w_i f(x)
- \end{equation}
- e a função peso $w_i$ é dado por:
- \begin{equation}
-  w_i \equiv \int_{a}^{b} C_i(x) \partial x
- \end{equation}
- Onde $C_i$ é o polinômio base de \emph{Lagrange}.
- Quando calculamos, os pontos de \emph{interpolação} são nomeados de \emph{abcissas}, enquanto que a \emph{integral} de um polinômio base é chamado de \emph{quadratura}, no contexto da integração numérica.
- 
- A \emph{ordem} de um método numérico é diretamente relacionado a maior polinômio que o aproxima. Por exemplo quando aplicamos a interpolação para equações de primeiro e segundo grau, os erros são respectivamente $O(h^2),\ O(h^4)$. Similarmente, a fórmula de quadratura com $(N + 1)$ pontos, será exata se o integrado for um polinômio de grau $N$.
- 
- Gauss fez uma observação que pontos de interpolação equidistantes não são tão bons. Se tivermos pontos interpoladores $x_i$ e seus pesos $w_i$ 
-desconhecido, teremos o dobro de parâmetros para escolher que maximizem a precisão do método e assim podemos ter uma aproximação exata para polinômios de grau $(2N + 1)$.
-\subsection{Teorema: Integração Gauss-Jacobi}
- Seja $(N + 1)$ pontos interpoladores $x_i$ escolhidos e raízes de $P_N(x)$, um polinômio de grau $(N+1)$ do tipo \emph{ortogonal} no intervalo $[a,b]$ com respeito a função $p(x)$, então a fórmula de quadratura é dado por:
+\section{Formulação matemática}
+ Para uma nova formulação do problema, tomemos novas notações, começando pela equação de Helmholtz de primeira ordem:
 \begin{equation}
- \int^a_b f(x)p(x) \partial x = \sum^{N}_{i= 0} w_i f_i(x)
-\end{equation} 
-é exata para toda $f(x)$ polinomial de grau máximo $(2N +1)$
+ L(u) = \frac{\partial^2 u}{\partial x^2} - \lambda u + f = 0
+\end{equation}
+ Onde u respeita as condições de contorno:\\
+\begin{equation}
+ u(0) = g_D \ , \ \frac{\partial u}{\partial x}(l) = g_N
+\end{equation}
+ Assim, temos que determinar a solução no intervalo $ 0 < x < l$, que será o domínio $\Omega$.
+\begin{equation}
+ \Omega = \{\ x\ |\ 0\ <\ x <\ l\} = ]0,1]
+\end{equation}
+ Multiplicando $L(u)$ por uma função peso $v(x)$ qualquer e de integrando no domínio $\Omega$, temos:
+ \begin{equation}
+ \int^{l}_0 v \frac{\partial^2 u}{\partial x^2} \partial x - \int^{l}_0 \lambda v u \partial x + \int^{l}_0 v f \partial x = 0
+ \end{equation}
+ Sendo $u(x)$ e $v(x)$ funções suaves, podemos integrar o primeiro termo por partes obtendo:
+ \begin{equation}\label{eq:nova_eqdif}
+ \int_\Omega \frac{\partial v}{\partial x} \frac{\partial u}{\partial x} \partial x\ + \int_\Omega \lambda v u \partial x\ =\ \int_\Omega vf \partial x\ +\ \left[ v \frac{\partial v}{\partial x} \right]_\Omega
+ \end{equation}
+ introduzindo novas notações para ambos os lados da função temos: 
+\begin{align}
+ a(v,u)\ = & \int^l_{0} \left(\frac{\partial v}{\partial x}\frac{\partial u}{\partial x} + \lambda v u\right) \partial x\\
+ f(v)\ = & \int^{l}_0 v f \partial x + \left[v \frac{\partial v}{\partial x}\right]^{l}_{0} 
+\end{align}
+ A equação \ref{eq:nova_eqdif} pode ser reescrita como:
+ \begin{equation}
+ a(u,v) = f(v)
+ \end{equation}
+ No estudo de estruturas,  $a(u,u)$ é chamado de \emph{energia de deformação} e o espaço de funções na qual temos uma \emph{deformação} finita em $\Omega$, chamamos de \emph{espaço de energia} , denotado por $E(\Omega)$:
+\begin{equation}
+ E(\Omega) = { u | a(u,v) < \infty }
+\end{equation}
+  Associado a esse espaço, temos uma norma associada, denominada por $||u||_E$:
+\begin{equation}
+ ||u||_{E} = \sqrt{a(u,v)}
+\end{equation}
+ Funções que pertencem a esse espaço são chamados de funções $H^1$ e satisfazem a condição:
+ \begin{equation}
+ H^1(\Omega) = \bigg\{ u| \int_\Omega (|\nabla u|^2 + |u|^2) \partial \Omega  \bigg\}
+ \end{equation}
+  Assim temos o espaço da solução dado por:
+\begin{equation}
+U = \lbrace u| u \in H^1\ , u(0) = g_D  \rbrace
+\end{equation}
+ E o espaço da função teste é dado por :
+\begin{equation}
+V = \lbrace v | v \in H^1, v(0)=0 \rbrace
+\end{equation}
 
-\subsection{tipos de polinômio}
-	adicionar outros polinômios de base talvez ?
-	Gauss-Jacobi
-	Gauss-Lobatto-Jacobi
-	Gauss-Radau-Jacobi 
-
-
-\subsection{Derivada}
-	As derivadas podem ser calculadas da seguinte forma:
-	\begin{align}
-	f(x) = \sum^{N-1}_{i=0} f(x_i) C_i(x)\\
-	\frac{\partial f(x)}{\partial x} = \sum^{N}_{i = 0} f(x_i) \frac{\partial C_i(x)}{\partial x}
-	\end{align}
-	para calcular as integrais, é necessário conhecer a derivada nos nós da quadratura, $x_i$ :
-	%\begin{equation}
-	%
-	%\end{equation}
-
+ Assim, a formulação fraca do problema fica em encontrar $u \in U$ dado:
+ \begin{equation}
+ a(v,u)\ =\ f(v)\ ,\ \forall v \in V 
+ \end{equation}
+ Assim, temos o problema de soluções infinitas, pois ambos os espaços, U e V, contêm um número infinito de funções. Assim, selecionamos os subespaços $U^\delta$ ($ U^\delta \subset U$) e $V^\delta$ ($ V^\delta \subset V$) que contem um número finito de funções.
