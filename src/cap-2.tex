@@ -33,7 +33,7 @@
  \end{equation}
  No estudo de estruturas,  $a(u,u)$ é chamado de \emph{energia de deformação} e o espaço de funções na qual temos uma \emph{deformação} finita em $\Omega$, chamamos de \emph{espaço de energia} , denotado por $E(\Omega)$:
 \begin{equation}
- E(\Omega) = { u | a(u,v) < \infty }
+ E(\Omega) = \lbrace u | a(u,v) < \infty \rbrace
 \end{equation}
   Associado a esse espaço, temos uma norma associada, denominada por $||u||_E$:
 \begin{equation}
@@ -54,6 +54,7 @@ V = \lbrace v | v \in H^1, v(0)=0 \rbrace
 
  Assim, a formulação fraca do problema fica em encontrar $u \in U$ dado:
  \begin{equation}
- a(v,u)\ =\ f(v)\ ,\ \forall v \in V 
+ a(v,u)\ =\ f(v)\ ,\ \forall\ v \in V 
  \end{equation}
  Assim, temos o problema de soluções infinitas, pois ambos os espaços, U e V, contêm um número infinito de funções. Assim, selecionamos os subespaços $U^\delta$ ($ U^\delta \subset U$) e $V^\delta$ ($ V^\delta \subset V$) que contem um número finito de funções.
+ 

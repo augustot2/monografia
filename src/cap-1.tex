@@ -324,7 +324,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \end{equation}
  Onde $g_D$ e $g_N$, são constantes, e são chamadas de condição de contorno de \emph{D}irichlet e \emph{N}eumman. Essas condições junto da equação \eqref{eq:eq_dif}, chamamos essa combinação como formulação \emph{Forte} do problema.
 \subsection{Formulação fraca e a implementação da condição de fronteira de Neumman}
- Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 em na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
+ Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
  \begin{equation}\label{eq:eq_fraca}
  (v,L(u))=\int^1_{-1} v\left ( \frac{\partial^2u}{\partial x^2} + f \right )\partial x = 0
  \end{equation}
@@ -338,9 +338,9 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x =  v(1)g_N + \int^{1}_{-1}  v f\ \partial x  
 \end{equation}
 
-Vemos que nessa última etapa, vemos que a condição de fronteira de \emph{Neumman} é naturalmente incluida na formulação. A forma integral  equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
+Vemos que nessa última etapa, a condição de fronteira de \emph{Neumman} é naturalmente inclusa na formulação. A forma integral  equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
 
-A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a solução para a formulação fraca da equação, quando a solução exata $u(x)$ e a função test $v(x)$ são aproximadas por expanções \emph{finitas} $u^\delta(x)$ e $v^\delta(x)$, e assim a  equação diferencial se torna:
+A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a solução para a formulação fraca da equação, quando a solução exata $u(x)$ e a função teste $v(x)$ são aproximadas por expanções \emph{finitas} $u^\delta(x)$ e $v^\delta(x)$, e assim a  equação diferencial se torna:
 \begin{equation}\label{eq:eqdif_neumann}
  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x 
 \end{equation}
@@ -356,7 +356,7 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x  +  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x \\
 & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x=  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x -    \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x 
  \end{align}
- Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} bis oernute reduzir uma \textbf{equação diferencial} num problema algébrico.
+ Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} nos permite reduzir uma \textbf{equação diferencial} num problema algébrico.
 
 \subsection{Condição de fronteira de Robin}
  Outro tipo de condição de fronteira é a condição mista ou de \emph{Robin}. Ela  aparece, por exemplo, em equações de transferência de calor e é uma combinação linear das condições de fronteira de \emph{Dirichlet} e \emph{Neumman} da forma:
@@ -374,7 +374,7 @@ e substituindo na \ref{eq:eq_fraca} temos:
 
  A diferença entre as implementações das condições de fronteiras de \emph{Robin} e \emph{Neumman} é apenas no termo novo $\frac{\beta}{\alpha}v^\delta(1)u(1)$.
 \subsection{método dos elementos finitos}
- O método dos elementos finitos para equações diferenciais de segunda ordem, estima $v^\delta$ por uma classe de funções $C^0$ contínua, onde essa aproximada é contínua em todo domínio $\Omega$. A solução do método é dividir em esse domínio em finitos elementos, da forma $\Omega^e$, onde a derivada também é contínua. No entanto nas fronteiras entre os elementos, sua derivada pode ser descontínua apesar da função ser $C^0$ contínua.
+ O método dos elementos finitos para equações diferenciais de segunda ordem, estima $v^\delta$ por uma classe de funções $C^0$ contínua, onde essa aproximada é contínua em todo domínio $\Omega$. A solução do método é dividir esse domínio em finitos elementos, da forma $\Omega^e$, onde a derivada também é contínua. No entanto nas fronteiras entre os elementos, sua derivada pode ser descontínua apesar da função ser $C^0$ contínua.
  Fazendo a nova forma para $N_{el}$ elementos, transformando a equação \eqref{eq:eq_dif} temos:
 \begin{align} 
  \int^1_{-1} \frac{\partial v^\delta}{\partial x}\frac{\partial u^\delta}{\partial x} \partial x&= 
