@@ -49,7 +49,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \newpage
 
 \subsection{Fenômeno de Runge}
- Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente distantes sobre um interval $[a,b]$, $\lim_{n \rightarrow \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável.
+ Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente distantes sobre um interval $[a,b]$, $\lim_{n \to \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável.
  No início do século XX, \emph{Carl David Tolmé Runge}, provou que para uma função $f(x)$:
  \begin{equation}
  f(x) = \frac{1}{1 + x^2} , x \in [-5,5]
@@ -61,7 +61,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \caption{fenômeno Runge}
 \end{figure}
 
- Assim, Runge prova que no meio do intervalo temos boas aproximações mas infelizmente perto dos extremos, os valores interpolados oscilam muito, para um polinômio de grau n com pontos equidistante. Esse fenômeno sugere que escolhamos pontos diversos que tenham menor concentração do meio do intervalo, onde temos uma maior precisão, e aumentar a densidade de pontos próximos dos extremos.
+ Assim, Runge prova que no meio do intervalo temos boas aproximações mas infelizmente perto dos extremos, os valores interpolados oscilam muito, para um polinômio de grau n com pontos equidistante. Esse fenômeno sugere que escolhamos pontos diversos que tenham menor concentração no meio do intervalo, onde temos uma maior precisão, e aumentar a densidade de pontos próximos dos extremos.
  Agora como encontrar uma distribuição de pontos de forma que melhore a interpolação? A resposta pode ser explicado pelos teoremas a seguir.
 \pagebreak
 \subsection{ Teorema I: Erro de interpolação de Cauchy}
@@ -73,7 +73,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{equation}
  Para um $\epsilon(x) \in [-1,1]$.
  
- Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^{(N+1)}(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
+ Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^{(N+1)}(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que expandindo o produtório, o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
 
  
 \subsection{Teorema II: Amplitude minima}

@@ -25,5 +25,4 @@
 \contentsline {section}{\numberline {3.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{17}{section.3.1}
 \contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{19}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{21}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{23}{chapter*.11}
 \contentsfinish 
