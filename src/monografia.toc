@@ -4,25 +4,27 @@
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Hist\IeC {\'o}ria}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Julia}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}M\IeC {\'e}todo espectral}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Interpola\IeC {\c c}\IeC {\~a}o}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{3}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Fen\IeC {\^o}meno de Runge}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{6}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Teorema II: Amplitude minima}{6}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica pelo m\IeC {\'e}todo de coloca\IeC {\c c}\IeC {\~a}o }{7}{section.2.3}
-\contentsline {section}{\numberline {2.4}Deriva\IeC {\c c}\IeC {\~a}o pelo m\IeC {\'e}todo da coloca\IeC {\c c}\IeC {\~a}o [talvez altere o nome] }{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Polin\IeC {\^o}mios de Jacobi}{9}{subsection.2.4.1}
-\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}todo de Galerkin}{11}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Formula\IeC {\c c}\IeC {\~a}o fraca e a implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Neumman}{11}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Dirichlet}{12}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Condi\IeC {\c c}\IeC {\~a}o de fronteira de Robin}{12}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}m\IeC {\'e}todo dos elementos finitos}{13}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{14}{subsection.2.6.5}
-\contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{17}{section.3.1}
-\contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{19}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{21}{chapter.5}
+\contentsline {chapter}{\numberline {2}Static Condensation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}M\IeC {\'e}todo espectral}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}Interpola\IeC {\c c}\IeC {\~a}o}{5}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{5}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Fen\IeC {\^o}meno de Runge}{7}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3} Teorema I: Erro de interpola\IeC {\c c}\IeC {\~a}o de Cauchy}{8}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Teorema II: Amplitude minima}{8}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Integra\IeC {\c c}\IeC {\~a}o num\IeC {\'e}rica pelo m\IeC {\'e}todo de coloca\IeC {\c c}\IeC {\~a}o }{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Deriva\IeC {\c c}\IeC {\~a}o pelo m\IeC {\'e}todo da coloca\IeC {\c c}\IeC {\~a}o }{10}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Polin\IeC {\^o}mios de Jacobi}{11}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}M\IeC {\'e}todo Pseudo-espectral ou da coloca\IeC {\c c}\IeC {\~a}o}{13}{section.3.5}
+\contentsline {section}{\numberline {3.6}M\IeC {\'e}todo de Galerkin}{13}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Formula\IeC {\c c}\IeC {\~a}o fraca e a implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Neumman}{13}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Implementa\IeC {\c c}\IeC {\~a}o da condi\IeC {\c c}\IeC {\~a}o de fronteira de Dirichlet}{14}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Condi\IeC {\c c}\IeC {\~a}o de fronteira de Robin}{14}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}m\IeC {\'e}todo dos elementos finitos}{15}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{16}{subsection.3.6.5}
+\contentsline {chapter}{\numberline {4}M\IeC {\'e}todo dos elementos espectrais}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{19}{section.4.1}
+\contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{23}{chapter.6}
 \contentsfinish 

@@ -54,7 +54,16 @@ V = \lbrace v | v \in H^1, v(0)=0 \rbrace
 
  Assim, a formulação fraca do problema fica em encontrar $u \in U$ dado:
  \begin{equation}
- a(v,u)\ =\ f(v)\ ,\ \forall\ v \in V 
+ a(v,u)\ =\ f(v)\ ,\ \forall\ v \in V,\ u \in U
  \end{equation}
- Assim, temos o problema de soluções infinitas, pois ambos os espaços, U e V, contêm um número infinito de funções. Assim, selecionamos os subespaços $U^\delta$ ($ U^\delta \subset U$) e $V^\delta$ ($ V^\delta \subset V$) que contem um número finito de funções.
+ Assim, temos o problema de soluções infinitas, pois ambos os espaços, U e V, contêm um número infinito de funções. Para resolvermos o problema, selecionamos os subespaços $U^\delta$ ($ U^\delta \subset U$) e $V^\delta$ ($ V^\delta \subset V$) que contem um número finito de funções:
+  \begin{equation}
+ a(v^\delta,u^\delta)\ =\ f(v^\delta)\ ,\ \forall\ v^\delta \in V^\delta,\ u^\delta \in U^\delta
+ \end{equation}
+Impomos a condição de fronteira de Dirichlet decompondo $u^\delta$, em $u^d \in U^\delta$ e $u^h \in V^\delta$:
+\begin{equation}
+ u^\delta = u^d + u^h,\ u^h(0) = 0,\ u^d(0) = g_d
+\end{equation}
+ Definindo os espaços de funções $V^\delta$ e $U^\delta$, o problema de minimização do problema no espaço infinitesimal $V$, torna-se a resolução do problema no subspaço finito $V^\delta$.
  
+\section{•}
