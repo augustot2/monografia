@@ -4,7 +4,7 @@
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Hist\IeC {\'o}ria}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Julia}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}Static Condensation}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{3}{section.2.1}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}M\IeC {\'e}todo espectral}{5}{section.3.1}
@@ -25,6 +25,9 @@
 \contentsline {subsection}{\numberline {3.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{16}{subsection.3.6.5}
 \contentsline {chapter}{\numberline {4}M\IeC {\'e}todo dos elementos espectrais}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}\IeC {\textbullet }}{20}{section.4.2}
 \contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{23}{chapter.6}
+\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{25}{chapter.7}
+\contentsline {section}{\numberline {7.1}M\IeC {\'e}todo h}{25}{section.7.1}
 \contentsfinish 
