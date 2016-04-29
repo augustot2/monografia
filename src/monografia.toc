@@ -29,5 +29,6 @@
 \contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{23}{chapter.6}
 \contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}M\IeC {\'e}todo h}{25}{section.7.1}
+\contentsline {section}{\numberline {7.1}M\IeC {\'e}todo hp}{25}{section.7.1}
+\contentsline {section}{\numberline {7.2}Particionamento do dom\IeC {\'\i }nio}{26}{section.7.2}
 \contentsfinish 
