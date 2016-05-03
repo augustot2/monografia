@@ -39,12 +39,13 @@
 \contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}Converg\IeC {\^e}ncia do erro usando o m\IeC {\'e}todo espectral}{23}{section.5.2}
-\contentsline {section}{\numberline {5.3}M\IeC {\'e}todo P}{24}{section.5.3}
-\contentsline {section}{\numberline {5.4}M\IeC {\'e}todo H}{24}{section.5.4}
-\contentsline {section}{\numberline {5.5}M\IeC {\'e}todo HP}{24}{section.5.5}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{25}{chapter.6}
-\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{27}{chapter.7}
-\contentsline {section}{\numberline {7.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{27}{section.7.1}
-\contentsline {section}{\numberline {7.2}Particionamento do dom\IeC {\'\i }nio}{28}{section.7.2}
-\contentsline {section}{\numberline {7.3}Demonstra\IeC {\c c}\IeC {\~a}o}{28}{section.7.3}
+\contentsline {subsection}{\numberline {5.2.1}Interpola\IeC {\c c}\IeC {\~a}o polinomial}{25}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}M\IeC {\'e}todo P}{25}{section.5.3}
+\contentsline {section}{\numberline {5.4}M\IeC {\'e}todo H}{25}{section.5.4}
+\contentsline {section}{\numberline {5.5}M\IeC {\'e}todo HP}{25}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{27}{chapter.6}
+\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{29}{section.7.1}
+\contentsline {section}{\numberline {7.2}Particionamento do dom\IeC {\'\i }nio}{30}{section.7.2}
+\contentsline {section}{\numberline {7.3}Demonstra\IeC {\c c}\IeC {\~a}o}{30}{section.7.3}
 \contentsfinish 

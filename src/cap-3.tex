@@ -5,42 +5,56 @@
 
 \section{Convergência do erro usando o método espectral}
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.
-	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:
-	
-	Gráfico dos erros:
-	
-	tabela:
-	\begin{table}[]
+	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:\\	
+\begin{figure}[!ht]
+  \includegraphics[width=0.8\textwidth,center]{figuras/interpolacao_todas.png}
+  \caption{interpolação de polinômios de alta ordem com raízes de Gauss-Lobatto-Jacobi, igualmente espaçados, Chebyshev}
+\end{figure}
+Notamos novamente que para pontos igualmente espaçados a aproximação nos pontos próximos das extremidades notamos que o erro é grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões.
+
+
+\pagebreak
+\begin{table}[h]
 \centering
 \caption{tabela de erros para os diferentes tipos de raízes}
 \label{my-label}
 \begin{tabular}{|l|l|l|l|}
 \hline
-Grau & equidist           & glj       & cheb      \\ \hline
-15   & 7.192324287742138  & 4.925e-02 & 4.660e-02 \\
-16   & 2.1068604877730723 & 9.128e-02 & 8.309e-02 \\
-17   & 14.3867603991747   & 3.480e-02 & 3.261e-02 \\
-18   & 4.223357792774246  & 6.138e-02 & 5.590e-02 \\
-19   & 29.186207063703357 & 2.417e-02 & 2.249e-02 \\
-20   & 8.575360826439185  & 4.126e-02 & 3.758e-02 \\
-21   & 59.768399059191566 & 1.656e-02 & 1.533e-02 \\
-\vdots   &\vdots              & \vdots    & \vdots    \\
-22   & 17.602048487622582 & 2.772e-02 & 2.526e-02 \\
-23   & 123.61807766057046 & 1.124e-02 & 1.036e-02 \\
-24   & 36.395623192147866 & 1.863e-02 & 1.698e-02 \\
-25   & 257.21247481034436 & 7.559e-03 & 6.947e-03 \\
-26   & 75.76386568988288  & 1.252e-02 & 1.141e-02 \\
-27   & 538.1716397032399  & 5.054e-03 & 4.634e-03 \\
-28   & 158.69210212531505 & 8.410e-03 & 7.669e-03 \\
-29   & 1130.7416064571887 & 3.362e-03 & 3.078e-03 \\
-30   & 333.9416665132435  & 5.651e-03 & 5.154e-03 \\
-31   & 2384.72856827992   & 2.229e-03 & 2.061e-03 \\
-32   & 704.0759210504285  & 3.797e-03 & 3.463e-03 \\
-33   & 5058.987396238796  & 1.510e-03 & 1.402e-03 \\
-34   & 1494.3806583464172 & 2.551e-03 & 2.328e-03 \\
-35   & 10719.901146881022 & 1.025e-03 & 9.488e-04
+Grau & equidist & glj       & chebyshev     \\ \hline
+15   & 7.19     & 4.925e-02 & 4.660e-02 \\
+16   & 2.11     & 9.128e-02 & 8.309e-02 \\
+17   & 14.39    & 3.480e-02 & 3.261e-02 \\
+18   & 4.22     & 6.138e-02 & 5.590e-02 \\
+19   & 29.19    & 2.417e-02 & 2.249e-02 \\
+20   & 8.58     & 4.126e-02 & 3.758e-02 \\
+\vdots   & \vdots              & \vdots    & \vdots    \\
+30   & 333.94   & 5.651e-03 & 5.154e-03 \\
+31   & 2384.73  & 2.229e-03 & 2.061e-03 \\
+32   & 704.08   & 3.797e-03 & 3.463e-03 \\
+33   & 5058.99  & 1.510e-03 & 1.402e-03 \\
+34   & 1494.38  & 2.551e-03 & 2.328e-03 \\
+35   & 10719.90 & 1.025e-03 & 9.488e-04 \\ \hline
 \end{tabular}
 \end{table}
+gráfico de erro
+\begin{figure}[!ht]
+  \includegraphics[width=0.5\textwidth,center]{figuras/glj_equi.png}
+  \caption{comparação de erros de raízes de glj versus equidistante}
+\end{figure}
+\begin{figure}[!hb]
+  \includegraphics[width=0.5\textwidth,center]{figuras/glj_cheb.png}
+  \caption{comparação de erros de raízes de glj versus equidistante}
+\end{figure}
+
+1Paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo
+graficos de erros:
+
+
+2Paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo paragrafo
+
+
+\subsection{Interpolação polinomial}
+
 \section{Método P}
 
 \section{Método H}
