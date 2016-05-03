@@ -25,10 +25,26 @@
 \contentsline {subsection}{\numberline {3.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{16}{subsection.3.6.5}
 \contentsline {chapter}{\numberline {4}M\IeC {\'e}todo dos elementos espectrais}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}\IeC {\textbullet }}{20}{section.4.2}
-\contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{23}{chapter.6}
-\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}M\IeC {\'e}todo hp}{25}{section.7.1}
-\contentsline {section}{\numberline {7.2}Particionamento do dom\IeC {\'\i }nio}{26}{section.7.2}
+\contentsline {section}{\numberline {4.2}Formula\IeC {\c c}\IeC {\~a}o Fraca}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Bases}{21}{section.4.3}
+\contentsline {section}{\numberline {4.4}Elementos Finitos h}{21}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Assembly}{21}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Tipo p}{21}{section.4.5}
+\contentsline {section}{\numberline {4.6}Tipo hp}{21}{section.4.6}
+\contentsline {section}{\numberline {4.7}Sistema Linear}{21}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}condensa\IeC {\c c}\IeC {\~a}o Est\IeC {\'a}tica}{21}{subsection.4.7.1}
+\contentsline {section}{\numberline {4.8}Condi\IeC {\c c}\IeC {\~a}o de contorno de Dirichlet}{21}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}lift}{21}{subsection.4.8.1}
+\contentsline {section}{\numberline {4.9}Condi\IeC {\c c}\IeC {\~a}o de Neuman}{21}{section.4.9}
+\contentsline {chapter}{\numberline {5}Simula\IeC {\c c}\IeC {\~o}es}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Converg\IeC {\^e}ncia do erro usando o m\IeC {\'e}todo espectral}{23}{section.5.2}
+\contentsline {section}{\numberline {5.3}M\IeC {\'e}todo P}{24}{section.5.3}
+\contentsline {section}{\numberline {5.4}M\IeC {\'e}todo H}{24}{section.5.4}
+\contentsline {section}{\numberline {5.5}M\IeC {\'e}todo HP}{24}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{25}{chapter.6}
+\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{27}{chapter.7}
+\contentsline {section}{\numberline {7.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{27}{section.7.1}
+\contentsline {section}{\numberline {7.2}Particionamento do dom\IeC {\'\i }nio}{28}{section.7.2}
+\contentsline {section}{\numberline {7.3}Demonstra\IeC {\c c}\IeC {\~a}o}{28}{section.7.3}
 \contentsfinish 

@@ -8,7 +8,7 @@
 \includegraphics[width=0.6\textwidth, center ]{figuras/compara_metodo_n.png}
 \caption{polinômio base de Lagrange para N  pontos em apenas um elemento}
 \end{figure}
-\\ Na figura acima vemos que para um problema subdividido em \emph{um} elemento a aproximação acontece para um polinômio de lagrange de grau elevado, no caso anterior, n igual a 20. Porém  aumentando o número de elementos e tendo fixo o grau do polinômio, vemos que essa singularidade é contornada.
+\\ Na figura acima vemos que para um problema subdividido em \emph{um} elemento, a aproximação acontece para um polinômio de lagrange de grau elevado, no caso anterior, n igual a 20. Porém  aumentando o número de elementos e tendo fixo o grau do polinômio, vemos que essa singularidade é contornada.
 
 \begin{figure}[!b]
 \includegraphics[width=0.6 \textwidth, center]{figuras/compara_metodo_n2.png}
@@ -21,24 +21,50 @@
 \begin{equation}
  \Omega  = \bigcup^{Nel}_{e= 1} \Omega^e,\ onde\ \bigcap^{Nel}_{e= 1} \Omega^e = \varnothing
 \end{equation}
-Para um domínio $ \Omega = \{x\ | 0 \ <\ x\ <\ l  \}$, definímos sua malha por 
-
+Para um domínio $ \Omega = \{x\ | 0 \ <\ x\ <\ l  \}$, definímos sua malha por $Nel + 1$ pontos:
 \begin{equation}
  0  = x_0 < x_1 < \ldots < x_{Nel - 1} < x_{Nel} = l
 \end{equation}
-\
+Logo, o e-ésimo elemento é definido por:
 \begin{equation}
  \Omega^e = \{x\ |\ x_{e-1}\ <\ x\ <\ x_{e}\ \}
 \end{equation}
-
-
-
+Ar
 \begin{equation}
  \Omega^1 = \{x\ |\ x_{0}\ <\ x\ <\ x_{1}\ \}
 \end{equation}
 
 
 
+\section{Demonstração}
+Frases: os modos globais podem ser representados em termos dos modos de expansão locais de cada elemento
+
+
+
+
+omega padrão $\Omega_p$:
+\begin{equation}
+	\Omega_p = \{x\ |\ -1\ <\ x\ <\ 1\ \}
+\end{equation}
+
+
+mapeamento :
+\begin{align}
+x = \chi^e(\xi) = \frac{1-\xi}{2}x_{e-1}\ +\ \frac{1+\xi}{2}x_{e}\ ,\  \xi \in \Omega_{p}
+\end{align}
+inversa:
+\begin{align}
+\xi = (\chi^e) ^{-1}(x) = 2\ \frac{x - x_{e-1}}{x_{e} - x_{e-1}} - 1,\ x\ \in \   \Omega^e
+\end{align}
+
+lagrangiana
+\begin{equation}
+	h_i(x) = \prod_{k=1,k\ne i}^Q \frac{x - x_k}{x_i - x_k}
+\end{equation}
+
+\begin{align}
+	 x = x
+\end{align}
 
 
 
