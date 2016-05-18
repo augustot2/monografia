@@ -1,0 +1,55 @@
+\section{Particionamento do domínio}
+ Quando queremos solucionar um problema usando elementos , particionamos o seu domínio $\Omega$, definimos uma malha subdividida em $N_el$ elementos, de forma que não haja sobreposição dos mesmos.Matematicamente pode ser escrito como:\
+\begin{equation}
+ \Omega  = \bigcup^{Nel}_{e= 1} \Omega^e,\ onde\ \bigcap^{Nel}_{e= 1} \Omega^e = \varnothing
+\end{equation}
+Para um domínio $ \Omega = \{x\ | 0 \ <\ x\ <\ l  \}$, definímos sua malha por $Nel + 1$ pontos:
+\begin{equation}
+ 0  = x_0 < x_1 < \ldots < x_{Nel - 1} < x_{Nel} = l
+\end{equation}
+Logo, o e-ésimo elemento é definido por:
+\begin{equation}
+ \Omega^e = \{x\ |\ x_{e-1}\ <\ x\ <\ x_{e}\ \}
+\end{equation}
+ Subdividindo o elemento em $N_{el} = 3$ distintos, temos uma malha então com $N_{el} + 1 = 4$ pontos distintos $x_0 =0,x_1,x_2,x_3=l$ e seu primeiro elemento definido por:
+\begin{equation}
+ \Omega^1 = \{x\ |\ x_{0}\ <\ x\ <\ x_{1}\ \}
+\end{equation}
+
+
+
+\section{Demonstração}
+ Fazendo uma expansão de elementos finitos linear onde $N_{el} =3$. Temos $N_{dof} = 4$ graus de liberdade, assim
+ $\Phi_0,\Phi_1,\ \Phi_2,\ \Phi_3\ $ modos globais que são diferentes de zero no máximo em 2 elementos. Assim, não é econômico expandir em termos dos modos globais quando utilizamos grandes números de elementos.
+ Assim, podemos ver que localmente, cada modo global consiste de duas funções lineares $\phi_0,\phi_1$, definidas num elemento omega padrão $\Omega_p$:
+\begin{equation}
+	\Omega_p = \{x\ |\ -1\ <\ x\ <\ 1\ \}
+\end{equation}
+tal que:
+\begin{equation}\phi_0(\xi) = \left\{\begin{matrix}
+\frac{1- \xi}{2}\ , \xi \in \Omega_p \\
+0,\ \xi \notin \Omega_p
+\end{matrix}\right.,
+\phi_1(\xi) = \left\{\begin{matrix}
+\frac{1 + \xi}{2}\ ,\ \xi \in \Omega_p \\
+0\ ,\ \xi \notin \Omega_p
+\end{matrix}\right.
+\end{equation}
+podemos mapear $\Omega_p$ para qualquer elemento $\Omega_e$ pela transformação  $\chi^e(\xi) $:
+\begin{align}
+x = \chi^e(\xi) = \frac{1-\xi}{2}x_{e-1}\ +\ \frac{1+\xi}{2}x_{e}\ ,\  \xi \in \Omega_{p}
+\end{align}
+ Esse mapeamento tem uma inversa $ (\chi^e) ^{-1}(x)$, da forma:
+\begin{align}
+\xi = (\chi^e) ^{-1}(x) = 2\ \frac{x - x_{e-1}}{x_{e} - x_{e-1}} - 1,\ x\ \in \   \Omega^e
+\end{align}
+ Os modos globais $\Phi_i(x)$ podem ser representados em termos das expansões locais $\phi_p$ mapeando o elemento padrão para cada elemento $\Omega^e$. Como exemplo, os primeiros modos globais $\Phi_0,\ \Phi_1$ podem ser escritos como:
+\begin{equation}
+\Phi_0(x) = \left\{\begin{matrix}
+\frac{x - x_1}{x_0 - x_1}\ , x \in \Omega^1 \\
+0,\ x \notin \Omega^1
+\end{matrix}\right. = \left\{\begin{matrix}
+\phi_0(\xi) = \phi_0( [\chi^1] ^{-1}(x) )\ ,\ x \in \Omega^1, \\
+0\ ,\ x \notin \Omega^1
+\end{matrix}\right.
+\end{equation}

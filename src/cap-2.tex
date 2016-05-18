@@ -1,4 +1,4 @@
-\chapter{Método dos elementos espectrais}
+chapter{Método dos elementos espectrais}
 \label{cap:II}
 
 \section{Formulação matemática}
@@ -68,8 +68,21 @@ Impomos a condição de fronteira de Dirichlet decompondo $u^\delta$, em $u^d \i
  
 \section{Formulação Fraca}
 \section{Bases}
-\section{Elementos Finitos h}
+\section{Elementos Finitos h} 
 \subsection{Assembly}
+\begin{equation}
+u^{\delta}(x) = \sum^{N_{dof}}_{i = 1} \hat{u}_i \Phi_i(x) 
+\end{equation}
+
+\begin{equation}
+ u^{\delta}(x) = \sum^{N_{dof}}_{i = 1} \hat{u}_i \Phi_i(x) = \sum^{N_{el}}_{e=1} \sum^{P}_{p=0}  \hat{u}^{e}_p \phi^{e}_p(x)
+\end{equation}
+
+\begin{align}
+\hat{u}^{1}_{1} = \hat{u}^{2}_{0}
+\hat{u}^{2}_{1} = \hat{u}^{3}_{0}
+\end{align}
+
 \section{Tipo p}
 \section{Tipo hp}
 \section{Sistema Linear}

@@ -16,55 +16,120 @@
 \end{figure}
 
 \pagebreak
-\section{Particionamento do domínio}
- Quando queremos solucionar um problema usando elementos , particionamos o seu domínio $\Omega$, definimos uma malha subdividida em $N_el$ elementos, de forma que não haja sobreposição dos mesmos.Matematicamente pode ser escrito como:\
+
+ 
+\subsection{Mapeamento}
+ Quando tratamos das funções de bases, temos as funções globais e as locais. Apesar das funções globais serem na teoria usadas para o calcular as matrizes de \emph{massa} e de \emph{rigidez}, na prática deixamos que os cálculos sejam feitos usando as funções de bases locais na qual o próprio nome indica é a função de base para um elemento.\\
+ Tomemos como exemplo as funções lineares globais $\Phi$ em um domínio $\Omega = \{x\ |\ 0\leq x \leq 1\}$ subdividido em \emph{3} elementos. Temos 4 graus de liberdade nessa expansão, definida no máximo em 2 elementos ao mesmo tempo,que vale 1 em um dos extremos desses elementos e decresce para 0 para o em direção aos outros extremos.
 \begin{equation}
- \Omega  = \bigcup^{Nel}_{e= 1} \Omega^e,\ onde\ \bigcap^{Nel}_{e= 1} \Omega^e = \varnothing
-\end{equation}
-Para um domínio $ \Omega = \{x\ | 0 \ <\ x\ <\ l  \}$, definímos sua malha por $Nel + 1$ pontos:
+\Phi_1(x) = \left\{\begin{matrix}
+1 - 3x,\ 0 \leq x \leq \frac{1}{3}\\
+0\ , \frac{1}{3} < x \leq 1
+\end{matrix}\right.\ \ 
+\Phi_2(x) = \left\{\begin{matrix}
+3x,\ 0 \leq x \leq \frac{1}{3}\\
+2 - 3x\ , \frac{1}{3} < x \leq \frac{2}{3}\\
+0\ , \frac{2}{3} < x \leq 1
+\end{matrix}\right.\\
+\end{equation} 
 \begin{equation}
- 0  = x_0 < x_1 < \ldots < x_{Nel - 1} < x_{Nel} = l
-\end{equation}
-Logo, o e-ésimo elemento é definido por:
-\begin{equation}
- \Omega^e = \{x\ |\ x_{e-1}\ <\ x\ <\ x_{e}\ \}
-\end{equation}
-Ar
-\begin{equation}
- \Omega^1 = \{x\ |\ x_{0}\ <\ x\ <\ x_{1}\ \}
-\end{equation}
-
-
-
-\section{Demonstração}
-Frases: os modos globais podem ser representados em termos dos modos de expansão locais de cada elemento
-
-
-
-
-omega padrão $\Omega_p$:
-\begin{equation}
-	\Omega_p = \{x\ |\ -1\ <\ x\ <\ 1\ \}
+\Phi_3(x) = \left\{\begin{matrix}
+0 ,\ 0 \leq x < \frac{1}{3}\\
+3x - 1\ ,\ \frac{1}{3} < x \leq \frac{2}{3}\\
+-3x + 3 \ ,\ \frac{2}{3} < x \leq 1
+\end{matrix}\right.\\
+\Phi_4(x) = \left\{\begin{matrix}
+0\ ,\ \ 0 \leq x < \frac{1}{3}\\
+0\ ,\ \frac{1}{3} < x \leq \frac{2}{3}\\
+3x -2 \ ,\ \frac{2}{3} < x \leq 1
+\end{matrix}\right.
 \end{equation}
 
+\begin{figure}[!h]
+\includegraphics[width=0.6\textwidth, center ]{figuras/Matrix_elem_global.png}
+\caption{funções globais para cada elemento}
+\end{figure}
 
-mapeamento :
+Também podemos definir funções locais $\phi^e_p(x)$ onde $e = \{x \| x_{e1} \leq x \leq x_{e2} \}$:
+\begin{equation}
+\phi^e_1\ = \left\{\begin{matrix}
+\frac{x_{e1}\ -\ x}{x_{e2} - x_{e1}}, x \in \Omega_e \\
+0 ,\ x \notin \Omega_e 
+\end{matrix}\right.
+\phi^e_2\ = \left\{\begin{matrix}
+\frac{x\ -\ x_{e1}}{x_{e2} - x_{e1}}, x \in \Omega_e \\
+0 ,\ x \notin \Omega_e 
+\end{matrix}\right.
+\end{equation} 
+
+\begin{figure}[!h]
+\includegraphics[width=0.6\textwidth, center ]{figuras/Matrix_element_local.png}
+\caption{funções locais para cada elemento}
+\end{figure}
+ Podemos remapear $\Phi_i$'s em função das $\phi_i$'s locais como:
 \begin{align}
-x = \chi^e(\xi) = \frac{1-\xi}{2}x_{e-1}\ +\ \frac{1+\xi}{2}x_{e}\ ,\  \xi \in \Omega_{p}
-\end{align}
-inversa:
-\begin{align}
-\xi = (\chi^e) ^{-1}(x) = 2\ \frac{x - x_{e-1}}{x_{e} - x_{e-1}} - 1,\ x\ \in \   \Omega^e
+\Phi_1 &= \phi_{1}^{1} \\[0.5pt]
+\Phi_2 &= \phi_{2}^{1} + \phi_{1}^{2} \\[0.5pt]
+\Phi_3 &= \phi_{2}^{2} + \phi_{1}^{3} \\[0.5pt]
+\Phi_4 &= \phi_{2}^{3}
 \end{align}
 
-lagrangiana
 \begin{equation}
-	h_i(x) = \prod_{k=1,k\ne i}^Q \frac{x - x_k}{x_i - x_k}
+\begin{bmatrix}
+\phi_1^1\\[1.9pt] 
+\phi_2^1\\[1.9pt]
+\phi_1^2\\[1.9pt] 
+\phi_2^2\\[1.9pt]
+\phi_1^3\\[1.9pt] 
+\phi_2^3\\[1.9pt] 
+\end{bmatrix}\ = \
+\begin{bmatrix}
+1 &0  & 0 & 0 \\ 
+0 & 1 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 &0  & 1 & 0\\ 
+0 &0  & 1 & 0\\ 
+0 &0  & 0 & 1
+\end{bmatrix}\
+\begin{bmatrix}
+\Phi_1\\ 
+\Phi_2\\ 
+\Phi_3\\ 
+\Phi_4
+\end{bmatrix}
 \end{equation}
 
-\begin{align}
-	 x = x
-\end{align}
+Notamos que existe uma relação entre as funções  $\Phi$ globais e as $\phi$ locais, para tal existe uma matriz $A$ que nos permite igualá-las, porém a relação inversa que nos mais interessa, na qual podemos fazer operações locais em cada elemento. Essa relação nos é interessante pois na formulação de Galerkin, nos permite fazer os cálculos das integrais localmente.
+\begin{equation}
+\int_\Omega\ \Phi_2(x) \partial x = \int_{0}^{\frac{1}{3}} \phi^1_2(x) \partial x + \int_{\frac{1}{3}}^{\frac{2}{3}} \phi^2_1(x)\ u(x) \partial x
+\end{equation}
 
+Devido ao fato da matriz $A$ ser uma matriz esparsa e portanto numericamente ineficiente para ser usada como um operador, utilizamos outra saída. Essa alternativa é uma matriz \emph{map}eadora em que cada coluna é um elemento (e) e cada linha o indice da função global (i).
+\begin{equation}
+map[1,i]= \begin{bmatrix}
+1\\
+2
+\end{bmatrix},\
+map[2,i]= \begin{bmatrix}
+2\\
+3
+\end{bmatrix}\
+,map[3,i]= \begin{bmatrix}
+3\\
+4
+\end{bmatrix}
+\end{equation}
 
-
+usando um pseudo código, utilizamos essa matriz mapeadora para montar a função global dada a local:
+\begin{lstlisting}
+ for e =1:Nel
+ 	for i=1,2
+ 		$\Phi$[map[e,i]] = $\Phi$[map[e,i]] + $\phi$[e,i]
+ 	end
+ end
+\end{lstlisting}
+Assim a matriz de massa \emph{global} $M$ definida como $M_{ij} = \int_\Omega \Phi_i\ \Phi_j \partial x$ analogamente como  o código anterior, pode ser reescrita a função de uma matriz de massa $M^e$ \emph{local}, utilizando uma matriz de mapeamento $map$ similar a anterior.
+\begin{figure}[!h]
+\includegraphics[width=0.6\textwidth, center ]{figuras/Matrix_element.png}
+\caption{Matriz de massa mapeada}
+\end{figure}
