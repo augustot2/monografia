@@ -14,12 +14,57 @@
 \includegraphics[width=0.6 \textwidth, center]{figuras/compara_metodo_n2.png}
 \caption{Grau de polinômio fixo com diferentes números de elemento}
 \end{figure}
+\pagebreak
+\subsection{[A decidir]}
+	Ao decidir resolver a equação diferencial, obtemos um sistema de equações diferenciais para cada função teste $v_j^\delta$  e sem perder a igualdade transformamos o problema diferencial em um problema variacional, segue o exemplo abaixo:
+\begin{align}
+\frac{\partial^2 u^\delta }{\partial x^2} + \lambda u^\delta= f\\[1.5pt]
+v^\delta_j (\frac{\partial^2 u^\delta }{\partial x^2} + \lambda v^\delta_j\ u^\delta) \ = v^\delta_j f\\[1.5pt]
+\int_\Omega v^\delta_j (\frac{\partial^2 u^\delta }{\partial x^2} + \lambda v^\delta_j\  u^\delta) \partial x =\int_\Omega v^\delta_j  f \partial x\\[1.5pt]
+\int_\Omega v^\delta_j \frac{\partial^2 u^\delta }{\partial x^2}\ \partial x + \int_\Omega \lambda v^\delta_j\ u^\delta\partial x =\ \int_\Omega v^\delta_j  f \partial x\\[1.5pt]
+\int_\Omega \frac{\partial v^\delta_j }{\partial x} \frac{\partial u^\delta }{\partial x}\ \partial x + \int_\Omega \lambda v^\delta_j\ u^\delta\ \partial x - (v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega\ =\  \int_\Omega v^\delta_j\  f\ \partial x \ \forall j = 1,2,3,\dots,N 
+\end{align}
+ Como $u^\delta$ é a aproximada de $u$ utilizando a função teste $v^\delta_j$, temos:
+\begin{align}
+\sum^N_{i=1} u_i \int_\Omega \frac{\partial v^\delta_j }{\partial x} \frac{\partial v^\delta_i }{\partial x}\ \partial x +\sum^N_{i=1} u_i  \int_\Omega \lambda\ v^\delta_j v^\delta_i \ \partial x =\  (v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega + \int_\Omega v^\delta_j\ f\ \partial x \forall j =1,2,\dots,N 
+\end{align}  
+Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos reescrever de forma matricial, onde $(v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega$ só é adicionado ao lado esquerdo quando se há uma condição de \emph{Neumann} e quando  $v^\delta_j$ é diferente de zero nos extremos do domínio. Assim, podemos reescrever o sistema como:
+\begin{equation}
+\{ M + \lambda S\} U = F
+\end{equation}
+\begin{align}
+M &=
+\begin{bmatrix}
+\int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{1}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
+\int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
+\vdots & \vdots & \vdots & \dots \\
+\int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{1}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
+\end{bmatrix} \\,
+S &= \begin{bmatrix}
+\int_\Omega v^\delta_1 v^\delta_1 \partial x & \int_\Omega v^\delta_1 v^\delta_2 \partial x & \dots & \int_\Omega v^\delta_1 v^\delta_N \partial x \\ 
+\int_\Omega v^\delta_2 v^\delta_1 \partial x & \int_\Omega v^\delta_2 v^\delta_2 \partial x & \dots & \int_\Omega v^\delta_2 v^\delta_N \partial x\\ 
+\vdots & \vdots & \ddots & \vdots \\
+\int_\Omega v^\delta_N v^\delta_1 \partial x & \int_\Omega v^\delta_N v^\delta_2 \partial x & \dots & \int_\Omega v^\delta_N v^\delta_3 \partial x
+\end{bmatrix},\
+U = \begin{bmatrix}
+u_1\\ 
+u_2\\ 
+\vdots \\
+u_N
+\end{bmatrix}\\
+F &= \begin{bmatrix}
+\int_\Omega v^\delta_1\ f\ \partial x +  (v^\delta_1  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega \\ 
+\int_\Omega v^\delta_2\ f\ \partial x +  (v^\delta_2  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega \\ 
+\vdots \\
+\int_\Omega v^\delta_N\ f\ \partial x +  (v^\delta_N  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega\\ 
+\end{bmatrix}
+\end{align}
 
 \pagebreak
 
  
 \subsection{Mapeamento}
- Quando tratamos das funções de bases, temos as funções globais e as locais. Apesar das funções globais serem na teoria usadas para o calcular as matrizes de \emph{massa} e de \emph{rigidez}, na prática deixamos que os cálculos sejam feitos usando as funções de bases locais na qual o próprio nome indica é a função de base para um elemento.\\
+ Quando tratamos das funções de bases, temos as funções globais e as locais. Apesar das funções globais serem na teoria usadas para o calcular as matrizes de \emph{massa} e de \emph{rigidez}, na prática decompomos as funções globais em elementos e utilizamos dessa decomposição as funções de base locais para o cálculo das matrizes.\\
  Tomemos como exemplo as funções lineares globais $\Phi$ em um domínio $\Omega = \{x\ |\ 0\leq x \leq 1\}$ subdividido em \emph{3} elementos. Temos 4 graus de liberdade nessa expansão, definida no máximo em 2 elementos ao mesmo tempo,que vale 1 em um dos extremos desses elementos e decresce para 0 para o em direção aos outros extremos.
 \begin{equation}
 \Phi_1(x) = \left\{\begin{matrix}
@@ -50,7 +95,7 @@
 \caption{funções globais para cada elemento}
 \end{figure}
 
-Também podemos definir funções locais $\phi^e_p(x)$ onde $e = \{x \| x_{e1} \leq x \leq x_{e2} \}$:
+Também podemos definir funções locais $\phi^e_p(x)$ onde $\Omega_e = \{x \| x_{e1} \leq x \leq x_{e2} \}$:
 \begin{equation}
 \phi^e_1\ = \left\{\begin{matrix}
 \frac{x_{e1}\ -\ x}{x_{e2} - x_{e1}}, x \in \Omega_e \\
