@@ -1,0 +1,19 @@
+#bases
+\Phi^a_p(x) = x^p\\
+\Phi^b_p(x) =\frac{\prod^P_{q=0,q \neq  p} (x - x_q)}{\prod^P_{q=0,q \neq  p} (x_p  - x_q)} \\
+\Phi^c_p(x) = L_p(x) \forall p = 0,1,\dots,P\\
+#base modal
+\Phi_p(\xi) \leftrightarrow \psi(\xi) =
+\begin{cases}
+\frac{1 - \xi}{2} & p = 0\\
+\frac{1 + \xi}{2} & p = 1\\
+\frac{1 + \xi}{2}\frac{1 - \xi}{2}P^{1,1}_{p-1}(\xi) &  1<p<P
+\end{cases}
+
+#matriz de massa
+M_{ij}  = <\Phi_i,\Phi_j>
+
+
+Fazer:
+- Diferenças de base modal e nodal
+- determinar uma  base na região padrão [0,1]

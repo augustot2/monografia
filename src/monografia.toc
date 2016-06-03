@@ -21,28 +21,29 @@
 \contentsline {subsection}{\numberline {2.6.3}Condi\IeC {\c c}\IeC {\~a}o de fronteira de Robin}{12}{subsection.2.6.3}
 \contentsline {subsection}{\numberline {2.6.4}m\IeC {\'e}todo dos elementos finitos}{13}{subsection.2.6.4}
 \contentsline {subsection}{\numberline {2.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{14}{subsection.2.6.5}
-\contentsline {section}{\numberline {2.7}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{16}{section.2.7}
-\contentsline {section}{\numberline {2.8}Formula\IeC {\c c}\IeC {\~a}o Fraca}{17}{section.2.8}
-\contentsline {section}{\numberline {2.9}Bases}{17}{section.2.9}
-\contentsline {section}{\numberline {2.10}Elementos Finitos h}{17}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}Assembly}{17}{subsection.2.10.1}
-\contentsline {section}{\numberline {2.11}Tipo p}{18}{section.2.11}
-\contentsline {section}{\numberline {2.12}Tipo hp}{18}{section.2.12}
-\contentsline {section}{\numberline {2.13}Sistema Linear}{18}{section.2.13}
-\contentsline {subsection}{\numberline {2.13.1}condensa\IeC {\c c}\IeC {\~a}o Est\IeC {\'a}tica}{18}{subsection.2.13.1}
-\contentsline {section}{\numberline {2.14}Condi\IeC {\c c}\IeC {\~a}o de contorno de Dirichlet}{18}{section.2.14}
-\contentsline {subsection}{\numberline {2.14.1}lift}{18}{subsection.2.14.1}
-\contentsline {section}{\numberline {2.15}Condi\IeC {\c c}\IeC {\~a}o de Neuman}{18}{section.2.15}
-\contentsline {chapter}{\numberline {3}Simula\IeC {\c c}\IeC {\~o}es}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{21}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{23}{section.3.3}
-\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{25}{chapter.4}
-\contentsline {chapter}{\numberline {5}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{27}{section.5.1}
-\contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{29}{chapter.6}
-\contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{29}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}[A decidir]}{30}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Mapeamento}{31}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {2.6.6}Forma Matricial do problema}{16}{subsection.2.6.6}
+\contentsline {subsection}{\numberline {2.6.7}Mapeamento}{17}{subsection.2.6.7}
+\contentsline {section}{\numberline {2.7}bases}{19}{section.2.7}
+\contentsline {section}{\numberline {2.8}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{19}{section.2.8}
+\contentsline {section}{\numberline {2.9}Formula\IeC {\c c}\IeC {\~a}o Fraca}{20}{section.2.9}
+\contentsline {section}{\numberline {2.10}Bases}{20}{section.2.10}
+\contentsline {section}{\numberline {2.11}Elementos Finitos h}{20}{section.2.11}
+\contentsline {subsection}{\numberline {2.11.1}Assembly}{20}{subsection.2.11.1}
+\contentsline {section}{\numberline {2.12}Tipo p}{21}{section.2.12}
+\contentsline {section}{\numberline {2.13}Tipo hp}{21}{section.2.13}
+\contentsline {section}{\numberline {2.14}Sistema Linear}{21}{section.2.14}
+\contentsline {subsection}{\numberline {2.14.1}condensa\IeC {\c c}\IeC {\~a}o Est\IeC {\'a}tica}{21}{subsection.2.14.1}
+\contentsline {section}{\numberline {2.15}Condi\IeC {\c c}\IeC {\~a}o de contorno de Dirichlet}{21}{section.2.15}
+\contentsline {subsection}{\numberline {2.15.1}lift}{21}{subsection.2.15.1}
+\contentsline {section}{\numberline {2.16}Condi\IeC {\c c}\IeC {\~a}o de Neuman}{21}{section.2.16}
+\contentsline {chapter}{\numberline {3}Simula\IeC {\c c}\IeC {\~o}es}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{25}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{27}{section.3.3}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{31}{section.5.1}
+\contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{33}{section.6.1}
 \contentsfinish 
