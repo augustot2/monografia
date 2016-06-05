@@ -39,7 +39,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \begin{equation}
  P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
 \end{equation}
- Obedecendo que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
+ Temos a interpolação é tal que que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth, center]{figuras/interpolacao_linear5.png}
   \caption{interpolação com n pontos equidistantes}
@@ -73,7 +73,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{equation}
  Para um $\epsilon(x) \in [-1,1]$.
  
- Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^{(N+1)}(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que expandindo o produtório, o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
+ Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^{(N+1)}(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que expandindo o produtório, o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos que nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
 
  
 \subsection{Teorema II: Amplitude minima} \label{subsec:TeoremaII}
@@ -241,7 +241,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 & \text{Polinômio de Legendre} (\alpha= \beta = 0)  \rightarrow L_n(x) =  P^{(0,0)}_{n}(x)
 \end{align}
  
- \emph{Interpolador de Gauss-Lobatto}: Nesse caso, os pontos de interpolação são os zeros do polinômio $[P^{\alpha,\beta}_{Q-2}(x)]'$, mais os extremos +1 e -1 do intervalo. E a função interpoladora é dada por:
+ \emph{Interpolador de Gauss-Lobatto}: Nesse caso, os pontos de interpolação são os zeros do polinômio $[P^{\alpha,\beta}_{Q-2}(x)]'$, mais os extremos +1 e -1 do intervalo. E a derivada da função é dada por:
 \begin{equation}
  C_{ij}= 
 \begin{cases}
@@ -312,7 +312,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
  
 \section{Método Pseudo-espectral ou da colocação}
  O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira. Porém não o utilizarei.
-z\section{Método de Galerkin}
+\section{Método de Galerkin}
  O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos \emph{Elementos Finitos} para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}
  L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
@@ -324,7 +324,7 @@ z\section{Método de Galerkin}
  \end{equation}
  Onde $g_D$ e $g_N$, são constantes, e são chamadas de condição de contorno de \emph{D}irichlet e \emph{N}eumman. Essas condições junto da equação \eqref{eq:eq_dif}, chamamos essa combinação como formulação \emph{Forte} do problema.
 \subsection{Formulação fraca e a implementação da condição de fronteira de Neumman}
- Caso multipliquemos a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrarmos sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
+ Multiplicando a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrar sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
  \begin{equation}\label{eq:eq_fraca}
  (v,L(u))=\int^1_{-1} v\left ( \frac{\partial^2u}{\partial x^2} + f \right )\partial x = 0
  \end{equation}
@@ -356,7 +356,7 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x  +  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x \\
 & \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x=  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x -    \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^d}{\partial x}  \partial x 
  \end{align}
- Veremos que a equação \eqref{eq:eqdif_dh} pode ser por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} nos permite reduzir uma \textbf{equação diferencial} num problema algébrico.
+ Veremos que a equação \eqref{eq:eqdif_dh} é dada por um sistema algébrico onde os termos do lado direito são conhecidos e a solução homogênea $u^h$ e $v^\delta$ são funções discretizadas. Assim o método de \emph{Galerkin} nos permite reduzir uma \textbf{equação diferencial} num problema algébrico.
 
 \subsection{Condição de fronteira de Robin}
  Outro tipo de condição de fronteira é a condição mista ou de \emph{Robin}. Ela  aparece, por exemplo, em equações de transferência de calor e é uma combinação linear das condições de fronteira de \emph{Dirichlet} e \emph{Neumman} da forma:
@@ -379,8 +379,8 @@ e substituindo na \ref{eq:eq_fraca} temos:
 \begin{align} 
  \int^1_{-1} \frac{\partial v^\delta}{\partial x}\frac{\partial u^\delta}{\partial x} \partial x&= 
 \sum^{N_{el}}_{e=1} \int_{\Omega^e}\frac{\partial v^\delta}{\partial x}\frac{\partial u^\delta}{\partial x} \partial x\\
-& = - \sum^{N_{el}}_{e=1} \int_{\Omega^e} v^\delta\frac{\partial u^\delta}{\partial x} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\\
-& = -\int^1_{-1} v^\delta\frac{\partial u^\delta}{\partial x} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\label{eqdif_ef}
+& = - \sum^{N_{el}}_{e=1} \int_{\Omega^e} v^\delta\frac{\partial^2 u^\delta}{\partial x^2} \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\\
+& = -\int^1_{-1} v^\delta\frac{\partial^2 u^\delta}{\partial x^2}  \partial x +\sum^{N_{el}}_{e=1} \left [ v^\delta \frac{\partial u^\delta}{\partial x}\right ]^{\Omega^e_D}_{\Omega^e_E}\label{eqdif_ef}
 \end{align}
  Onde $\Omega^e_D$ e $\Omega^e_E$ são o valor de $x$ no elemento  $\Omega^e$, respectivamente na extrema \emph{D}ireita e \emph{E}squerda desse elemento $e$. Substituindo a equação \eqref{eqdif_ef} na equação \eqref{eq:eqdif_neumann}:
  \begin{align}
@@ -532,7 +532,7 @@ g_n
 0
 \end{bmatrix}
 \end{Bmatrix}
-\end{align}]
+\end{align}
  Assim, notamos que para quaisquer $[\hat{v_1},\ \hat{v_2}]$,podemos solucionar essa equação, apenas resolvendo a equação dentro dos \emph{colchetes},fazendo $g_D$ e $g_N$ ambos iguais a $1$, temos:
 \begin{equation}
  \begin{bmatrix}
@@ -571,7 +571,7 @@ Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos
 \begin{align}
 M &=
 \begin{bmatrix}
-\int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{1}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
+\int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{1}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
 \int_\Omega \frac{\partial v^\delta_{1}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{2}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
 \vdots & \vdots & \vdots & \dots \\
 \int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{1}}{\partial x}\ \partial x  & \int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{2}}{\partial x}\ \partial x  & \dots & \int_\Omega \frac{\partial v^\delta_{N}}{\partial x}\frac{\partial v^\delta_{N}}{\partial x}\ \partial x  \\ 
