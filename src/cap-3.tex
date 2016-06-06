@@ -48,73 +48,23 @@ Comparando as escolhas de raízes dos problemas conseguimos ver que a convergên
 Notamos que embora a convergência, utilizando ambas as raízes dos polinômios, tenham o mesmo comportamento, podemos observar que como demonstrado  anteriormente a escolha do Polinômio de Chebyshev é o que melhor aproxima a função do fenômeno de Runge observando uma inclinação menor do erro.
 
 \subsection{Convergência do erro de interpolação utilizando método H}
- tendo aproximado a função de runge acima, utilizaremos o mesmo método, porém utilizaremos em conjunto o \emph{Método H}, método no qual subdividimos o problema em $n$ elementos de tamanho $H$. Iremos comparar o efeito desse método contra o método espectral anterior utilizando as mesmas raízes de aproximação, Gauss-Lobatto-Jacobi.
+ Tendo aproximado a função de runge acima, utilizaremos um novo método chamado método H,método no qual subdividimos o problema em $n$ elementos de tamanho $H$. Iremos comparar o efeito desse método contra o método espectral anterior utilizando as mesmas raízes de aproximação, Gauss-Lobatto-Jacobi.
+ 
 \begin{figure}[!ht]
-  \includegraphics[width=0.5\textwidth,center]{figuras/interp_usando_FEM.png}
+  \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEM.png}
   \caption{gráficos das aproximações fixado o grau do polinômio em 7 e subdividimos o domínio em $N_{el}$ elementos }
 \end{figure}
 \begin{figure}[!hb]
-  \includegraphics[width=0.5\textwidth,center]{figuras/interp_usando_FEMfixo.png}
+  \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEMfixo.png}
   \caption{gráficos das aproximações fixado o número de elementos em 1 e utilizamos polinômios de grau elevado}
 \end{figure}
-tabela:
-\begin{table}[]
-\centering
-\caption{Tabela de erros para a interpolação com apenas o aumento do grau de polinômio}
-\label{my-label}
-\begin{tabular}{|l|l|}
-\hline
-\multicolumn{2}{|c|}{elemento fixo} \\
-\hline
-erro        & Graus de liberdade   \\
-6.462e-01   & 3.0                  \\
-8.013e-01   & 4.0                  \\
-4.385e-01   & 5.0                  \\
-6.034e-01   & 6.0                  \\
-2.905e-01   & 7.0                  \\
-4.285e-01   & 8.0                  \\
-1.884e-01   & 9.0                  \\
-2.954e-01   & 10.0                 \\
-1.212e-01   & 11.0                 \\
-2.008e-01   & 12.0                 \\
-7.699e-02   & 13.0                 \\
-1.356e-01   & 14.0                 \\
-4.899e-02   & 15.0                 \\
-9.129e-02   & 16.0                 \\
-3.477e-02   & 17.0                 \\
-6.139e-02   & 18.0                 \\
-2.376e-02   & 19.0                 \\
-4.126e-02   & 20.0                \\
-\hline
-\end{tabular}
-\end{table}
 
-\begin{table}[]
-\centering
-\caption{Tabela de erros para a interpolação com o grau de polinômio fixo em 7 e o aumento do número de elementos}
-\label{my-label}
-\begin{tabular}{|l|l|l|}
-\hline
-\multicolumn{2}{|c|}{Polinômio Fixo} &           \\
-\hline
-erro         & Graus de liberdade    & $N_{el}$ \\
-2.905e-01    & 7.0                 & 1         \\
-1.773e-02    & 13.0                & 2         \\
-2.044e-02    & 19.0                & 3         \\
-2.292e-03    & 25.0                & 4         \\
-2.275e-03    & 31.0                & 5        \\
-\vdots       &  \vdots             & \vdots   \\
-\hline
-\end{tabular}
-\end{table}
-
- Notamos nas tabelas  que para o método utilizando o grau do polinômio fixo, a convergência de seu erro é mais rápida  e seu erro já é menor para um número de elementos não muito elevado. No caso, para um número de elementos 4 e um polininômio de grau 7, seu erro é bem menor [2.292e-03] que um polinômio de grau 20 [4.126e-02].
- 
 \begin{figure}[!hb]
-  \includegraphics[width=0.5\textwidth,center]{figuras/convergencia_erro_FEM2.png}
+  \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_FEM2.png}
   \caption{Convergência dos erros entre polinômios fixos e polinômios de grau elevado}
 \end{figure}
 
+ Notamos então no gráfico  que para o método utilizando o grau do polinômio fixo e variando o número de elementos, a convergência do erro é bem mais rápida que no caso onde variamos somente o grau do polinômio.
 \section{Método HP na resolução de equações diferenciais}
 
  Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$. Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio.
@@ -124,84 +74,19 @@ y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \forall k = 1,2,\d
 \end{align}	
  
 \begin{figure}[!ht]
-  \includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
+  \includegraphics[width=1\textwidth,center]{figuras/solu_edo_simul.png}
   \caption{comparação entre a solução exata e a aproximada usando M= 10 e Q=10}
 \end{figure}
 
 \begin{figure}[!hb]
-  \includegraphics[width=0.5\textwidth,center]{figuras/convergencia_erro_EDO.png}
-  \caption{convergência do log(erro) em função dos graus de liberdade fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 }
+  \includegraphics[width=1\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
+  \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 }
 \end{figure}
 
-\begin{table}[]
-\centering
-\caption{tabela P = 2}
-\label{my-label}
-\begin{tabular}{|l|l|}
-\hline
-erro    & graus \\ \hline
-0.998   & 0.0   \\ \hline
-1.0     & 1.0   \\ \hline
-0.998   & 2.0   \\ \hline
-1.0     & 3.0   \\ \hline
-34.211  & 4.0   \\ \hline
-1.0     & 5.0   \\ \hline
-32.9996 & 6.0   \\ \hline
-9.7971  & 7.0   \\ \hline
-4.1311  & 8.0   \\ \hline
-2.7544  & 9.0   \\ \hline
-1.9603  & 10.0  \\ \hline
-1.0     & 11.0  \\ \hline
-1.1184  & 12.0  \\ \hline
-0.8798  & 13.0  \\ \hline
-0.7059  & 14.0  \\ \hline
-\end{tabular}
-\end{table}
 
-\begin{table}[]
-\centering
-\caption{P=4}
-\label{my-label}
-\begin{tabular}{ll}
-erro    & graus \\
-38.8223 & 2.0   \\
-10.4536 & 5.0   \\
-2.6411  & 8.0   \\
-6.5538  & 11.0  \\
-2.4768  & 14.0  \\
-0.4863  & 17.0  \\
-1.2609  & 20.0  \\
-0.3212  & 23.0  \\
-0.1965  & 26.0  \\
-0.1272  & 29.0  \\
-0.085   & 32.0  \\
-0.0584  & 35.0  \\
-0.0409  & 38.0  \\
-0.0293  & 41.0  \\
-0.0214  & 44.0 
-\end{tabular}
-\end{table}
+\begin{figure}[!hb]
+  \includegraphics[width=1\textwidth,center]{figuras/convergencia_erro_EDO_p.png}
+  \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o número de elementos e variando grau do polinômio em P  }
+\end{figure}
 
-\begin{table}[]
-\centering
-\caption{P=6}
-\label{my-label}
-\begin{tabular}{ll}
-erro    & graus \\
-12.9393 & 4.0   \\
-7.8142  & 9.0   \\
-1.6405  & 14.0  \\
-0.6042  & 19.0  \\
-0.1529  & 24.0  \\
-0.0209  & 29.0  \\
-0.0232  & 34.0  \\
-0.0082  & 39.0  \\
-0.0046  & 44.0  \\
-0.0027  & 49.0  \\
-0.0016  & 54.0  \\
-0.001   & 59.0  \\
-0.0006  & 64.0  \\
-0.0004  & 69.0  \\
-0.0002  & 74.0 
-\end{tabular}
-\end{table}
+\subsection{Condição de Neumann}

@@ -41,9 +41,10 @@
 \contentsline {section}{\numberline {3.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{23}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{25}{subsection.3.2.1}
 \contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{27}{section.3.3}
-\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
-\contentsline {chapter}{\numberline {5}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{31}{section.5.1}
-\contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{33}{section.6.1}
+\contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{31}{chapter.4}
+\contentsline {chapter}{\numberline {5}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}M\IeC {\'e}todo dos res\IeC {\'\i }duos ponderados}{34}{section.5.2}
+\contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{35}{chapter.6}
+\contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{35}{section.6.1}
 \contentsfinish 
