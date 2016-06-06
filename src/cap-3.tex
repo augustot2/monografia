@@ -38,11 +38,11 @@ Grau & equidist & glj       & chebyshev     \\ \hline
 Comparando as escolhas de raízes dos problemas conseguimos ver que a convergência do erro usando as raízes equidistantes aumenta conforme o grau do polinômio aumenta. Enquanto que para as raízes de Chebyshev e Gauss-Lobatto-Jacobi, os erros convergem algebricamente. 
 \begin{figure}[!ht]
   \includegraphics[width=0.5\textwidth,center]{figuras/glj_equi.png}
-  \caption{comparação semilog  de erros de raízes de glj versus equidistante }
+  \caption{comparação semilog  dos erros e graus de liberdade de raízes de glj versus equidistante }
 \end{figure}
 \begin{figure}[!hb]
   \includegraphics[width=0.5\textwidth,center]{figuras/glj_cheb.png}
-  \caption{comparação semilog  de erros de raízes de glj versus Chebyshev}
+  \caption{comparação semilog  dos erros e graus de liberdade de raízes de glj versus Chebyshev}
 \end{figure}
 \\
 Notamos que embora a convergência, utilizando ambas as raízes dos polinômios, tenham o mesmo comportamento, podemos observar que como demonstrado  anteriormente a escolha do Polinômio de Chebyshev é o que melhor aproxima a função do fenômeno de Runge observando uma inclinação menor do erro.
@@ -117,10 +117,91 @@ erro         & Graus de liberdade    & $N_{el}$ \\
 
 \section{Método HP na resolução de equações diferenciais}
 
-\begin{equation}
-	y'' + y = (1 + 4 (k \pi)^2)sin(2 k \pi x) \\
-	y(-1) = y(1) = 0 \\
-\end{equation}
- cuja solução única é dada por $y = sin(2 k \pi x)$.
+ Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$. Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio.
+\begin{align}
+y'' + y &= (1 + 4 (k \pi)^2)sin(2 k \pi x) \\
+y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \forall k = 1,2,\dots \\
+\end{align}	
+ 
+\begin{figure}[!ht]
+  \includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
+  \caption{comparação entre a solução exata e a aproximada usando M= 10 e Q=10}
+\end{figure}
 
+\begin{figure}[!hb]
+  \includegraphics[width=0.5\textwidth,center]{figuras/convergencia_erro_EDO.png}
+  \caption{convergência do log(erro) em função dos graus de liberdade fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 }
+\end{figure}
 
+\begin{table}[]
+\centering
+\caption{tabela P = 2}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+erro    & graus \\ \hline
+0.998   & 0.0   \\ \hline
+1.0     & 1.0   \\ \hline
+0.998   & 2.0   \\ \hline
+1.0     & 3.0   \\ \hline
+34.211  & 4.0   \\ \hline
+1.0     & 5.0   \\ \hline
+32.9996 & 6.0   \\ \hline
+9.7971  & 7.0   \\ \hline
+4.1311  & 8.0   \\ \hline
+2.7544  & 9.0   \\ \hline
+1.9603  & 10.0  \\ \hline
+1.0     & 11.0  \\ \hline
+1.1184  & 12.0  \\ \hline
+0.8798  & 13.0  \\ \hline
+0.7059  & 14.0  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{P=4}
+\label{my-label}
+\begin{tabular}{ll}
+erro    & graus \\
+38.8223 & 2.0   \\
+10.4536 & 5.0   \\
+2.6411  & 8.0   \\
+6.5538  & 11.0  \\
+2.4768  & 14.0  \\
+0.4863  & 17.0  \\
+1.2609  & 20.0  \\
+0.3212  & 23.0  \\
+0.1965  & 26.0  \\
+0.1272  & 29.0  \\
+0.085   & 32.0  \\
+0.0584  & 35.0  \\
+0.0409  & 38.0  \\
+0.0293  & 41.0  \\
+0.0214  & 44.0 
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{P=6}
+\label{my-label}
+\begin{tabular}{ll}
+erro    & graus \\
+12.9393 & 4.0   \\
+7.8142  & 9.0   \\
+1.6405  & 14.0  \\
+0.6042  & 19.0  \\
+0.1529  & 24.0  \\
+0.0209  & 29.0  \\
+0.0232  & 34.0  \\
+0.0082  & 39.0  \\
+0.0046  & 44.0  \\
+0.0027  & 49.0  \\
+0.0016  & 54.0  \\
+0.001   & 59.0  \\
+0.0006  & 64.0  \\
+0.0004  & 69.0  \\
+0.0002  & 74.0 
+\end{tabular}
+\end{table}
