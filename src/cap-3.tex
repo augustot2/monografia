@@ -67,16 +67,17 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
  Notamos então no gráfico  que para o método utilizando o grau do polinômio fixo e variando o número de elementos, a convergência do erro é bem mais rápida que no caso onde variamos somente o grau do polinômio.
 \section{Método HP na resolução de equações diferenciais}
 
- Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$. Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio.
+ Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$. Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema utiliz
 \begin{align}
 y'' + y &= (1 + 4 (k \pi)^2)sin(2 k \pi x) \\
-y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \forall k = 1,2,\dots \\
+y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,\dots \\
 \end{align}	
- 
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \includegraphics[width=1\textwidth,center]{figuras/solu_edo_simul.png}
-  \caption{comparação entre a solução exata e a aproximada usando M= 10 e Q=10}
+  \caption{comparação entre a solução exata e a aproximada usando P= 10 e $N_{el} = 10$ }
 \end{figure}
+ Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
+
 
 \begin{figure}[!hb]
   \includegraphics[width=1\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
