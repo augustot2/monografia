@@ -309,9 +309,35 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 \end{cases}\\
  \end{align}\\
  onde $\Gamma{x}$ é a função gamma.
- 
-\section{Método Pseudo-espectral ou da colocação}
- O método Pseudo-espectral é utilizado para a resolução de Equações diferenciais ordinárias e parciais (EDO,EDP), que utilizando os métodos de diferenciação anteriores mostrados na resolução dos problemas, sabendo das condições de fronteira. Porém não o utilizarei.
+
+\section{Método dos resíduos ponderados}
+ A fim de resolvermos a equação diferencial, temos que tornar a solução $u^\delta(x)$ aquela que melhor aproxima a solução exata do problema $u(x)$, para isso devemos então minimizar o resíduo dessa aproximada. Tomando o problema diferencial abaixo, temos o operador diferencial $L(\bullet)$
+ \begin{equation}
+    L(u) = \frac{\partial^2 u}{\partial x^2} + \lambda u + f = 0 \\
+    L(u) = 0
+ \end{equation}
+ Aproximando $u$ por $u^\delta$ obtemos um erro associado ao operador $L(\bullet)$:
+ \begin{equation}
+ 	u^\delta(x) = u(x_0) + \sum^{N_{dof}}_{i = 1} u(x_i) \Phi(x)\\
+    L(u^\delta) = R(u^\delta)
+\end{equation}
+Nosso problema está na minimização desse erro $R(u^\delta)$. Para isso, escolhemos uma função teste $v_j$ onde $j = 1,2,\dots, N_{dof}$, tal que seu produto interno com o erro seja o menor possível.
+\begin{equation}
+    <v_j,R(u^\delta)> = \int_{\Omega} v_j(x)\ R(x) \partial x,\ \forall j = 1,2,3,\dots,N_{dof}\\
+\end{equation}
+Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$. Ao longo dos anos várias funções foram encontradas para a minimização dos erros. O método mais conhecido é o dos Mínimos Quadrados no qual $v_j\ =\ \frac{\partial R}{\partial \hat{u}_j}$. Alguns outros também existem como o método de \emph{colocação} e método dos \emph{momentos}. Aquele que usarei é o método de \emph{Galerkin}.
+\section{Método de Galerkin[2]}
+ O método de \emph{Galerkin}, também conhecido como \emph{Petrov-Galerkin} devido a Georgii I. Petrov e Boris Galerkin, 
+
+
+
+
+
+
+
+
+
+
 \section{Método de Galerkin}
  O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos \emph{Elementos Finitos} para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}

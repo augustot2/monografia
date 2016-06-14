@@ -7,7 +7,7 @@
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.
 	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:\\	
 \begin{figure}[!ht]
-  \includegraphics[width=0.8\textwidth,center]{figuras/interpolacao_todas.png}
+  \includegraphics[width=1\textwidth,center]{figuras/interpolacao_todas.png}
   \caption{interpolação de polinômios de alta ordem com raízes de Gauss-Lobatto-Jacobi, igualmente espaçados, Chebyshev}
 \end{figure}
 Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
@@ -59,7 +59,7 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
   \caption{gráficos das aproximações fixado o número de elementos em 1 e utilizamos polinômios de grau elevado}
 \end{figure}
 
-\begin{figure}[!hb]
+\begin{figure}[!ht]
   \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_FEM2.png}
   \caption{Convergência dos erros entre polinômios fixos e polinômios de grau elevado}
 \end{figure}
@@ -67,30 +67,32 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
  Notamos então no gráfico  que para o método utilizando o grau do polinômio fixo e variando o número de elementos, a convergência do erro é bem mais rápida que no caso onde variamos somente o grau do polinômio.
 \section{Método HP na resolução de equações diferenciais}
 
- Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$. Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema utiliz
+ Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$). Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema utiliz
 \begin{align}
 y'' + y &= (1 + 4 (k \pi)^2)sin(2 k \pi x) \\
 y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,\dots \\
 \end{align}	
-\begin{figure}[!h]
-  \includegraphics[width=1\textwidth,center]{figuras/solu_edo_simul.png}
-  \caption{comparação entre a solução exata e a aproximada usando P= 10 e $N_{el} = 10$ }
-\end{figure}
+
  Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
 
+ \begin{figure}[!hb]
+  \includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
+  \caption{comparação entre a solução exata e a aproximada usando P= 10 e $N_{el} = 10$ }
+\end{figure}
 
-\begin{figure}[!hb]
-  \includegraphics[width=1\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
+\begin{figure}[!ht]
+  \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
   \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 }
 \end{figure}
 
 
 \begin{figure}[!hb]
-  \includegraphics[width=1\textwidth,center]{figuras/convergencia_erro_EDO_p.png}
+  \includegraphics[width=.7\textwidth,center]{figuras/convergencia_erro_EDO_p.png}
   \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o número de elementos e variando grau do polinômio em P  }
 \end{figure}
-
-\subsection{Condição de Neumann}
+ Novamente, notamos um decaimento maior quando fixamos o grau do polinômio e aumentamos o número de elementos do problema.
+ 
+%\subsection{Condição de Neumann}
 
 
 

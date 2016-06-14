@@ -44,29 +44,3 @@ onde:
 Assim, encontramos $x_b$ e $x_i$ da equação.
 
 
-
-\section{Método dos resíduos ponderados}
- O método dos resíduos ponderados nos permite encontrar soluções para problemas nos qual queremos minimizar o erro de aproximação de um problema. No caso, estamos interessados na equação diferencial.
- \begin{equation}
-    L(u) = \frac{\partial^2 u}{\partial x^2} + \lambda u + f = 0 \\
-    L(u) = 0
- \end{equation}
- Aproximando $u$ por $u^\delta$ obtemos um erro associado ao operador L:
- \begin{equation}
- 	u^\delta(x) = u(x_0) + \sum^{N_{dof}}_{i = 1} u(x_i) \Phi(x)\\
-    L(u^\delta) = R(u^\delta)
-\end{equation}
-Nosso problema está na minimização desse erro $R(u^\delta)$. Para isso, escolhemos uma função teste $v_j$ onde $j = 1,2,\dots, N_{dof}$, tal que seu produto interno com o erro seja o menor possível.
-\begin{equation}
-    <v_j,R(u^\delta)> = \int_{\Omega} v_j(x)\ R(x) \partial x,\ \forall j = 1,2,3,\dots,N_{dof}\\
-\end{equation}
-Assim, obtemos um sistema linear no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$.
-
-\begin{align}
-    <v_j,R(u^\delta)> = \int_{\Omega} v_j(x)\ R(u^\delta(x)) \partial x,\ \forall j = 1,2,3,\dots,N_{dof}\\
-    <v_1,R(u^\delta)> = \int_{\Omega} v_1(x)\ R(u^\delta(x)) \partial x\\
-    <v_2,R(u^\delta)> = \int_{\Omega} v_2(x)\ R(u^\delta(x)) \partial x\\
-    <v_3,R(u^\delta)> = \int_{\Omega} v_3(x)\ R(u^\delta(x)) \partial x\\
-       \vdots \   \ \vdots \ \vdots \ \vdots  \\
-    <v_{N_{dof}},R> = \int_{\Omega} v_{N_{dof}}(x)\ R(x) \partial x
-\end{align}
