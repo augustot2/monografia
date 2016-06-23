@@ -38,7 +38,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  A interpolação de \emph{Lagrange} é dada por :
 \begin{equation}
  P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
-\end{equation}
+\end{equation}    
  Temos a interpolação é tal que que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth, center]{figuras/interpolacao_linear5.png}
@@ -325,21 +325,10 @@ Nosso problema está na minimização desse erro $R(u^\delta)$. Para isso, escol
 \begin{equation}
     <v_j,R(u^\delta)> = \int_{\Omega} v_j(x)\ R(x) \partial x,\ \forall j = 1,2,3,\dots,N_{dof}\\
 \end{equation}
-Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$. Ao longo dos anos várias funções foram encontradas para a minimização dos erros. O método mais conhecido é o dos Mínimos Quadrados no qual $v_j\ =\ \frac{\partial R}{\partial \hat{u}_j}$. Alguns outros também existem como o método de \emph{colocação} e método dos \emph{momentos}. Aquele que usarei é o método de \emph{Galerkin}.
-\section{Método de Galerkin[2]}
- O método de \emph{Galerkin}, também conhecido como \emph{Petrov-Galerkin} devido a Georgii I. Petrov e Boris Galerkin, 
-
-
-
-
-
-
-
-
-
+Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$. Ao longo dos anos várias funções foram encontradas para a minimização dos erros. O método mais conhecido é o dos Mínimos Quadrados no qual $v_j\ =\ \frac{\partial R}{\partial \hat{u}_j}$. Alguns outros também existem como o método de \emph{colocação} e método dos \emph{momentos}. Aquele que usarei é o método de \emph{Galerkin}, onde escolhemos $v_j \equiv \phi_j$ e $v_j(\Omega_d) = 0$ onde $\Omega_d$ é a fronteira de \emph{Dirichlet}.
 
 \section{Método de Galerkin}
- O método de \emph{Galerkin}, será o mais utilizado daqui pra frente. Utilizamos o método dos \emph{Elementos Finitos} para resolução de Equações diferenciais. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
+ O método de \emph{Galerkin}, também conhecido como \emph{Petrov-Galerkin} devido a Georgii I. Petrov e Boris Galerkin será o mais utilizado daqui pra frente. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}
  L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
  \end{equation}
@@ -364,7 +353,7 @@ Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função
  \int^{1}_{-1} \frac{\partial v}{\partial x}  \frac{\partial u}{\partial x}  \partial x =  v(1)g_N + \int^{1}_{-1}  v f\ \partial x  
 \end{equation}
 
-Vemos que nessa última etapa, a condição de fronteira de \emph{Neumman} é naturalmente inclusa na formulação. A forma integral  equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
+Vemos que nessa última etapa, a condição de fronteira de \emph{Neumman} é naturalmente inclusa na formulação. A forma integral da equação como vimos nas últimas duas etapas, é dita como a \emph{Formulação Fraca} do problema.
 
 A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a solução para a formulação fraca da equação, quando a solução exata $u(x)$ e a função teste $v(x)$ são aproximadas por expanções \emph{finitas} $u^\delta(x)$ e $v^\delta(x)$, e assim a  equação diferencial se torna:
 \begin{equation}\label{eq:eqdif_neumann}
@@ -477,7 +466,7 @@ u^\delta = \sum^2_{i=0} \hat{u_i}\phi_i(x)
     
   \end{minipage}
 \end{SCfigure}
-\pagebreak \\
+%\pagebreak \\
  Um exemplo desse domínio dividido em dois é:
 \begin{figure}[h]
  \includegraphics[width=0.45\textwidth, center]{figuras/2_elementos_finitos.png}

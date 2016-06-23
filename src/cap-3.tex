@@ -1,4 +1,4 @@
-\chapter{Simulações}
+ \chapter{Simulações}
 \label{cap:III}
 \section{Introdução}
  Neste capítulo mostrarei resoluções de algumas aproximações de funções e resolução de equações diferenciais utilizando métodos discutidos anteriormente. Todas as figuras obtidas aqui e implementação dos métodos foram feitas a partir da linguagem \emph{Julia}.
@@ -67,18 +67,17 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
  Notamos então no gráfico  que para o método utilizando o grau do polinômio fixo e variando o número de elementos, a convergência do erro é bem mais rápida que no caso onde variamos somente o grau do polinômio.
 \section{Método HP na resolução de equações diferenciais}
 
- Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$). Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema utiliz
+ Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$). Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema abaixo:
 \begin{align}
 y'' + y &= (1 + 4 (k \pi)^2)sin(2 k \pi x) \\
 y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,\dots \\
 \end{align}	
-
- Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
-
- \begin{figure}[!hb]
-  \includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
-  \caption{comparação entre a solução exata e a aproximada usando P= 10 e $N_{el} = 10$ }
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,center]{figuras/solu_edo_simul.png}
+\caption{comparação entre a solução exata e a aproximada usando P = 10 e $N_{el} = 10$ } 
 \end{figure}
+ Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
 
 \begin{figure}[!ht]
   \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
@@ -91,8 +90,59 @@ y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,
   \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o número de elementos e variando grau do polinômio em P  }
 \end{figure}
  Novamente, notamos um decaimento maior quando fixamos o grau do polinômio e aumentamos o número de elementos do problema.
- 
-%\subsection{Condição de Neumann}
+\pagebreak
+\subsection{Condição de Neumann}
+ Agora utilizamos o método HP para um problema no qual temos em uma das extremidades uma condição de \emph{Neumann}.Nesse exemplo usarei como solução do problema $y(x) = \cos(10 x) \sin(25 x)$, onde $ x \in [-1,1]$ e a condição de Neuman está em $x=1$. Nesse caso para o problema temos que acrescentar o termo  $v_j(1) \frac{\partial y(1)}{\partial x}$  ao lado direito da equação quando for resolvê-lo:
+\begin{equation}
+\\-y'' + y = 726\,\cos \left(10\,x\right)\,\sin \left(25\,x\right)+500\,\sin 
+ \left(10\,x\right)\,\cos \left(25\,x\right) 
+\end{equation}
+ Assim utilizando o método HP no problema, obtemos a seguinte aproximação:
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,center]{figuras/Neumm_10_15.png}
+\caption{comparação entre a solução exata e a aproximada usando P = 15 e $N_{el} = 10$ } 
+\end{figure}
 
+A convergência dos erros utilizando o método P e o método H continuam semelhantes à convergência do erro dos métodos aplicado a condição de \emph{Dirichlet}:
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth,center]{figuras/convergencia_erro_Neumm.png}
+\caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 } 
+\end{figure}
 
+\section{onde o método HP se sobrepõe?}
+ Ao utilizar o método HP, estamos alternando entre os dois método. Notamos que para funções com alta frequência como a anterior caso utilizemos apenas o método P, teriamos que utilizar um polinômio de grau elevado para obter uma boa aproximação:
+\begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth,center]{figuras/Neumm_1_30.png}
+\caption{aproximação do método P de grau 30} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth,center]{figuras/Neumm_1_40.png}
+\caption{aproximação do método P de grau 40} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth,center]{figuras/Neumm_1_50.png}
+\caption{aproximação do método P de grau 50} 
+\end{figure}
+ Agora, utilizando o método HP, utilizamos um polinômio de grau 20 e aumentando em 1 unidade o número de elementos, observamos o quanto o erro converge rapidamente:\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth,center]{figuras/Neumm_2_20.png}
+\caption{aproximação do método P de grau 20 e $N_{el} = 2$} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth,center]{figuras/Neumm_3_20.png}
+\caption{aproximação do método P de grau 20 e $N_{el} = 3$} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth,center]{figuras/Neumm_4_20.png}
+\caption{aproximação do método P de grau 20 e $N_{el} = 4$} 
+\end{figure}
+
+Assim, para um melhor aproveitamento do método, temos que para funções mais complexas, o uso de apenas um polinômio de grau elevado não é muito proveitoso para a minimização  do erro. Portanto subdividindo o problema em elementos, facilita melhor a aproximação da solução do problema.
