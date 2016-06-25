@@ -111,7 +111,18 @@ A convergência dos erros utilizando o método P e o método H continuam semelha
 \includegraphics[width=1.0\textwidth,center]{figuras/convergencia_erro_Neumm.png}
 \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 } 
 \end{figure}
+ Agora veremos a convergência do erro para a aproximada da solução no ponto onde temos a condição de \emph{Neumman} ocorre:
+ \begin{figure}[H]
+\centering
+\includegraphics[width=.6\textwidth,center]{figuras/convergencia_fronteira_neuman_P.png}
+\caption{convergência da solução aproximada na condição de fronteira utilizando o método P onde o grau do polinômio varia de 2 a 40 } 
+\end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\textwidth,center]{figuras/convergencia_fronteira_neuman_H.png}
+\caption{convergência da solução aproximada na condição de fronteira utilizando o método H onde o número de elementos varia de 1 a 50 } 
+\end{figure}
 \section{onde o método HP se sobrepõe?}
  Ao utilizar o método HP, estamos alternando entre os dois método. Notamos que para funções com alta frequência como a anterior caso utilizemos apenas o método P, teriamos que utilizar um polinômio de grau elevado para obter uma boa aproximação:
 \begin{figure}[H]
