@@ -1,4 +1,4 @@
- \chapter{Simulações}
+\chapter{Simulações}
 \label{cap:III}
 \section{Introdução}
  Neste capítulo mostrarei resoluções de algumas aproximações de funções e resolução de equações diferenciais utilizando métodos discutidos anteriormente. Todas as figuras obtidas aqui e implementação dos métodos foram feitas a partir da linguagem \emph{Julia}.
@@ -98,30 +98,22 @@ y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,
  \left(10\,x\right)\,\cos \left(25\,x\right) 
 \end{equation}
  Assim utilizando o método HP no problema, obtemos a seguinte aproximação:
-
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth,center]{figuras/Neumm_10_15.png}
+\includegraphics[width=0.7\textwidth,center]{figuras/Neumm_10_15.png}
 \caption{comparação entre a solução exata e a aproximada usando P = 15 e $N_{el} = 10$ } 
 \end{figure}
-
 A convergência dos erros utilizando o método P e o método H continuam semelhantes à convergência do erro dos métodos aplicado a condição de \emph{Dirichlet}:
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\textwidth,center]{figuras/convergencia_erro_Neumm.png}
+\includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_Neumm.png}
 \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 } 
 \end{figure}
- Agora veremos a convergência do erro para a aproximada da solução no ponto onde temos a condição de \emph{Neumman} ocorre:
- \begin{figure}[H]
-\centering
-\includegraphics[width=.6\textwidth,center]{figuras/convergencia_fronteira_neuman_P.png}
-\caption{convergência da solução aproximada na condição de fronteira utilizando o método P onde o grau do polinômio varia de 2 a 40 } 
-\end{figure}
-
+ Agora veremos a convergência do erro para a aproximada da \emph{derivada} da solução no ponto onde temos a condição de \emph{Neumman} ocorre:
 \begin{figure}[H]
 \centering
-\includegraphics[width=.7\textwidth,center]{figuras/convergencia_fronteira_neuman_H.png}
-\caption{convergência da solução aproximada na condição de fronteira utilizando o método H onde o número de elementos varia de 1 a 50 } 
+\includegraphics[width=.8\textwidth,center]{figuras/erro_derivada.png}
+\caption{convergência da derivada da solução aproximada entre os dois métodos} 
 \end{figure}
 \section{onde o método HP se sobrepõe?}
  Ao utilizar o método HP, estamos alternando entre os dois método. Notamos que para funções com alta frequência como a anterior caso utilizemos apenas o método P, teriamos que utilizar um polinômio de grau elevado para obter uma boa aproximação:

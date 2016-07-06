@@ -328,7 +328,7 @@ Nosso problema está na minimização desse erro $R(u^\delta)$. Para isso, escol
 Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$. Ao longo dos anos várias funções foram encontradas para a minimização dos erros. O método mais conhecido é o dos Mínimos Quadrados no qual $v_j\ =\ \frac{\partial R}{\partial \hat{u}_j}$. Alguns outros também existem como o método de \emph{colocação} e método dos \emph{momentos}. Aquele que usarei é o método de \emph{Galerkin}, onde escolhemos $v_j \equiv \phi_j$ e $v_j(\Omega_d) = 0$ onde $\Omega_d$ é a fronteira de \emph{Dirichlet}.
 
 \section{Método de Galerkin}
- O método de \emph{Galerkin}, também conhecido como \emph{Petrov-Galerkin} devido a Georgii I. Petrov e Boris Galerkin será o mais utilizado daqui pra frente. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
+ O método de \emph{Galerkin}, também conhecido como \emph{Bulbnov-Galerkin} devido a Ivan Grigoryevich Bubnov  e Ivan Grigoryevich Bubnov  será o mais utilizado daqui pra frente. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}
  L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
  \end{equation}
@@ -386,7 +386,6 @@ e substituindo na \ref{eq:eq_fraca} temos:
 \begin{equation}
 \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^h}{\partial x}  \partial x + \frac{\beta}{\alpha}v^\delta(1)u(1) =   \int^{1}_{-1}  v^\delta f\ \partial x + \frac{v^\delta(1)g_N}{\alpha}
 \end{equation}
-
  A diferença entre as implementações das condições de fronteiras de \emph{Robin} e \emph{Neumman} é apenas no termo novo $\frac{\beta}{\alpha}v^\delta(1)u(1)$.
 \subsection{método dos elementos finitos}
  O método dos elementos finitos para equações diferenciais de segunda ordem, estima $v^\delta$ por uma classe de funções $C^0$ contínua, onde essa aproximada é contínua em todo domínio $\Omega$. A solução do método é dividir esse domínio em finitos elementos, da forma $\Omega^e$, onde a derivada também é contínua. No entanto nas fronteiras entre os elementos, sua derivada pode ser descontínua apesar da função ser $C^0$ contínua.
@@ -729,6 +728,45 @@ Assim a matriz de massa \emph{global} $M$ definida como $M_{ij} = \int_\Omega \P
 \includegraphics[width=0.6\textwidth, center ]{figuras/Matrix_element.png}
 \caption{Matriz de massa mapeada}
 \end{figure}
-%\pagebreak
-\section{bases}
- No método hp aplicamos uma expansão polinomial de qualquero
+
+\pagebreak
+
+\section{Condensação estática}
+  Após o mapeamento das matrizes temos então a tarefa de resolver o sistema linear.Utilizando o fato do mapeamento ter separado as funções de base para os modos \textbf{internos} (i) e os modos de \textbf{fronteira} (b) de cada elemento, aplicamos a técnica de \emph{condensação estática}. Onde com remapeando os vetores x e f do sistema linear $A\  x = f$ de maneira a ficar primeiro os coeficientes de fronteira e depois os coeficientes internos temos o sistema reescrito como:
+  \begin{equation}
+    x = \left\{\begin{matrix} x_b \\ x_i \\ \end{matrix}\right\}\ ,\ f =  \left\{\begin{matrix} f_b \\ f_i \\ \end{matrix}\right\}\
+  \end{equation}
+E com esse rearranjo, temos a matriz A global como:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth,center]{figuras/Matriz_global.png}
+\caption{esquema da matriz global remapeada} 
+\end{figure}
+onde cada $A_{\cdot \cdot}$ é uma sub matriz de A em que $A_{ii}$ é uma matriz em banda, $A_{ib}$ e $A_{bi}$ são  matrizes espúrias e $A_{bb}$ é uma matriz em bloco.
+
+\begin{equation}
+A\cdot x  = \left[ 
+\begin{matrix} 
+A_{bb} & A_{bi} \\
+A_{ib} & A_{ii} \\
+\end{matrix}\right] \cdot \left\{
+\begin{matrix} x_b \\ x_i \\ 
+\end{matrix}\right\} = 
+\left\{\begin{matrix} f_b \\ f_i \\\end{matrix}\right\} 
+\end{equation}
+Para resolver esse sistemas fazemos:
+\begin{equation}
+x_i = A_{ii}^{-1} f_i - A_{ii}^{-1} A_{ib} x_b
+\end{equation}
+Que substituindo $x_i$ na equação de  $x_b$, obtemos:
+\begin{equation}
+\left( A_{bb} - A_{bi}A_{ii}^{-1} A_{ib} \right) x_b = f_b - A_{bi}A_{ii}^{-1} f_i\\
+A'_{bb} \cdot x_b = f'_b
+\end{equation}
+onde:
+\begin{align}
+& A'_{bb} = A_{bb} - A_{bi}A_{ii}^{-1} A_{ib}\\ 
+& f'_b = f_b - A_{bi}A_{ii}^{-1} f_i
+\end{align}
+Assim, encontramos $x_b$ e $x_i$ da equação.
+
