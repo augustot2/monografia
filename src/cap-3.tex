@@ -1,7 +1,9 @@
 \chapter{Simulações}
 \label{cap:III}
 \section{Introdução}
- Neste capítulo mostrarei resoluções de algumas aproximações de funções e resolução de equações diferenciais utilizando métodos discutidos anteriormente. Todas as figuras obtidas aqui e implementação dos métodos foram feitas a partir da linguagem \emph{Julia}.
+ Definido o método dos elementos finitos com a formulação de Galerkin, temos diferentes meios para resolver o problema. Anteriormente resolvemos uma equação diferencial usando elementos finitos com \textbf{equações lineares}. Discretizando o espaço em elementos de tamanho \textbf{h} e utilizando as técnicas de derivação e integração numérica utilizando polinômios de grau \textbf{p}, podemos utilizar a combinação desses métodos nos fornece aproximações com erros menores, para diferentes métodos.
+ 
+ Neste capítulo mostrarei resoluções de algumas equações diferenciais comparando os métodos \emph{h} e \emph{p}  e também aproximações por interpolações de funções utilizando pontos equidistantes e de Chebishev. Todas as figuras e resoluções foram obtidas utilizando a linguagem de programação \emph{Julia}.
 
 \section{Convergência do erro de interpolação utilizando o método espectral}
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.

@@ -38,7 +38,6 @@
 \contentsline {subsection}{\numberline {4.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{28}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{29}{section.4.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{31}{chapter.5}
-\contentsline {chapter}{\numberline {6}Static Condensation [Cap\IeC {\'\i }tulo avulso]}{33}{chapter.6}
-\contentsline {chapter}{\numberline {7}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{35}{chapter.7}
-\contentsline {section}{\numberline {7.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{35}{section.7.1}
+\contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{33}{section.6.1}
 \contentsfinish 
