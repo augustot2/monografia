@@ -576,12 +576,13 @@ v^\delta_j (\frac{\partial^2 u^\delta }{\partial x^2} + \lambda v^\delta_j\ u^\d
 \end{align}
  Como $u^\delta$ é a aproximada de $u$ utilizando a função teste $v^\delta_j$, temos:
 \begin{align}
-\sum^N_{i=1} u_i \int_\Omega \frac{\partial v^\delta_j }{\partial x} \frac{\partial v^\delta_i }{\partial x}\ \partial x +\sum^N_{i=1} u_i  \int_\Omega \lambda\ v^\delta_j v^\delta_i \ \partial x =\  (v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega + \int_\Omega v^\delta_j\ f\ \partial x \forall j =1,2,\dots,N 
+\sum^N_{i=1} u_i \int_\Omega \frac{\partial v^\delta_j }{\partial x} \frac{\partial v^\delta_i }{\partial x}\ \partial x +\sum^N_{i=1} u_i  \int_\Omega \lambda\ v^\delta_j v^\delta_i \ \partial x =\  (v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega + \int_\Omega v^\delta_j\ f\ \partial x \ \forall j =1,2,\dots,N 
 \end{align}  
 Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos reescrever de forma matricial, onde $(v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega$ só é adicionado ao lado esquerdo quando se há uma condição de \emph{Neumann} e quando  $v^\delta_j$ é diferente de zero nos extremos do domínio. Assim, podemos reescrever o sistema como:
 \begin{equation}
 \{ M + \lambda S\} U = F
 \end{equation}
+ Onde chamamos a matriz M de matriz de massa e a matriz S de matriz de rigidez.
 \begin{align}
 M &=
 \begin{bmatrix}

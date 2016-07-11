@@ -1,4 +1,4 @@
-\chapter{Simulações}
+\chapter{Simulações}   
 \label{cap:III}
 \section{Introdução}
  Definido o método dos elementos finitos com a formulação de Galerkin, temos diferentes meios para resolver o problema. Anteriormente resolvemos uma equação diferencial usando elementos finitos com \textbf{equações lineares}. Discretizando o espaço em elementos de tamanho \textbf{h} e utilizando as técnicas de derivação e integração numérica utilizando polinômios de grau \textbf{p}, podemos utilizar a combinação desses métodos nos fornece aproximações com erros menores, para diferentes métodos.
@@ -14,29 +14,6 @@
 \end{figure}
 Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
 
-\pagebreak
-\begin{table}[h]
-\centering
-\caption{tabela de erros máximos para os diferentes tipos de raízes}
-\label{my-label}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Grau & equidist & glj       & chebyshev     \\ \hline
-15   & 7.19     & 4.925e-02 & 4.660e-02 \\
-16   & 2.11     & 9.128e-02 & 8.309e-02 \\
-17   & 14.39    & 3.480e-02 & 3.261e-02 \\
-18   & 4.22     & 6.138e-02 & 5.590e-02 \\
-19   & 29.19    & 2.417e-02 & 2.249e-02 \\
-20   & 8.58     & 4.126e-02 & 3.758e-02 \\
-\vdots   & \vdots              & \vdots    & \vdots    \\
-30   & 333.94   & 5.651e-03 & 5.154e-03 \\
-31   & 2384.73  & 2.229e-03 & 2.061e-03 \\
-32   & 704.08   & 3.797e-03 & 3.463e-03 \\
-33   & 5058.99  & 1.510e-03 & 1.402e-03 \\
-34   & 1494.38  & 2.551e-03 & 2.328e-03 \\
-35   & 10719.90 & 1.025e-03 & 9.488e-04 \\ \hline
-\end{tabular}
-\end{table}
 Comparando as escolhas de raízes dos problemas conseguimos ver que a convergência do erro usando as raízes equidistantes aumenta conforme o grau do polinômio aumenta. Enquanto que para as raízes de Chebyshev e Gauss-Lobatto-Jacobi, os erros convergem algebricamente. 
 \begin{figure}[!ht]
   \includegraphics[width=0.5\textwidth,center]{figuras/glj_equi.png}
@@ -52,16 +29,16 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
 \subsection{Convergência do erro de interpolação utilizando método H}
  Tendo aproximado a função de runge acima, utilizaremos um novo método chamado método H,método no qual subdividimos o problema em $n$ elementos de tamanho $H$. Iremos comparar o efeito desse método contra o método espectral anterior utilizando as mesmas raízes de aproximação, Gauss-Lobatto-Jacobi.
  
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEM.png}
   \caption{gráficos das aproximações fixado o grau do polinômio em 7 e subdividimos o domínio em $N_{el}$ elementos }
 \end{figure}
-\begin{figure}[!hb]
+\begin{figure}[!h]
   \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEMfixo.png}
   \caption{gráficos das aproximações fixado o número de elementos em 1 e utilizamos polinômios de grau elevado}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
   \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_FEM2.png}
   \caption{Convergência dos erros entre polinômios fixos e polinômios de grau elevado}
 \end{figure}

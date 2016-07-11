@@ -26,19 +26,17 @@
 \contentsline {section}{\numberline {2.7}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{20}{section.2.7}
 \contentsline {chapter}{\numberline {3}M\IeC {\'e}todo dos elementos espectrais}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Formula\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}Formula\IeC {\c c}\IeC {\~a}o Fraca}{22}{section.3.2}
-\contentsline {section}{\numberline {3.3}Bases}{22}{section.3.3}
-\contentsline {section}{\numberline {3.4}Elementos Finitos h}{22}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Assembly}{22}{subsection.3.4.1}
 \contentsline {chapter}{\numberline {4}Simula\IeC {\c c}\IeC {\~o}es}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{23}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{25}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{28}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{24}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{27}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{29}{section.4.4}
 \contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}sub 1}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}sub 2 }{31}{section.5.2}
 \contentsline {chapter}{\numberline {6}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{33}{chapter.6}
 \contentsline {section}{\numberline {6.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{33}{section.6.1}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{35}{chapter*.33}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{35}{chapter*.32}
 \contentsfinish 
