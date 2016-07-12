@@ -9,7 +9,7 @@
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.
 	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:\\	
 \begin{figure}[!ht]
-  \includegraphics[width=1\textwidth,center]{figuras/interpolacao_todas.png}
+  \includegraphics[width=1.15\textwidth,center]{figuras/interpolacao_todas.png}
   \caption{interpolação de polinômios de alta ordem com raízes de Gauss-Lobatto-Jacobi, igualmente espaçados, Chebyshev}
 \end{figure}
 Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
@@ -53,23 +53,16 @@ y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,
 \end{align}	
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth,center]{figuras/solu_edo_simul.png}
+\includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
 \caption{comparação entre a solução exata e a aproximada usando P = 10 e $N_{el} = 10$ } 
 \end{figure}
  Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
-
-\begin{figure}[!ht]
-  \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_EDO_h.png}
-  \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o grau do polinômio em P e variando o número de elementos entre 1 a 40 }
-\end{figure}
-
-
-\begin{figure}[!hb]
-  \includegraphics[width=.7\textwidth,center]{figuras/convergencia_erro_EDO_p.png}
-  \caption{convergência do log(erro) em função dos log(graus de liberdade) fixando o número de elementos e variando grau do polinômio em P  }
+\begin{figure}[H]
+  \includegraphics[width=.7 \textwidth,center]{figuras/convergencia_erro_HP.png}
+  \caption{convergência do log(erro) em função dos log(graus de liberdade) comparando os métodos HP }
 \end{figure}
  Novamente, notamos um decaimento maior quando fixamos o grau do polinômio e aumentamos o número de elementos do problema.
-\pagebreak
+%\pagebreak
 \subsection{Condição de Neumann}
  Agora utilizamos o método HP para um problema no qual temos em uma das extremidades uma condição de \emph{Neumann}.Nesse exemplo usarei como solução do problema $y(x) = \cos(10 x) \sin(25 x)$, onde $ x \in [-1,1]$ e a condição de Neuman está em $x=1$. Nesse caso para o problema temos que acrescentar o termo  $v_j(1) \frac{\partial y(1)}{\partial x}$  ao lado direito da equação quando for resolvê-lo:
 \begin{equation}
