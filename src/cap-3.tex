@@ -28,22 +28,23 @@ Notamos que embora a convergência, utilizando ambas as raízes dos polinômios,
 
 \subsection{Convergência do erro de interpolação utilizando método H}
  Tendo aproximado a função de runge acima, utilizaremos um novo método chamado método H,método no qual subdividimos o problema em $n$ elementos de tamanho $H$. Iremos comparar o efeito desse método contra o método espectral anterior utilizando as mesmas raízes de aproximação, Gauss-Lobatto-Jacobi.
- 
-\begin{figure}[!h]
-  \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEM.png}
-  \caption{gráficos das aproximações fixado o grau do polinômio em 7 e subdividimos o domínio em $N_{el}$ elementos }
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth,center]{figuras/interp_usando_FEM.png}
+\caption{gráficos das aproximações fixado o grau do polinômio em 7 e subdividimos o domínio em $N_{el}$ elementos }
 \end{figure}
-\begin{figure}[!h]
+
+\begin{figure}[H]
   \includegraphics[width=0.8\textwidth,center]{figuras/interp_usando_FEMfixo.png}
   \caption{gráficos das aproximações fixado o número de elementos em 1 e utilizamos polinômios de grau elevado}
 \end{figure}
-
-\begin{figure}[!h]
+ No gráfico de convergência do erro máximo, notamos que o decaimento para o método P é gemométrico enquanto para o método H é subgeométrico para o gráfico do tipo log-linear.
+ \begin{figure}[H]
   \includegraphics[width=0.7\textwidth,center]{figuras/convergencia_erro_FEM2.png}
   \caption{Convergência dos erros entre polinômios fixos e polinômios de grau elevado}
 \end{figure}
 
- Notamos então no gráfico  que para o método utilizando o grau do polinômio fixo e variando o número de elementos, a convergência do erro é bem mais rápida que no caso onde variamos somente o grau do polinômio.
 \section{Método HP na resolução de equações diferenciais}
 
  Agora, resolveremos uma equação diferencial de segundo grau. Para tanto, irei apresentar uma equação com solução conhecida ($sin(2\ k \pi x)$). Nesse caso, definirei o problema com a condição de fronteira de \emph{Dirichlet}, definindo assim o valor nas extremidades do domínio. Abaixo, está um comparativo entre a solução exata e a solução aproximada do problema abaixo:

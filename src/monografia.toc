@@ -23,13 +23,13 @@
 \contentsline {subsection}{\numberline {2.6.5}Exemplo de elementos finitos em 2 dom\IeC {\'\i }nios}{14}{subsection.2.6.5}
 \contentsline {subsection}{\numberline {2.6.6}Forma Matricial do problema}{16}{subsection.2.6.6}
 \contentsline {subsection}{\numberline {2.6.7}Mapeamento}{17}{subsection.2.6.7}
-\contentsline {section}{\numberline {2.7}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{20}{section.2.7}
+\contentsline {section}{\numberline {2.7}Condensa\IeC {\c c}\IeC {\~a}o est\IeC {\'a}tica}{19}{section.2.7}
 \contentsline {chapter}{\numberline {3}Simula\IeC {\c c}\IeC {\~o}es}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{22}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{24}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{25}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{23}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{24}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{26}{section.3.4}
 \contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}sub 1}{29}{section.4.1}

@@ -730,14 +730,13 @@ Assim a matriz de massa \emph{global} $M$ definida como $M_{ij} = \int_\Omega \P
 \caption{Matriz de massa mapeada}
 \end{figure}
 
-\pagebreak
 
 \section{Condensação estática}
   Após o mapeamento das matrizes temos então a tarefa de resolver o sistema linear.Utilizando o fato do mapeamento ter separado as funções de base para os modos \textbf{internos} (i) e os modos de \textbf{fronteira} (b) de cada elemento, aplicamos a técnica de \emph{condensação estática}. Onde com remapeando os vetores x e f do sistema linear $A\  x = f$ de maneira a ficar primeiro os coeficientes de fronteira e depois os coeficientes internos temos o sistema reescrito como:
   \begin{equation}
     x = \left\{\begin{matrix} x_b \\ x_i \\ \end{matrix}\right\}\ ,\ f =  \left\{\begin{matrix} f_b \\ f_i \\ \end{matrix}\right\}\
   \end{equation}
-E com esse remapeamento feito anteriormente, temos a matriz A global como:
+E com o remapeamento feito anteriormente, temos a matriz A global como:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth,center]{figuras/Matriz_global.png}
@@ -769,5 +768,5 @@ onde:
 & A'_{bb} = A_{bb} - A_{bi}A_{ii}^{-1} A_{ib}\\ 
 & f'_b = f_b - A_{bi}A_{ii}^{-1} f_i
 \end{align}
-Assim, encontramos $x_b$ e $x_i$ da equação.
+Assim, utilizando o remapeamento e a condensação estática, encontramos $x_b$ e $x_i$ da equação.
 
