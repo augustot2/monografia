@@ -312,10 +312,11 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 
 \section{Método dos resíduos ponderados}
  A fim de resolvermos a equação diferencial, temos que tornar a solução $u^\delta(x)$ aquela que melhor aproxima a solução exata do problema $u(x)$, para isso devemos então minimizar o resíduo dessa aproximada. Tomando o problema diferencial abaixo, temos o operador diferencial $L(\bullet)$
- \begin{equation}
-    L(u) = \frac{\partial^2 u}{\partial x^2} + \lambda u + f = 0 \\
-    L(u) = 0
- \end{equation}
+ \begin{align}
+     L(u) &= \frac{\partial^2 u}{\partial x^2} + \lambda u + f = 0 \\
+    L(u) &= 0
+ \end{align}
+
  Aproximando $u$ por $u^\delta$ obtemos um erro associado ao operador $L(\bullet)$:
  \begin{equation}
  	u^\delta(x) = u(x_0) + \sum^{N_{dof}}_{i = 1} u(x_i) \Phi(x)\\
@@ -582,7 +583,7 @@ Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos
 \begin{equation}
 \{ M + \lambda S\} U = F
 \end{equation}
- Onde chamamos a matriz M de matriz de massa e a matriz S de matriz de rigidez.
+ Onde chamamos a matriz M de matriz de massa e S de matriz de rigidez.
 \begin{align}
 M &=
 \begin{bmatrix}
