@@ -3,7 +3,7 @@
 \contentsline {chapter}{Lista de Tabelas}{ix}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Hist\IeC {\'o}ria}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}O M\IeC {\'e}todo}{1}{section.1.2}
+\contentsline {section}{\numberline {1.2}A monografia}{1}{section.1.2}
 \contentsline {section}{\numberline {1.3}A linguagem Julia}{2}{section.1.3}
 \contentsline {chapter}{\numberline {2}M\IeC {\'e}todo espectral e M\IeC {\'e}todo dos elementos finitos}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}M\IeC {\'e}todo espectral}{3}{section.2.1}
@@ -29,9 +29,9 @@
 \contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando o m\IeC {\'e}todo espectral}{21}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Converg\IeC {\^e}ncia do erro de interpola\IeC {\c c}\IeC {\~a}o utilizando m\IeC {\'e}todo H}{22}{subsection.3.2.1}
-\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{23}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{24}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{26}{section.3.4}
+\contentsline {section}{\numberline {3.3}M\IeC {\'e}todo HP na resolu\IeC {\c c}\IeC {\~a}o de equa\IeC {\c c}\IeC {\~o}es diferenciais}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{25}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{27}{section.3.4}
 \contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}sub 1}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}sub 2 }{29}{section.4.2}

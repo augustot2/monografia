@@ -9,18 +9,18 @@
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.
 	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:\\	
 \begin{figure}[!ht]
-  \includegraphics[width=1.15\textwidth,center]{figuras/interpolacao_todas.png}
+  \includegraphics[width=1.25\textwidth,center]{figuras/interpolacao_todas.png}
   \caption{interpolação de polinômios de alta ordem com raízes de Gauss-Lobatto-Jacobi, igualmente espaçados, Chebyshev}
 \end{figure}
 Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
 
 Comparando as escolhas de raízes dos problemas conseguimos ver que a convergência do erro usando as raízes equidistantes aumenta conforme o grau do polinômio aumenta. Enquanto que para as raízes de Chebyshev e Gauss-Lobatto-Jacobi, os erros convergem algebricamente. 
 \begin{figure}[!ht]
-  \includegraphics[width=0.5\textwidth,center]{figuras/glj_equi.png}
+  \includegraphics[width=0.8\textwidth,center]{figuras/glj_equi.png}
   \caption{comparação semilog  dos erros e graus de liberdade de raízes de glj versus equidistante }
 \end{figure}
 \begin{figure}[!hb]
-  \includegraphics[width=0.5\textwidth,center]{figuras/glj_cheb.png}
+  \includegraphics[width=0.8\textwidth,center]{figuras/glj_cheb.png}
   \caption{comparação semilog  dos erros e graus de liberdade de raízes de glj versus Chebyshev}
 \end{figure}
 \\
@@ -88,6 +88,7 @@ A convergência dos erros utilizando o método P e o método H continuam semelha
 \includegraphics[width=.8\textwidth,center]{figuras/erro_derivada.png}
 \caption{convergência do erro da derivada da solução aproximada entre os dois métodos} 
 \end{figure}
+
 \section{onde o método HP se sobrepõe?}
  Ao utilizar o método HP, estamos alternando entre os dois método. Notamos que para funções com alta frequência como a anterior caso utilizemos apenas o método P, teriamos que utilizar um polinômio de grau elevado para obter uma boa aproximação:
 \begin{figure}[H]
@@ -102,7 +103,7 @@ A convergência dos erros utilizando o método P e o método H continuam semelha
 \end{figure}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.65\textwidth,center]{figuras/Neumm_4_20.png}
+\includegraphics[width=0.75\textwidth,center]{figuras/Neumm_4_20.png}
 \caption{aproximação do método P de grau 20 e $N_{el} = 4$} 
 \end{figure}
 

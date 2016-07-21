@@ -1,4 +1,4 @@
-\chapter{Método espectral e Método dos elementos finitos}
+ \chapter{Método espectral e Método dos elementos finitos}
 \label{cap:I}
 \section{Método espectral} 
 
@@ -730,7 +730,7 @@ Assim a matriz de massa \emph{global} $M$ definida como $M_{ij} = \int_\Omega \P
 \includegraphics[width=0.6\textwidth, center ]{figuras/Matrix_element.png}
 \caption{Matriz de massa mapeada}
 \end{figure}
-
+ Com o exemplo anterior conseguimos ter uma idéia de como remapear as respectivas matrizes para funções lineares, porém utilizando polinômios de maior grau podemos usar o mesmo código para essa reestruturação. Sendo assim podemos usar polinômios de Lagrange, Legendre ou mesmo uma nova base da família do polinômio de Jacobi para obter assim solucionar problemas mais complexos que não poderíamos solucionar com uma função linear.
 
 \section{Condensação estática}
   Após o mapeamento das matrizes temos então a tarefa de resolver o sistema linear.Utilizando o fato do mapeamento ter separado as funções de base para os modos \textbf{internos} (i) e os modos de \textbf{fronteira} (b) de cada elemento, aplicamos a técnica de \emph{condensação estática}. Onde com remapeando os vetores x e f do sistema linear $A\  x = f$ de maneira a ficar primeiro os coeficientes de fronteira e depois os coeficientes internos temos o sistema reescrito como:
