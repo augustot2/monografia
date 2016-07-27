@@ -35,7 +35,5 @@
 \contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.1}Aprendizado na teoria}{29}{subsection.4.0.1}
 \contentsline {subsection}{\numberline {4.0.2}Implementa\IeC {\c c}\IeC {\~a}o do c\IeC {\'o}digo}{29}{subsection.4.0.2}
-\contentsline {chapter}{\numberline {5}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{31}{section.5.1}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{33}{chapter*.32}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{31}{chapter*.30}
 \contentsfinish 
