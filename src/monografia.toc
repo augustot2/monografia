@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Condi\IeC {\c c}\IeC {\~a}o de Neumann}{25}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}onde o m\IeC {\'e}todo HP se sobrep\IeC {\~o}e?}{27}{section.3.4}
 \contentsline {chapter}{\numberline {4}Conclus\IeC {\~o}es}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}sub 1}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}sub 2 }{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.0.1}Aprendizado na teoria}{29}{subsection.4.0.1}
+\contentsline {subsection}{\numberline {4.0.2}Implementa\IeC {\c c}\IeC {\~a}o do c\IeC {\'o}digo}{29}{subsection.4.0.2}
 \contentsline {chapter}{\numberline {5}Expan\IeC {\c c}\IeC {\~a}o em uma dimens\IeC {\~a}o}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Motiva\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo hp}{31}{section.5.1}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{33}{chapter*.32}
