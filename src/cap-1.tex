@@ -2,10 +2,10 @@
 \label{cap:I}
 \section{Método espectral} 
 
- Método espectral é um método poderoso usado para solução de equações diferencial parcial. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. 
+ Método espectral é um método poderoso usado para solução de equações diferenciais parciais. Diferentemente do método das diferenças finitas, que considera apenas os pontos próximos do ponto que queremos computar chamada de método \emph{local}, o método espectral considera todo o domínio, sendo assim um método \emph{global}. Essa técnica tem mais precisão pois converge exponencialmente diferente do método local. É preferível a utilização desse método quando a solução varia em função do \textit{tempo} e \textit{espaço}. 
 
 \section{Interpolação}
- Para fazer a interpolação da função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, $P_{n}(x)$ satisfazendo:
+ Para fazer a interpolação da função $f(x)$ por um polinômio trigonométrico ou não, de grau $n$, define-se $P_{n}(x)$ satisfazendo:
 
 \begin{equation}
 	P_n (x_i) = f(x_i) \ i = 1,2,...,\emph{n+1}
@@ -19,7 +19,7 @@
   \caption{interpolação simples}
 \end{figure}
 
- Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto,a   maneira mais simples de entender é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
+ Antes do uso de calculadoras e computadores, um método de estimar o valor de uma $f$ num ponto,a   maneira mais simples de entender, é a estimação do valor da função em um ponto intermediário entre dois pontos conhecidos é o uso da interpolação \emph{Linear}.
 
 \begin{equation}
 	f(x) \approx \frac{x - x_1}{x_0 - x_1}f(x_0)  + \frac{x - x_0}{x_1 - x_0}f(x_1)
@@ -39,7 +39,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \begin{equation}
  P_n(x) \equiv \sum_{i = 0}^{N} f(x_i)C_i(x) 
 \end{equation}    
- Temos a interpolação é tal que que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistante serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
+ Com isso,  a interpolação é tal que $P_n(x_i) = f(x_i)$. Apesar dos pontos interpoladores equidistantes serem comumente utilizados, não há restrições, podendo até mesmo estar fora de ordem.
 \begin{figure}[h]
   \includegraphics[width=0.5\textwidth, center]{figuras/interpolacao_linear5.png}
   \caption{interpolação com n pontos equidistantes}
@@ -49,8 +49,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
 \newpage
 
 \subsection{Fenômeno de Runge}
- Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente distantes sobre um interval $[a,b]$, $\lim_{n \to \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável.
- No início do século XX, \emph{Carl David Tolmé Runge}, provou que para uma função $f(x)$:
+ Apesar de parecer que uma boa interpolação tenha uma boa aproximação usando pontos igualmente espaçados sobre um interval $[a,b]$, $\lim_{n \to \infty} |f(x) - P_n(x)| = 0$ para qualquer $f(x)$ diferenciável., isto nem sempre é verdade. No início do século XX, \emph{Carl David Tolmé Runge}, provou para a função $f(x)$:
  \begin{equation}
  f(x) = \frac{1}{1 + x^2} , x \in [-5,5]
  \end{equation}
@@ -73,7 +72,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  \end{equation}
  Para um $\epsilon(x) \in [-1,1]$.
  
- Logo, para minimizar o erro, não podemos fazer nada quanto o termo $f^{(N+1)}(\epsilon)$, pois necessita conhecer a função interpolada. Quanto o polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que expandindo o produtório, o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos que nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
+ Logo, para minimizar o erro, não podemos fazer nada quanto ao termo $f^{(N+1)}(\epsilon)$, pois para isso  necessitamos conhecer a função interpolada. Quanto ao polinômio $\prod^{N}_{i = 0} (x - x_i)$, sabemos que expandindo o produtório, o coeficiente do termo $x^N$ é $1$, independente da escolha de pontos. Então a pergunta que fica é, qual escolha de pontos que nos dá um \emph{polinômio} com coeficiente líder igual a $1$ minimiza essa função ? Felizmente e coincidentemente, essa resposta foi respondida quase meio século antes do próprio fenômeno de Runge ser descoberto. Veremos no próximo teorema.
 
  
 \subsection{Teorema II: Amplitude minima} \label{subsec:TeoremaII}
@@ -109,7 +108,7 @@ C_i(x) = \prod_{j = 0 \\ j \neq i}^{N} \frac{x - x_j}{x_i - x_j}
  
  Agora temos como conseguir o polinômio de \emph{Chebyshev} que minimiza o erro. Porém essa escolha de polinômio varia para diferentes geometrias no $\mathbb{R}^2$ ou funções harmônicas ou hermitianas.
  \begin{figure}[t]
- \includegraphics[width=0.45\textwidth, center]{figuras/chebychev_equidist.png}
+ \includegraphics[width=0.7\textwidth, center]{figuras/chebychev_equidist.png}
  \caption{método de raízes de Chebychev contra raízes de pontos equidistante}
  \end{figure}
 \pagebreak
@@ -127,10 +126,10 @@ podemos aproximar a integral por:
 
 onde o coeficiente é:
 \begin{equation}
- w_i =  \int^{a}_b  P_i(x) 
+ w_i =  \int^{a}_b  P_i(x) \partial x
 \end{equation}
- para provarmos que o termo de \emph{erro} na equação \eqref{eq:integra}, é zerada, fazemos a seguinte prova:\\
- Tomando $f$ como sendo uma polinômio de grau $(2n+1)$. Temos que $f^{(n+1)}$ será um polinômio de grau $n$. Logo, reescrevendo $f^{(n+1)}$, temos:
+ para demonstrarmos que o termo de \emph{erro} na equação \eqref{eq:integra}, é zerada, fazemos a seguinte prova:\\
+ Tomando $f$ como sendo um polinômio de grau $(2n+1)$, temos que $f^{(n+1)}$ será um polinômio de grau $n$. Logo, reescrevendo $f^{(n+1)}$, temos:
  \begin{equation}
  f^{(n+1)}(x) = \sum^{n-1}_{j = 0} b_j P_j(x)
  \end{equation}
@@ -154,7 +153,7 @@ Assim, fazemos:
  No caso acima foi utilizado para a integração um polinômio qualquer ortogonal, porém podemos utilizar qualquer classe de polinômios \emph{ortogonais} para estimarmos a integral da função, tomando os zeros dos polinômios a nossa escolha.[\emph{Gauss-Chebychev}, \emph{Gauss-Jacobi}, \emph{Gauss-Radau}, \emph{Gauss-Lobatto}]
  
 \section{Derivação pelo método da colocação }
- Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$, pode ser reescrito em termos de polinômios de Lagrange $C_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
+ Com a interpolação de $f(x) \in P_p$, onde $P_p$ é o espaço de polinômios de grau $\leq p$,  ela pode ser reescrita em termos de polinômios de Lagrange $C_i$, por $N + 1$ e $x \in -1 \leq x \leq 1$ pontos como:
  \begin{equation}
  f(x)  = \sum^{N}_{0} f(x_i) C_i(x)
  \end{equation}
@@ -217,7 +216,7 @@ u_{N}\\
 \end{align}
   
 \subsection{Polinômios de Jacobi}
- Polinômios de Jacobi $P^{\alpha,\beta}_n(x)$ são famílias de polinômios de soluções para problemas de \emph{Sturm-Liouville}. Tais polinômios são \emph{ortogonais} no intervalo $[-1,1]$  com respeito funções peso do tipo $(1-x)^\alpha (1+x)^\beta \text(para) (\alpha,\beta > -1)$.
+ Polinômios de Jacobi $P^{\alpha,\beta}_n(x)$ são famílias de polinômios de soluções para problemas de \emph{Sturm-Liouville}. Tais polinômios são \emph{ortogonais} no intervalo $[-1,1]$  com respeito funções peso do tipo $(1-x)^\alpha (1+x)^\beta$ para $\alpha,\beta > -1$.
 Pela fórmula de Rodrigues, essa família é dada por:
 \begin{equation}
 P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \frac{d^n}{dx^n} \left\{ (1-x)^\alpha (1+x)^\beta \left (1 - x^2 \right )^n \right\},\ (\alpha, \beta >-1)
@@ -241,7 +240,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 & \text{Polinômio de Legendre} (\alpha= \beta = 0)  \rightarrow L_n(x) =  P^{(0,0)}_{n}(x)
 \end{align}
  
- \emph{Interpolador de Gauss-Lobatto}: Nesse caso, os pontos de interpolação são os zeros do polinômio $[P^{\alpha,\beta}_{Q-2}(x)]'$, mais os extremos +1 e -1 do intervalo. E a derivada da função é dada por:
+ \emph{Interpolador de Gauss-Lobatto}: Nesse caso, os pontos de interpolação são os zeros do polinômio $[P^{\alpha,\beta}_{Q-2}(x)]'$. E a derivada da função é dada por:
 \begin{equation}
  C_{ij}= 
 \begin{cases}
@@ -308,7 +307,7 @@ P_n^{(\alpha,\beta)}(x) = \frac{(-1)^n}{2^n n!} (1-x)^{-\alpha} (1+x)^{-\beta} \
 \frac{2(\beta -(N-1)(N + \alpha + \beta))}{\alpha + 2}\frac{\Gamma(N+\alpha)}{\Gamma(N-1)\Gamma(\alpha+2))} \ \ i = N-1
 \end{cases}\\
  \end{align}\\
- onde $\Gamma{x}$ é a função gamma.
+ onde $\Gamma(x)$ é a função gamma.
 
 \section{Método dos resíduos ponderados}
  A fim de resolvermos a equação diferencial, temos que tornar a solução $u^\delta(x)$ aquela que melhor aproxima a solução exata do problema $u(x)$, para isso devemos então minimizar o resíduo dessa aproximada. Tomando o problema diferencial abaixo, temos o operador diferencial $L(\bullet)$
@@ -329,7 +328,7 @@ Nosso problema está na minimização desse erro $R(u^\delta)$. Para isso, escol
 Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função teste $v_j$, temos a melhor aproximação $u^\delta$. Ao longo dos anos várias funções foram encontradas para a minimização dos erros. O método mais conhecido é o dos Mínimos Quadrados no qual $v_j\ =\ \frac{\partial R}{\partial \hat{u}_j}$. Alguns outros também existem como o método de \emph{colocação} e método dos \emph{momentos}. Aquele que usarei é o método de \emph{Galerkin}, onde escolhemos $v_j \equiv \phi_j$ e $v_j(\Omega_d) = 0$ onde $\Omega_d$ é a fronteira de \emph{Dirichlet}.
 
 \section{Método de Galerkin}
- O método de \emph{Galerkin}, também conhecido como \emph{Bulbnov-Galerkin} devido a Ivan Grigoryevich Bubnov  e Ivan Grigoryevich Bubnov  será o mais utilizado daqui pra frente. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
+ O método de \emph{Galerkin}, também conhecido como \emph{Bubnov-Galerkin} devido a Ivan Grigoryevich Bubnov  e Boris Grigoryevich Galerkin  será o mais utilizado daqui pra frente. Para fins de exemplo consideramos a seguinte equação diferencial em uma dimensão:
  \begin{equation}\label{eq:eq_dif}
  L(u) \equiv \frac{\partial^2 u}{\partial x^2} + f = 0
  \end{equation}
@@ -340,7 +339,7 @@ Assim, obtemos um sistema linear para cada j no qual escolhido a melhor função
  \end{equation}
  Onde $g_D$ e $g_N$, são constantes, e são chamadas de condição de contorno de \emph{D}irichlet e \emph{N}eumman. Essas condições junto da equação \eqref{eq:eq_dif}, chamamos essa combinação como formulação \emph{Forte} do problema.
 \subsection{Formulação fraca e a implementação da condição de fronteira de Neumman}
- Multiplicando a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrar sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
+ Multiplicando a equação \eqref{eq:eq_dif}, por uma função $v(x)$, que por definição é 0 na fronteira de \emph{Dirichlet} $\partial \Omega_D$, e integrando sobre o domínio $\Omega$, obtemos o produto interno de $L(u)$ e $v$:
  \begin{equation}\label{eq:eq_fraca}
  (v,L(u))=\int^1_{-1} v\left ( \frac{\partial^2u}{\partial x^2} + f \right )\partial x = 0
  \end{equation}
@@ -361,7 +360,7 @@ A solução aproximada de Galerkin da equação \eqref{eq:eq_dif}, é a soluçã
  \int^{1}_{-1} \frac{\partial v^\delta}{\partial x}  \frac{\partial u^\delta}{\partial x}  \partial x =  v^\delta(1)g_N + \int^{1}_{-1}  v^\delta f\ \partial x 
 \end{equation}
 \subsection{Implementação da condição de fronteira de Dirichlet}
- Como para todo função teste $v^\delta(x)$ é zero na fronteira de \emph{Dirichlet}, fica claro que $u^\delta$ deve conter outra função não zero na fronteira, sem isso não seria possível satisfazer a condição de fronteira de \emph{Dirichlet} do problema. Então temos que a solução aproximada $u^\delta$ é uma combinação de outras duas funções: $u^d$, que satisfaz as condições de fronteira de \emph{Dirichlet} e uma função \emph{h}omogênea desconhecida $u^h$, que é zero na fronteira de Dirichelt.
+ Como toda função teste $v^\delta(x)$ é zero na fronteira de \emph{Dirichlet}, fica claro que $u^\delta$ deve conter outra função não zero na fronteira, sem isso não seria possível satisfazer a condição de fronteira de \emph{Dirichlet} do problema. Então temos que a solução aproximada $u^\delta$ é uma combinação de outras duas funções: $u^d$, que satisfaz as condições de fronteira de \emph{Dirichlet} e uma função \emph{h}omogênea desconhecida $u^h$, que é zero na fronteira de Dirichelt.
  \begin{align}
  u^\delta = u^d + u^h \\
  \text{onde:}\\
@@ -477,7 +476,7 @@ u^\delta = \sum^2_{i=0} \hat{u_i}\phi_i(x)
  & u^H = \hat{u_1}\phi_1(x) + \hat{u_2}\phi_2(x)
  & u^D = g_D\phi_0(x)
  \end{align}
- onde $\hat{u_0}\ e \hat{u_1}$ arbitrários. A espação definida em $u^H$ contém as mesmas funções usadas na função teste $v$, tendo :
+ onde $\hat{u_0}\ e \hat{u_1}$ são arbitrários. A aproximação definida em $u^H$ contém as mesmas funções usadas na função teste $v$, tendo :
  \begin{equation}
  v^\delta(x) = \hat{v_1}\phi_1(x) + \hat{v_2}\phi_2(x)
  \end{equation}
@@ -579,7 +578,7 @@ v^\delta_j (\frac{\partial^2 u^\delta }{\partial x^2} + \lambda v^\delta_j\ u^\d
 \begin{align}
 \sum^N_{i=1} u_i \int_\Omega \frac{\partial v^\delta_j }{\partial x} \frac{\partial v^\delta_i }{\partial x}\ \partial x +\sum^N_{i=1} u_i  \int_\Omega \lambda\ v^\delta_j v^\delta_i \ \partial x =\  (v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega + \int_\Omega v^\delta_j\ f\ \partial x \ \forall j =1,2,\dots,N 
 \end{align}  
-Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos reescrever de forma matricial, onde $(v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega$ só é adicionado ao lado esquerdo quando se há uma condição de \emph{Neumann} e quando  $v^\delta_j$ é diferente de zero nos extremos do domínio. Assim, podemos reescrever o sistema como:
+Como essa equação é definida para todo  $v_j$ para $j = 1,2,\dots,N$, podemos reescrever de forma matricial, onde $(v^\delta_j  \frac{\partial u^\delta }{\partial x})\Biggm\lvert_\Omega$ só é adicionado ao lado direito quando  há uma condição de \emph{Neumann} e quando  $v^\delta_j$ é diferente de zero nos extremos do domínio. Assim, podemos reescrever o sistema como:
 \begin{equation}
 \{ M + \lambda S\} U = F
 \end{equation}
@@ -740,10 +739,10 @@ Assim a matriz de massa \emph{global} $M$ definida como $M_{ij} = \int_\Omega \P
 E com o remapeamento feito anteriormente, temos a matriz A global como:
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth,center]{figuras/Matriz_global.png}
+\includegraphics[width=0.7\textwidth,center]{figuras/Matriz_global.png}
 \caption{esquema da matriz global remapeada} 
 \end{figure}
-onde cada $A_{\cdot \cdot}$ é uma sub matriz de A em que $A_{ii}$ é uma matriz em banda, $A_{ib}$ e $A_{bi}$ são  matrizes espúrias e $A_{bb}$ é uma matriz em bloco.
+onde cada $A_{\cdot \cdot}$ é uma sub matriz de A em que $A_{ii}$ é uma matriz em banda, $A_{ib}$ e $A_{bi}$ são  matrizes esparsas e $A_{bb}$ é uma matriz em bloco.
 
 \begin{equation}
 A\cdot x  = \left[ 
