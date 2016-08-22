@@ -3,16 +3,18 @@
 \section{Introdução}
  Definido o método dos elementos finitos com a formulação de Galerkin, temos diferentes meios para resolver o problema. Anteriormente resolvemos uma equação diferencial usando elementos finitos com \textbf{equações lineares}. Discretizando o espaço em elementos de tamanho \textbf{h} e utilizando as técnicas de derivação e integração numérica utilizando polinômios de grau \textbf{p}, podemos utilizar a combinação desses métodos nos fornece aproximações com erros menores, para diferentes métodos.
  
- Neste capítulo mostrarei resoluções de algumas equações diferenciais comparando os métodos \emph{h} e \emph{p}  e também aproximações por interpolações de funções utilizando pontos equidistantes e de Chebishev. Todas as figuras e resoluções foram obtidas utilizando a linguagem de programação \emph{Julia}.
+ Neste capítulo mostrarei resoluções de algumas equações diferenciais comparando os métodos \emph{h} e \emph{p}  e também aproximações por interpolações de funções utilizando pontos equidistantes e de Chebyshev. Todas as figuras e resoluções foram obtidas utilizando a linguagem de programação \emph{Julia}.
 
 \section{Convergência do erro de interpolação utilizando o método espectral}
 	Vamos agora ver a convergência do erro da aproximaçãode uma função de runge $\frac{1}{1+x^2},\ x\ \in [-5,5]$, para pontos \emph{equidistantes} e pontos igualmente espaçados, utilizando o polinômio de \textbf{Lagrange}.
-	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são:\\	
+	As aproximadas obtidas para raízes equidistantes e raízes de chebishev são mostradas na figura \ref{fig:interp}.	
 \begin{figure}[!ht]
   \includegraphics[width=1.25\textwidth,center]{figuras/interpolacao_todas.png}
   \caption{interpolação de polinômios de alta ordem com raízes de Gauss-Lobatto-Jacobi, igualmente espaçados, Chebyshev}
+\label{fig:interp}
 \end{figure}
-Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
+
+Notamos novamente que para diferentes  polinômios de lagrange de alta ordem utilizando pontos igualmente espaçados, a aproximação nos pontos próximos das extremidades apresenta um erro  grande, enquanto que para pontos distribuídos usando as raízes de Chebyshev e de Gauss-Lobatto-Jacobi se comportam bem nessas regiões. Agora, iremos verificar a convergência desse erro, analizando o erro máximo para cada escolha de raízes.
 
 Comparando as escolhas de raízes dos problemas conseguimos ver que a convergência do erro usando as raízes equidistantes aumenta conforme o grau do polinômio aumenta. Enquanto que para as raízes de Chebyshev e Gauss-Lobatto-Jacobi, os erros convergem algebricamente. 
 \begin{figure}[!ht]
@@ -57,15 +59,16 @@ y(-1) &= sin(-2\ k \ \pi ) = 0 ,\ y(1) = sin(2\ k\ \pi) = 0 \ \ \forall k = 1,2,
 \includegraphics[width=0.5\textwidth,center]{figuras/solu_edo_simul.png}
 \caption{comparação entre a solução exata e a aproximada usando P = 10 e $N_{el} = 10$ } 
 \end{figure}
- Abaixo observaremos a variância do erro máximo para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo, é o inverso disso, em que fixamos o número de elementos e variamos o grau do polinômio interpolador P.
+Na figura \ref{fig:convD} observamos  como o erro máximo varia para dois casos do Método \emph{HP}. No primeiro fixamos o grau P do polinômio interpolador e variamos o tamanho \emph{H} dos elementos, assim variando o número de elementos que discretizamos o problema. No segundo,  fixamos o número de elementos e variamos o grau do polinômio interpolador P.
 \begin{figure}[H]
-  \includegraphics[width=.7 \textwidth,center]{figuras/convergencia_erro_HP.png}
+  \includegraphics[width=.9 \textwidth,center]{figuras/convergencia_erro_HP.png}
   \caption{convergência do log(erro) em função dos log(graus de liberdade) comparando os métodos HP }
+\label{fig:convD}
 \end{figure}
  Novamente, notamos um decaimento maior quando fixamos o grau do polinômio e aumentamos o número de elementos do problema.
 %\pagebreak
 \subsection{Condição de Neumann}
- Agora utilizamos o método HP para um problema no qual temos em uma das extremidades uma condição de \emph{Neumann}.Nesse exemplo usarei como solução do problema $y(x) = \cos(10 x) \sin(25 x)$, onde $ x \in [-1,1]$ e a condição de Neuman está em $x=1$. Nesse caso para o problema temos que acrescentar o termo  $v_j(1) \frac{\partial y(1)}{\partial x}$  ao lado direito da equação quando for resolvê-lo:
+ Agora utilizamos o método HP para um problema no qual temos em uma das extremidades uma condição de \emph{Neumann}. Nesse exemplo usarei como solução do problema $y(x) = \cos(10 x) \sin(25 x)$, onde $ x \in [-1,1]$ e a condição de Neuman está em $x=1$. Nesse caso temos que acrescentar o termo  $v_j(1) \frac{\partial y(1)}{\partial x}$  ao lado direito da equação durante a solução da formulação fraca:
 \begin{equation}
 \\-y'' + y = 726\,\cos \left(10\,x\right)\,\sin \left(25\,x\right)+500\,\sin 
  \left(10\,x\right)\,\cos \left(25\,x\right) 
